@@ -1,2 +1,2 @@
-# Unote-smo
+# Unoteísmo
 Site Sobre Unoteísmo
