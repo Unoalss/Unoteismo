@@ -3,25 +3,28 @@
 > **«A verdade sem viés religioso: respostas claras sobre a Bíblia, sobre a fé e sobre a vida.»**
 
 [![Website Oficial](https://img.shields.io/badge/Website-unoteismo.workers.dev-d4af37?style=for-the-badge&logo=google-chrome&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev)
+[![Teologia Unoteísta](https://img.shields.io/badge/Teologia-Três_Axiomas-teal?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
 [![Bíblia Sagrada](https://img.shields.io/badge/Bíblia_Sagrada-69_Livros-blue?style=for-the-badge&logo=bookstack&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 [![Léxico Grego](https://img.shields.io/badge/Léxico_Grego-61.047_Verbetes-purple?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int)
+[![YouTube](https://img.shields.io/badge/YouTube-@unoteismo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@unoteismo)
+[![TikTok](https://img.shields.io/badge/TikTok-@unoteismo-black?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@unoteismo)
 [![Licença](https://img.shields.io/badge/Acesso-Livre_e_Gratuito-success?style=for-the-badge)](#)
 
 ---
 
 ## 1. O que é o Unoteísmo?
 
-O **Unoteísmo** é um sistema de pensamento teológico e uma **filosofia de vida fundamentada na busca e defesa incansável da verdade**, caracterizada por sua independência em relação a corporativismos eclesiásticos, hierarquias clericais e tradições dogmáticas medievais (**sem viés religioso**).
+O **Unoteísmo** é um sistema de pensamento teológico e uma **filosofia de vida fundamentada na busca e defesa incansável da verdade**, caracterizada por sua completa independência em relação a corporativismos eclesiásticos, hierarquias clericais e tradições dogmáticas medievais (**sem viés religioso**).
 
-No âmbito ontológico e bíblico, o Unoteísmo sustenta a existência de **um único Deus supremo e absoluto — o Pai —**, que é puramente Espírito e a fonte de todas as coisas, o qual se encarnou plenamente no homem histórico **Jesus Cristo** desde a sua concepção milagrosa no ventre de Maria.
+No âmbito ontológico e escriturístico, o Unoteísmo professa que Deus é o **Espírito, a Consciência eterna que permeia todas as coisas**, possuindo vontade própria e julgando todas as coisas segundo a sua vontade. Não há divisão de Deus em pessoas distintas: **há uma só Consciência e uma só Pessoa divina**.
 
-A síntese basilar da cristologia unoteísta é expressa na máxima:
-> ### ❝ Jesus é o Pai quanto ao Espírito e é o homem quanto à carne. ❞
+Essa mesma Consciência divina manifesta-se na criação através do **Logos (Sabedoria e Palavra)** — portador da mente e do corpo espiritual — e encarna plenamente no homem histórico **Jesus Cristo**, o Messias, Unigênito do Pai e herdeiro de todas as promessas.
 
 ---
 
 ## 2. Os Quatro Pilares da Filosofia de Vida
 
+```text
                     ┌────────────────────────────────────────┐
                     │               UNOTEÍSMO                │
                     │       Uma Filosofia de Verdade         │
@@ -30,89 +33,115 @@ A síntese basilar da cristologia unoteísta é expressa na máxima:
      ┌──────────────────┬───────────────┴──────────────┬──────────────────┐
      │                  │                              │                  │
      ▼                  ▼                              ▼                  ▼
+1. Busca da Verdade 2. Sem Viés Religioso    3. Respostas Claras  4. Prática no Cotidiano
+```
 
-1. **A Busca e Defesa da Verdade como Dever Racional:** A verdade não teme perguntas profundas, escrutínio filológico, críticas históricas ou investigações científicas. A honestidade intelectual é tratada como um compromisso inegociável.
-2. **A Superação de Qualquer Viés Religioso:** Livre de monopólios clericais, sacerdócios corporativos e exploração financeira (recusa de dízimos compulsórios ou comércio da fé).
-3. **Clareza Hermenêutica e Transparência Conceitual:** Superação de contradições lógicas e "mistérios impenetráveis", entregando respostas bíblicas diretas e lógicas.
-4. **Prática Moral e Existencial no Cotidiano:** A fé viva como conduta diária de retidão, justiça, responsabilidade moral e respeito à consciência individual.
-
----
-
-## 3. Teologia Fundamental: Deus, Espírito e Jesus Cristo
-
-* **Deus, o Pai:** Há um só Deus, o Pai, que é Espírito (*João 4:24*), incriado, infinito e soberano absoluto.
-* **O Espírito Santo:** O próprio Espírito, poder e presença emanada de Deus Pai. Ao encarnar em Jesus Cristo, passa a ser identificado como *Espírito de Cristo* (*Romanos 8:9*).
-* **Jesus Cristo:**
-  * **Filho do Homem:** Verdadeiramente homem, nascido de mulher (*Gálatas 4:4*), descendente de Davi e participante real da carne humana.
-  * **Filho de Deus:** Porque seu Espírito é o próprio Espírito de Deus, emanado e enviado do céu da parte de Deus e reconhecido na figura humana.
+| Pilar | Fundamento |
+| :--- | :--- |
+| **1. Busca da Verdade** | A verdade não teme perguntas profundas, escrutínio filológico, críticas históricas ou investigações científicas. A honestidade intelectual é inegociável. |
+| **2. Sem Viés Religioso** | Livre de monopólios clericais, sacerdócios corporativos e exploração financeira (recusa de dízimos compulsórios ou comércio da fé). |
+| **3. Respostas Claras** | Superação de contradições lógicas e "mistérios impenetráveis", entregando respostas bíblicas diretas, racionais e coerentes. |
+| **4. Prática no Cotidiano** | A fé viva como conduta diária de retidão, justiça, discernimento moral e responsabilidade pessoal em comunhão genuína com Deus. |
 
 ---
 
-## 4. Resumo Teológico Oficial
+## 3. Teologia Unoteísta: Os Três Axiomas Fundamentais
 
-> Há um só Deus, o Pai; um só Espírito de Deus; e Jesus Cristo, o homem no qual esse Espírito se encarnou desde a concepção.
+A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a filosofia da consciência com o testemunho bíblico:
+
+### Ⅰ. Axioma Ontológico (A Consciência Divina)
+> **Ontologicamente, Deus é o Espírito, a Consciência eterna que permeia todas as coisas, possui vontade própria e julga todas as coisas segundo a sua vontade.**
 >
-> Jesus não é outro Deus ao lado do Pai. Ele é o homem no qual o próprio Espírito de Deus se encarnou e através do qual Deus se manifestou em carne.
->
-> O Espírito que estava em Jesus não era um espírito estranho ou independente de Deus. Era o próprio Espírito de Deus, o Espírito do Pai. Ao encarnar em Jesus, esse Espírito passou a ser identificado como **Espírito de Cristo**.
->
-> Por isso, Jesus é chamado tanto **Filho do Homem** quanto **Filho de Deus**:
->
-> * **Filho do Homem**, porque é verdadeiramente homem, nascido de mulher e participante da humanidade.
-> * **Filho de Deus**, porque seu Espírito é o próprio Espírito de Deus, emanado e enviado do céu da parte de Deus e reconhecido na figura humana.
->
-> Nos crentes, o Espírito de Deus **habita**; em Jesus, o Espírito de Deus **encarna**.
->
-> A encarnação, portanto, não é a união de duas pessoas nem a criação de um segundo Deus, mas o próprio Deus habitando plenamente em um homem verdadeiro.
->
-> Por isso, cremos que Jesus é o Pai: Não porque a humanidade de Jesus seja o Pai, mas porque o Espírito que nele habita e que constitui a sua identidade divina é o próprio Pai manifestado em carne.
->
-> **Jesus é o Pai quanto ao Espírito e é o homem quanto à carne.**
+> **“Ouve, Israel: o Senhor nosso Deus é um.”** Há uma só Consciência e uma só Pessoa divina.
+
+* O Pai é o princípio consciente absoluto: Espírito, Razão e Mente infinita.
+* Não existe multiplicidade de pessoas divinas; a unicidade de Deus é ontológica e pessoal.
 
 ---
 
-## 5. Confissão de Fé Unoteísta (12 Artigos)
+### Ⅱ. Axioma Econômico (A Mediação e a Criação)
+> **Economicamente, Deus é o Ser criado chamado Sabedoria e Palavra (Logos), por meio do qual a Consciência divina se manifesta e estabelece sua relação com o mundo criado.**
+>
+> Esse Ser divino constitui a **mente e o corpo espiritual** por meio dos quais a Consciência divina se manifesta na realidade criada.
 
-1. **Cremos em um só Deus**, o Pai, que é Espírito e fonte de todas as coisas.
-2. **Cremos em um só Espírito de Deus**, o Espírito Santo, que procede do Pai, é enviado por Deus e manifesta a presença e a vontade de Deus.
-3. **Cremos em Jesus Cristo**, o Filho do Homem, o verdadeiro homem, nascido de mulher e gerado por Deus por meio do seu Espírito Santo.
-4. **Cremos que o Espírito de Deus se encarnou em Jesus** desde a sua concepção. Por isso, aquilo que foi gerado em Maria é do Espírito Santo e pertence a Ele.
-5. **Cremos que o Espírito que estava em Jesus** não era outro espírito nem um espírito independente de Deus, mas era o próprio Espírito de Deus, o Espírito do Pai.
-6. **Cremos que, ao encarnar em Jesus**, o Espírito de Deus passou a ser identificado como Espírito de Cristo.
-7. **Cremos que Jesus é chamado Filho do Homem** porque é verdadeiramente homem, nascido de mulher e participante da humanidade.
-8. **Cremos que Jesus é chamado Filho de Deus** porque nele encarnou o próprio Espírito de Deus, emanado e enviado do céu da parte do Pai que passa a ser conhecido na figura humana sendo, o messias, filho de davi, nosso Rei e vimos a sua gloria , gloria que na condição humana assume, como unigênito do Pai pois como homem herdou tudo ,recebeu todo poder e autoridade toda honra gloria e louvor.
-9. **Cremos que a encarnação não é a divisão de Deus em pessoas distintas**, mas o próprio Deus habitando corporalmente em um homem verdadeiro.
-10. **Cremos que Jesus é o homem no qual o Pai se manifestou ao mundo**, de modo que aquele que vê a Jesus vê o Pai operando nele.
-11. **Cremos que Jesus é o Pai quanto ao Espírito que nele habita** e que é o homem quanto à carne que assumiu.
-12. **Cremos que a salvação consiste em conhecer o único Deus verdadeiro**, o Pai, e a Jesus Cristo, o homem no qual o Espírito do Pai se manifestou.
+* **A Mediação Divina:** Deus, sendo Espírito e Consciência, necessitou de uma mente e de um corpo espiritual para mediar sua relação com a criação. Esse Ser é a manifestação pessoal da Consciência divina: o Logos, a Razão e a Palavra de Deus (*João 1:1*).
+* **Atribuição dos Nomes:** Os nomes *Logos, Sabedoria, Palavra e Espírito* pertencem propriamente à Consciência divina, mas são também atribuídos ao Ser manifestado por ser ele o seu portador.
+* **O Nome YHWH:** O nome YHWH pertence propriamente à Consciência divina, mas é atribuído ao Ser divino manifestado, por ser ele a manifestação pessoal dessa Consciência: assim, o nome daquele que é Deus é também aplicado àquele por meio de quem Deus se manifesta.
+* **Corpo Espiritual Incorruptível:** Na ressurreição de Cristo, esse corpo espiritual reveste e glorifica o corpo físico, tornando o perecível imperecível. Da mesma forma, os homens receberão corpos espirituais preparados por Deus (*“um edifício de Deus, uma casa não feita por mãos humanas”* — *2 Coríntios 5:1*).
 
 ---
 
-## 6. O Cânon das Escrituras (69 Livros)
+### Ⅲ. Axioma Cristológico (A Encarnação e a Ressurreição)
+> **Assim como o nome YHWH pertence propriamente à Consciência divina, mas é atribuído ao Ser divino manifestado por ser ele a manifestação pessoal dessa Consciência, o mesmo princípio se aplica à encarnação.**
+>
+> **A Consciência divina, que é o Espírito, o Logos, a Palavra, a Sabedoria e o próprio Deus, encarnou no ser humano Jesus. Ao assumir a humanidade, o Verbo se fez carne, passando a manifestar-se por meio de uma mente e de um corpo humanos.**
+
+* **O Filho Unigênito:** A Consciência divina é vista como Unigênito do Pai porque o ser humano no qual essa Consciência se encarnou é aquele por meio de quem Deus se tornou conhecido em forma humana. Como filho unigênito segundo a compreensão judaica, Jesus recebe do Pai a herança, as promessas, a autoridade, a honra e a glória.
+* **O Nome de Deus em Cristo:** Deus deu a Jesus o Seu próprio nome (*Filipenses 2:9*): o nome daquele que é Deus é atribuído ao homem por meio do qual Deus se manifesta. Nele estão os nomes *Logos, Sabedoria, Palavra, Verbo, Espírito e YHWH*.
+* **Ressurreição e Modelo:** O corpo espiritual do Logos reveste o corpo físico de Jesus na ressurreição, tornando incorruptível o perecível e estabelecendo-o como modelo para a ressurreição de todos os salvos.
+
+---
+
+## 4. Confissão de Fé Unoteísta (12 Artigos)
+
+1. **Artigo 1 — Um só Deus:** Cremos em um só Deus e Pai de todos, que é o Espírito, a Consciência eterna, uma só Pessoa divina, que permeia todas as coisas, possui vontade própria e julga todas as coisas segundo a sua vontade.
+2. **Artigo 2 — O Espírito de Deus:** Cremos que o Espírito é a própria Consciência divina, e que não há outro Espírito divino além daquele que é Deus. Deus é Espírito e existe eternamente como Consciência.
+3. **Artigo 3 — O Logos e a Sabedoria:** Cremos que Deus se manifesta na criação por meio do Ser criado chamado Logos, Palavra e Sabedoria, que possui mente e corpo espiritual e é o portador e a manifestação pessoal da Consciência divina.
+4. **Artigo 4 — A manifestação de Deus:** Cremos que, por ser manifestação da própria Consciência divina, o Logos é chamado pelos nomes Logos, Palavra, Sabedoria, Verbo e Espírito, e que o nome YHWH, próprio da Consciência divina, também lhe é atribuído por ser a manifestação pessoal de Deus.
+5. **Artigo 5 — A criação e o corpo espiritual:** Cremos que o Logos é o meio pelo qual Deus se relaciona com a criação, e que seu corpo espiritual é incorruptível. Cremos que Deus preparou também para os homens uma habitação espiritual, pela qual o corpo perecível será revestido daquilo que é imperecível.
+6. **Artigo 6 — A encarnação:** Cremos que a mesma Consciência divina, que é o Espírito, o Logos, a Palavra e a Sabedoria, encarnou no homem Jesus. O Verbo se fez carne e passou a manifestar-se por meio de uma mente e de um corpo humanos.
+7. **Artigo 7 — Jesus Cristo:** Cremos que Jesus é verdadeiramente homem: o Messias, o Filho do Homem, o Profeta e o Filho de Deus. Nele habita e se manifesta a própria Consciência divina, sem que exista uma segunda Pessoa divina.
+8. **Artigo 8 — O Unigênito:** Cremos que o Espírito passa a ser conhecido como Unigênito do Pai e ser chamado filho de Deus, por que o homem no qual a Consciência divina se encarnou e por meio do qual Deus se tornou conhecido em forma humana. Como Unigênito, pois em sua encarnação ele recebe do Pai a herança, as promessas, a autoridade, a honra e a glória.
+9. **Artigo 9 — O nome de Deus em Cristo:** Cremos que Deus deu a Jesus o seu próprio nome, pois o nome daquele que é Deus é atribuído ao homem por meio do qual Deus se manifesta. Por isso, Jesus é identificado com os nomes e títulos próprios da manifestação divina: Logos, Palavra, Sabedoria, Verbo, Espírito e YHWH.
+10. **Artigo 10 — Morte e ressurreição:** Cremos que Jesus morreu verdadeiramente segundo a carne e ressuscitou dentre os mortos. Na ressurreição, seu corpo perecível foi revestido e glorificado pelo corpo espiritual incorruptível, tornando-se o princípio e modelo da ressurreição dos homens.
+11. **Artigo 11 — O Espírito nos homens:** Cremos que o Espírito de Deus habita nos que pertencem a Deus. Nos homens, o Espírito não constitui uma segunda Pessoa divina, mas é a própria Consciência divina comunicada e presente neles os auxiliando e ensinando-lhes as verdades, os juízos e a certeza da fé. Em Cristo, porém, essa mesma Consciência divina encarnou constituindo seu ser.
+12. **Artigo 12 — Salvação e ressurreição:** Cremos que Deus oferece salvação a todos os homens por meio de Cristo. A fé é dom de Deus, e o homem deve crer para receber aquilo que Deus oferece. Aquele que recebe a fé e crê é justificado, selado pelo Espírito da Verdade e guardado por Deus. Na ressurreição, receberá um corpo espiritual incorruptível, preparado por Deus, conforme o modelo de Cristo.
+
+---
+
+## 5. O Cânon das Escrituras (69 Livros)
 
 | Divisão | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| **Antigo Testamento** | **42 Livros** | Inclui os livros hebraicos e tradição da Septuaginta (LXX), preservando o Livro de Daniel com os 14 capítulos completos (História de Susana e Bel e o Dragão). |
+| **Antigo Testamento** | **42 Livros** | Inclui os livros hebraicos e tradição da Septuaginta (LXX), preservando o Livro de Daniel com os 14 capítulos completos (Oração de Azarias e Cântico dos Três Jovens em Dn 3; História de Susana em Dn 13; e Bel e o Dragão em Dn 14). |
 | **Novo Testamento** | **27 Livros** | De Mateus ao Apocalipse de São João. |
-| **Total Canônico** | **69 Livros** | Cânon unoteísta fechado e integralmente traduzido. |
+| **Total Canônico** | **69 Livros** | Cânon unoteísta fechado e integralmente traduzido em língua portuguesa. |
 
 ---
 
-## 7. Quadro Teológico Comparativo
+## 6. Quadro Teológico Comparativo
 
 | Critério | Trinitarianismo Clássico | Modalismo Sabeliano | Arianismo / Unitarianismo | **UNOTEÍSMO** |
 | :--- | :--- | :--- | :--- | :--- |
-| **Deus** | Três pessoas em uma substância | Uma pessoa em modos sucessivos | O Pai é Deus; Cristo é criatura | **Um só Deus, o Pai, que encarna no homem Jesus** |
-| **Jesus Cristo** | Deus Filho encarnado (duas naturezas) | Modo temporário do Pai | Criatura primogênita ou profeta | **Verdadeiro homem com o Espírito do Pai encarnado** |
-| **Espírito Santo** | Terceira pessoa coeterna | Modo transitório posterior | Força ativa impessoal de Deus | **O próprio Espírito e sopro vital do Pai** |
-| **Fórmula Central** | Três pessoas em um só Deus | Pai = Filho = Espírito (modos) | Pai maior que o Filho | **Jesus é o Pai quanto ao Espírito e homem quanto à carne** |
-| **Eclesiologia** | Clero hierárquico e dízimos | Estrutura pastoral tradicional | Instituição fechada ou racionalismo | **Filosofia de vida, sem viés religioso ou clero** |
+| **Deus** | Três pessoas em uma substância | Uma pessoa em modos sucessivos | O Pai é Deus; Cristo é criatura | **Espírito e Consciência eterna única que permeia todas as coisas** |
+| **O Logos / Sabedoria** | Segunda pessoa divina coeterna | Modo transitório de Deus | Criatura intermediária desprovida de Deus | **Ser criado mediador (mente e corpo espiritual) portador da Consciência divina** |
+| **Jesus Cristo** | Deus Filho encarnado (duas naturezas) | Modo temporário do Pai | Mero homem ou criatura adotada | **Verdadeiro homem no qual a Consciência divina encarnou plenamente** |
+| **O Nome YHWH** | Partilhado pela Trindade | Aplicado aos três modos | Exclusivo do Pai transcendente | **Próprio da Consciência divina, atribuído ao Logos e a Jesus manifestado** |
+| **O Espírito Santo** | Terceira pessoa coeterna | Modo de ação divino | Força ativa impessoal de Deus | **A própria Consciência divina comunicada; habita nos homens e encarnou em Cristo** |
+| **Eclesiologia** | Clero hierárquico e dízimos | Estrutura pastoral tradicional | Instituição fechada ou racionalismo | **Filosofia de vida, sem viés religioso, sem intermediários humanos ou dízimos** |
 
 ---
 
-## 8. Recursos Online & Portais Oficiais
+## 7. Recursos Online & Portais Oficiais
 
 * 🌐 **Portal Oficial do Unoteísmo:** [https://unoteismo.arthurlazarodesousasantos.workers.dev](https://unoteismo.arthurlazarodesousasantos.workers.dev)
+* 📜 **Tratado da Teologia Unoteísta (Os Três Axiomas):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
 * 📖 **Leitor da Bíblia Sagrada (69 Livros):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 * 🔍 **Bíblia Interlinear & Léxico Grego Completo:** [https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int)
-* 📜 **Confissão de Fé Online:** [https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?confissao=1](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?confissao=1)
+* ⚖️ **Quadro Comparativo Teológico:** [https://unoteismo.arthurlazarodesousasantos.workers.dev/comparativo](https://unoteismo.arthurlazarodesousasantos.workers.dev/comparativo)
+* 📜 **Confissão de Fé Online (12 Artigos):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/#confissao](https://unoteismo.arthurlazarodesousasantos.workers.dev/#confissao)
+* 🏛️ **Wikidata (Q141544530):** [https://www.wikidata.org/wiki/Q141544530](https://www.wikidata.org/wiki/Q141544530)
+* 📦 **Repositório Oficial no GitHub:** [https://github.com/Unoalss/Unoteismo](https://github.com/Unoalss/Unoteismo)
+* 🎬 **Canal Oficial no YouTube:** [https://www.youtube.com/@unoteismo](https://www.youtube.com/@unoteismo)
+* 📱 **Perfil Oficial no TikTok:** [https://www.tiktok.com/@unoteismo](https://www.tiktok.com/@unoteismo)
+
+---
+
+### Palavras-Chave de Busca (SEO):
+`unoteismo` • `unoteísmo` • `unoteista` • `unoteísta` • `filosofia unoteísta` • `bíblia unoteísta`
+
+---
+
+### Para quem desenvolve
+
+Estrutura do projeto, como rodar localmente, testar e publicar: veja [DEV.md](DEV.md).
