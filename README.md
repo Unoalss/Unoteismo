@@ -3,11 +3,11 @@
 > **«A verdade sem viés religioso: respostas claras sobre a Bíblia, sobre a fé e sobre a vida.»**
 
 [![Website Oficial](https://img.shields.io/badge/Website-unoteismo.workers.dev-d4af37?style=for-the-badge&logo=google-chrome&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev)
-[![Teologia Unoteísta](https://img.shields.io/badge/Teologia-Três_Axiomas-teal?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
+[![Teologia Unoteísta](https://img.shields.io/badge/Teologia-3_Axiomas-008080?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
 [![Bíblia Sagrada](https://img.shields.io/badge/Bíblia_Sagrada-69_Livros-blue?style=for-the-badge&logo=bookstack&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 [![Léxico Grego](https://img.shields.io/badge/Léxico_Grego-61.047_Verbetes-purple?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int)
-[![YouTube](https://img.shields.io/badge/YouTube-@unoteismo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@unoteismo)
-[![TikTok](https://img.shields.io/badge/TikTok-@unoteismo-black?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@unoteismo)
+[![YouTube](https://img.shields.io/badge/YouTube-%40unoteismo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@unoteismo)
+[![TikTok](https://img.shields.io/badge/TikTok-%40unoteismo-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@unoteismo)
 [![Licença](https://img.shields.io/badge/Acesso-Livre_e_Gratuito-success?style=for-the-badge)](#)
 
 ---
