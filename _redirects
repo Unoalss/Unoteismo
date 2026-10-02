@@ -1,0 +1,16 @@
+# Redirecionamentos estáticos (Cloudflare Workers Assets)
+/home           /   301
+/home.html      /   301
+/metafisica     /   301
+/metafisica.html /  301
+/index.html        /            301
+/biblia.html       /biblia      301
+/teologia.html     /teologia    301
+/sobre.html        /sobre       301
+/privacidade.html  /privacidade 301
+/comparativo.html  /comparativo 301
+/soteriologia.html  /soteriologia 301
+/communicatio-idiomatum.html  /communicatio-idiomatum 301
+/batismo.html  /batismo 301
+/forma-da-consciencia.html  /forma-da-consciencia 301
+/admin.html        /admin       301

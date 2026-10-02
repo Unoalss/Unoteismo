@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>Painel — Unoteísmo</title>
+
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/admin.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <!-- ===================== LOGIN ===================== -->
+    <main id="login-view" class="login-wrap">
+        <form id="login-form" class="login-card" autocomplete="on">
+            <img src="/logo-128.png" alt="" width="26" height="72">
+            <h1>Painel do Unoteísmo</h1>
+            <p class="muted">Área restrita para editar os textos do site.</p>
+
+            <label for="login-password">Senha</label>
+            <div class="pw-row">
+                <input id="login-password" name="password" type="password" autocomplete="current-password" required autofocus>
+                <button type="button" id="login-toggle" class="icon-btn" aria-label="Mostrar senha" aria-pressed="false">Mostrar</button>
+            </div>
+
+            <button type="submit" id="login-submit" class="btn-primary">Entrar</button>
+            <p id="login-msg" class="msg" role="alert"></p>
+        </form>
+    </main>
+
+    <!-- ===================== PAINEL ===================== -->
+    <div id="app-view" hidden>
+        <header class="adm-top">
+            <a class="brand" href="/admin">
+                <img src="/logo-64.png" alt="" width="12" height="32">
+                <span>UNOTEÍSMO <small>Painel</small></span>
+            </a>
+            <nav class="adm-actions" aria-label="Ações">
+                <a id="view-site" href="/" target="_blank" rel="noopener">Ver página ↗</a>
+                <button type="button" id="btn-security" class="link-btn">Segurança</button>
+                <button type="button" id="btn-logout" class="link-btn">Sair</button>
+            </nav>
+        </header>
+
+        <main class="adm-main" id="conteudo">
+            <div class="adm-tabs" id="page-tabs" role="tablist" aria-label="Páginas editáveis"></div>
+
+            <!-- Editor da página -->
+            <section id="editor-view" aria-labelledby="page-title">
+                <div class="adm-toolbar">
+                    <div>
+                        <h1 id="page-title">Carregando…</h1>
+                        <p id="page-meta" class="muted"></p>
+                    </div>
+                    <div class="toolbar-right">
+                        <label class="sr-only" for="filter">Filtrar blocos</label>
+                        <input id="filter" type="search" placeholder="Filtrar blocos…" autocomplete="off">
+                        <button type="button" id="btn-save-all" class="btn-primary" disabled>Salvar alterações</button>
+                    </div>
+                </div>
+                <p class="hint">Edite os textos abaixo e clique em <strong>Salvar alterações</strong> (ou Ctrl+S). Cada bloco guarda as últimas versões
+                    no <em>Histórico</em>, e <em>Restaurar original</em> devolve o texto que veio com o site.</p>
+                <div id="groups"></div>
+            </section>
+
+            <!-- Segurança -->
+            <section id="security-view" hidden aria-labelledby="sec-title">
+                <div class="adm-toolbar">
+                    <div>
+                        <h1 id="sec-title">Segurança</h1>
+                        <p class="muted">Troque a senha de acesso ao painel. Todas as outras sessões abertas serão encerradas.</p>
+                    </div>
+                    <button type="button" id="btn-back" class="btn-secondary">← Voltar aos textos</button>
+                </div>
+                <form id="password-form" class="card-form" autocomplete="off">
+                    <label for="pw-current">Senha atual</label>
+                    <input id="pw-current" type="password" autocomplete="current-password" required>
+                    <label for="pw-new">Nova senha <span class="muted">(8 a 200 caracteres)</span></label>
+                    <input id="pw-new" type="password" autocomplete="new-password" minlength="8" maxlength="200" required>
+                    <label for="pw-repeat">Repita a nova senha</label>
+                    <input id="pw-repeat" type="password" autocomplete="new-password" minlength="8" maxlength="200" required>
+                    <button type="submit" class="btn-primary">Trocar senha</button>
+                    <p id="pw-msg" class="msg" role="alert"></p>
+                </form>
+            </section>
+        </main>
+
+        <div id="savebar" class="savebar" hidden>
+            <span id="savebar-text">0 alterações</span>
+            <button type="button" id="btn-save-bar" class="btn-primary">Salvar</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="/admin.js" defer></script>
+</body>
+
+</html>

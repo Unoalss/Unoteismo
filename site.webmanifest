@@ -1,0 +1,22 @@
+{
+  "name": "Unoteísmo — Bíblia Sagrada Online",
+  "short_name": "Unoteísmo",
+  "description": "Bíblia Sagrada Online (69 livros) com tradução em português, interlinear grego-português, léxico grego e áudio narrado.",
+  "id": "/",
+  "start_url": "/biblia?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#ffffff",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Ler a Bíblia", "url": "/biblia", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Interlinear Grego", "url": "/biblia?mode=int", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] }
+  ],
+  "categories": ["books", "education", "religion", "reference"]
+}

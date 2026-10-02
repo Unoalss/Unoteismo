@@ -3,8 +3,6 @@
 > **«A verdade sem viés religioso: respostas claras sobre a Bíblia, sobre a fé e sobre a vida.»**
 
 [![Website Oficial](https://img.shields.io/badge/Website-unoteismo.workers.dev-d4af37?style=for-the-badge&logo=google-chrome&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev)
-[![Release Oficial v1.0.0](https://img.shields.io/badge/Release-v1.0.0_Oficial-success?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Unoalss/Unoteismo/releases/tag/v1.0.0)
-[![ISBN Oficial](https://img.shields.io/badge/ISBN-978--65--02--41194--0-blue?style=for-the-badge&logo=barcode&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 [![Teologia Unoteísta](https://img.shields.io/badge/Teologia-3_Axiomas-008080?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
 [![Bíblia Sagrada](https://img.shields.io/badge/Bíblia_Sagrada-69_Livros-blue?style=for-the-badge&logo=bookstack&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 [![Léxico Grego](https://img.shields.io/badge/Léxico_Grego-61.047_Verbetes-purple?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int)
@@ -108,15 +106,6 @@ A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a
 | **Antigo Testamento** | **42 Livros** | Inclui os livros hebraicos e tradição da Septuaginta (LXX), preservando o Livro de Daniel com os 14 capítulos completos (Oração de Azarias e Cântico dos Três Jovens em Dn 3; História de Susana em Dn 13; e Bel e o Dragão em Dn 14). |
 | **Novo Testamento** | **27 Livros** | De Mateus ao Apocalipse de São João. |
 | **Total Canônico** | **69 Livros** | Cânon unoteísta fechado e integralmente traduzido em língua portuguesa. |
-| **Volume Total** | **1730 Páginas** | Formato 15,5 × 23,0 cm com introdução teológica, 69 livros canônicos e colofão. |
-
-> **Registro Editorial Internacional (CBL):**  
-> * **ISBN:** `978-65-02-41194-0`  
-> * **Título:** Bíblia Sagrada Unoteísta  
-> * **Subtítulo:** o caminho da verdade  
-> * **Titular dos Direitos:** Arthur Santos  
-> * **Órgão Emissor:** Câmara Brasileira do Livro (CBL) / Agência Brasileira do ISBN (Data de Registro: 01/10/2026)  
-> * **Veiculação:** Livro Físico (1730 páginas) e Distribuição Digital Aberta  
 
 ---
 

@@ -1,0 +1,27 @@
+# Dependências e estado local
+node_modules/
+.wrangler/
+__pycache__/
+*.pyc
+.dev.vars
+
+# Pasta gerada: recriada por make_public.py a cada publicação
+public/
+
+# Áreas de trabalho, backups e derivados pesados (recriáveis pelos scripts build_*.py)
+scratch/
+.kilo/
+*.SQLite3
+bible_chapters.sql
+lexicon.sql
+verses_fts.sql
+*.bak
+*.bak*
+*.tmp
+_standby/
+.claude/
+*.pdf
+data/dict_exact.json
+data/dict_search_index.json
+data/dict/
+admin_setup.sql

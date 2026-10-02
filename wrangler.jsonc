@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "unoteismo",
+  "main": "src/index.js",
+  "compatibility_date": "2024-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // 404 real (404.html) para rotas inexistentes; o Worker só roda para a API, a Bíblia e páginas editáveis (/ e /teologia)
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/", "/api/*", "/biblia", "/biblia/*", "/teologia"]
+  },
+  "vars": {
+    // Origem canônica usada no HTML gerado pelo Worker (troque ao migrar para domínio próprio)
+    "SITE_URL": "https://unoteismo.arthurlazarodesousasantos.workers.dev"
+  },
+  "observability": { "enabled": true },
+  // Limite por IP para /api/tts (60 req/min). O código ignora o limite se o binding não existir.
+  "ratelimits": [
+    { "name": "TTS_LIMITER", "namespace_id": "1001", "simple": { "limit": 60, "period": 60 } }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "unoteismo-db",
+      "database_id": "41046fdb-25c2-468f-8bf5-fdc0282740e6"
+    }
+  ]
+}

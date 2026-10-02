@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="rYjJW0OeqtHHoSxkdebRaMzGb3eoxjKfHtVpzUdYm7E">
+
+    <!-- Título Principal & SEO -->
+    <title>Unoteísmo — Filosofia de Vida, Busca da Verdade &amp; Bíblia Sagrada</title>
+    <meta name="description" content="O Unoteísmo não é apenas uma sistematização teológica: é uma filosofia de vida fundamentada na busca e defesa da verdade, sem viés religioso. Encontre respostas claras sobre a Bíblia, sobre a fé e sobre a vida.">
+    <meta name="author" content="Unoteísmo">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://unoteismo.arthurlazarodesousasantos.workers.dev/">
+
+    <!-- Open Graph / Redes Sociais (WhatsApp, Facebook, Telegram, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Unoteísmo">
+    <meta property="og:url" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/">
+    <meta property="og:title" content="Unoteísmo — Filosofia de Vida, Busca da Verdade &amp; Bíblia Sagrada">
+    <meta property="og:description" content="Filosofia de vida fundamentada na busca e defesa da verdade, sem viés religioso. Bíblia Sagrada online (69 livros), interlinear grego, léxico e áudio narrado.">
+    <meta property="og:image" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Unoteísmo — Bíblia Sagrada Online e Filosofia de Vida">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Unoteísmo — Filosofia de Vida, Busca da Verdade &amp; Bíblia Sagrada">
+    <meta name="twitter:description" content="Bíblia Sagrada online (69 livros), interlinear grego, léxico e áudio narrado, com uma filosofia de vida sem viés religioso.">
+    <meta name="twitter:image" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/og-image.png">
+
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/versao.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://unoteismo.arthurlazarodesousasantos.workers.dev/#website",
+          "url": "https://unoteismo.arthurlazarodesousasantos.workers.dev/",
+          "name": "Unoteísmo",
+          "description": "Filosofia de Vida, Busca e Defesa da Verdade sem Viés Religioso",
+          "inLanguage": "pt-BR",
+          "publisher": { "@id": "https://unoteismo.arthurlazarodesousasantos.workers.dev/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://unoteismo.arthurlazarodesousasantos.workers.dev/#organization",
+          "name": "Unoteísmo",
+          "url": "https://unoteismo.arthurlazarodesousasantos.workers.dev/",
+          "logo": { "@type": "ImageObject", "url": "https://unoteismo.arthurlazarodesousasantos.workers.dev/icon-512.png", "width": 512, "height": 512 },
+          "sameAs": [
+            "https://github.com/Unoalss/Unoteismo",
+            "https://www.youtube.com/@unoteismo",
+            "https://www.tiktok.com/@unoteismo",
+            "https://www.wikidata.org/wiki/Q141544530"
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <!-- Barra Superior Fiel a versao.html -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <a href="/" class="logo">
+                <img src="/logo-64.png" alt="" width="12" height="32">
+                <span>UNOTEÍSMO</span>
+            </a>
+        </div>
+
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="topbar-menu">
+            <span class="hamburger-box">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+
+        <div class="menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
+
+        <nav class="menu" id="topbar-menu" aria-label="Principal">
+            <a href="/" class="nav-link active" aria-current="page">Início</a>
+
+            <!-- Dropdown Bíblia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Bíblia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Bíblia Sagrada</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/biblia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📖</span>
+                        <div class="nav-item-text">
+                            <strong>Bíblia (69 Livros)</strong>
+                            <small>Texto canônico com áudio narrado</small>
+                        </div>
+                    </a>
+                    <a href="/biblia?mode=int" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🏛️</span>
+                        <div class="nav-item-text">
+                            <strong>Interlinear Grego</strong>
+                            <small>Texto original com lemas e morfologia</small>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="/#edicao-impressa" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📥</span>
+                        <div class="nav-item-text">
+                            <strong>Edição Impressa &amp; PDF</strong>
+                            <small>ISBN 978-65-02-41194-0 • Download PDF</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Teologia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Teologia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Tratados Teológicos</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/teologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Teologia Unoteísta</strong>
+                            <small>Fundamentos e síntese doutrinária</small>
+                        </div>
+                    </a>
+                    <a href="/soteriologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">✝️</span>
+                        <div class="nav-item-text">
+                            <strong>Soteriologia</strong>
+                            <small>A salvação, certeza da fé e crença</small>
+                        </div>
+                    </a>
+                    <a href="/communicatio-idiomatum" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🕊️</span>
+                        <div class="nav-item-text">
+                            <strong>Communicatio Idiomatum</strong>
+                            <small>Comunicação dos nomes e atributos</small>
+                        </div>
+                    </a>
+                    <a href="/batismo" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💧</span>
+                        <div class="nav-item-text">
+                            <strong>O Batismo Bíblico</strong>
+                            <small>Um só batismo em nome de Jesus</small>
+                        </div>
+                    </a>
+                    <a href="/forma-da-consciencia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🧠</span>
+                        <div class="nav-item-text">
+                            <strong>Forma da Consciência</strong>
+                            <small>Distinção entre as consciências e Cristo</small>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="/comparativo" class="nav-dropdown-item">
+                        <span class="nav-item-icon">⚖️</span>
+                        <div class="nav-item-text">
+                            <strong>Comparativo Teológico</strong>
+                            <small>Paralelo com trinitarismo e unicismo</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Filosofia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Filosofia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Filosofia & Busca da Verdade</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/#filosofia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💡</span>
+                        <div class="nav-item-text">
+                            <strong>A Filosofia</strong>
+                            <small>Vida e verdade sem viés religioso</small>
+                        </div>
+                    </a>
+                    <a href="/#respostas" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💬</span>
+                        <div class="nav-item-text">
+                            <strong>Respostas Claras</strong>
+                            <small>Esclarecimentos diretos às dúvidas</small>
+                        </div>
+                    </a>
+                    <a href="/#confissao" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Confissão de Fé</strong>
+                            <small>Declaração dos princípios fundamentais</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <a href="/sobre" class="nav-link">Sobre</a>
+
+            <a href="/biblia" class="menu-btn-cta"><span>Ler Bíblia →</span></a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container" id="conteudo">
+
+        <h1 class="titulo">Bíblia e Filosofia</h1>
+
+        <p class="subtitulo">
+            Escrituras Sagradas, conceitos claros e investigação teológica sem viés religioso.
+        </p>
+
+        <!-- Selo Oficial do Registro ISBN (Câmara Brasileira do Livro) -->
+        <div class="isbn-official-badge" role="status">
+            <span class="isbn-badge-icon" aria-hidden="true">🏛️</span>
+            <div class="isbn-badge-content">
+                <span class="isbn-badge-text">Edição Oficial Registrada sob o</span>
+                <span class="isbn-badge-code">ISBN 978-65-02-41194-0</span>
+                <span class="isbn-badge-text">(Câmara Brasileira do Livro)</span>
+            </div>
+            <a href="#edicao-impressa" class="isbn-badge-link">
+                <span>Especificações &amp; Download (PDF)</span>
+                <span aria-hidden="true">&rarr;</span>
+            </a>
+        </div>
+
+        <!-- "Continuar de onde parei" (preenchido por site.js a partir do localStorage) -->
+        <div class="continue-reading" id="continue-reading" hidden>
+            <a href="/biblia">Continuar lendo: <span class="continue-label">—</span> →</a>
+        </div>
+
+        <form class="home-search" action="/biblia" method="get" role="search">
+            <label class="sr-only" for="home-q">Pesquisar na Bíblia</label>
+            <input id="home-q" name="q" type="search" placeholder="Pesquise uma palavra ou referência (ex.: Filho de Deus, João 3:16)" autocomplete="off">
+            <button type="submit">Pesquisar</button>
+        </form>
+
+        <!-- Cards Principais de Acesso Rápido -->
+        <section class="cards">
+
+            <article class="card">
+                <h2><span aria-hidden="true">📖</span> Bíblia (69 Livros)</h2>
+                <p>
+                    Leia as Escrituras completas: Antigo Testamento (42 livros) e Novo Testamento (27 livros), com narração em áudio por vozes neurais IA versículo por versículo.
+                </p>
+                <a class="botao" href="/biblia">
+                    Abrir Bíblia →
+                </a>
+            </article>
+
+            <article class="card">
+                <h2><span aria-hidden="true">🏛️</span> Interlinear Grego</h2>
+                <p>
+                    Alinhamento minucioso palavra por palavra do grego bíblico com o português, exibindo lemas, códigos morfológicos e análise gramatical exata.
+                </p>
+                <a class="botao" href="/biblia?mode=int">
+                    Abrir Interlinear →
+                </a>
+            </article>
+
+            <article class="card">
+                <h2><span aria-hidden="true">📚</span> Léxico Grego (61k)</h2>
+                <p>
+                    Dicionário bíblico e exegético completo com 61.047 formas e verbetes da Septuaginta e do Novo Testamento grego.
+                </p>
+                <a class="botao" href="/biblia#lexico">
+                    Consultar Léxico →
+                </a>
+            </article>
+
+        </section>
+
+        <!-- Texto Bíblico em Destaque 1 -->
+        <section class="versiculo">
+            <p>
+                “No princípio era o Logos, e o Logos estava com Deus, e Deus era o Logos. Todas as coisas foram feitas por meio dele, e sem ele nada do que foi feito se fez.”
+            </p>
+            <div class="referencia">
+                João 1:1, 3
+            </div>
+        </section>
+
+        <!-- Texto Bíblico em Destaque 2: Axioma Teológico -->
+        <section class="versiculo" style="border-left-color: #0d47a1;">
+            <p>
+                “Ontologicamente, Deus é o Espírito, a Consciência eterna que permeia todas as coisas, possui vontade própria e julga todas as coisas segundo a sua vontade. Há uma só Consciência e uma só Pessoa divina.”
+            </p>
+            <div class="referencia">
+                Axioma Ontológico Fundamental — Teologia Unoteísta
+            </div>
+        </section>
+
+        <!-- Seção: Edição Oficial Impressa & Download da Obra (PDF) -->
+        <section class="edicao-impressa-container" id="edicao-impressa" aria-label="Edição Oficial Impressa e Download">
+            <header class="edicao-impressa-header">
+                <span class="edicao-chancela-tag">
+                    <span aria-hidden="true">🏛️</span> Registro Oficial na Câmara Brasileira do Livro
+                </span>
+                <h2 class="edicao-impressa-title">Edição Oficial Impressa &amp; Download da Obra</h2>
+                <p class="edicao-impressa-subtitle">
+                    Especificações técnicas oficiais da Bíblia Sagrada Unoteísta física e download gratuito da edição integral canônica em PDF.
+                </p>
+            </header>
+
+            <div class="edicao-impressa-grid">
+                <!-- Coluna 1: Apresentação e Download do PDF -->
+                <div class="edicao-card-download">
+                    <div class="edicao-book-mockup" aria-hidden="true">
+                        <div class="edicao-mockup-tag">Cânon Sagrado Unoteísta</div>
+                        <div class="edicao-mockup-title">BÍBLIA SAGRADA</div>
+                        <div class="edicao-mockup-sub">o caminho da verdade</div>
+                        <div class="edicao-mockup-divider"></div>
+                        <div class="edicao-mockup-author">Arthur Santos</div>
+                        <div class="edicao-mockup-pages">69 Livros • 1.730 Páginas • 1ª Edição 2026</div>
+                    </div>
+
+                    <div class="edicao-barcode-box">
+                        <img src="/codigo_de_barras_isbn_9786502411940.svg" alt="Código de Barras EAN-13 ISBN 978-65-02-41194-0" class="edicao-barcode-img" width="210" height="100" loading="lazy">
+                        <span class="edicao-barcode-label">Registro Oficial CBL: 978-65-02-41194-0</span>
+                    </div>
+
+                    <div class="edicao-actions-wrap">
+                        <a href="https://github.com/Unoalss/Unoteismo/releases/download/v1.0.0/Biblia.Sagrada.port-br.Unoteista.69.Livros.pdf" class="btn-download-pdf-primary" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <div class="btn-text-group">
+                                <span class="btn-main-label">Baixar Obra Completa em PDF</span>
+                                <span class="btn-sub-label">Edição Canônica v1.0.0 • 10,3 MB • Acesso Livre</span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/Unoalss/Unoteismo/releases/tag/v1.0.0" class="btn-release-github-sec" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"></path>
+                            </svg>
+                            <span>Ver Release Oficial v1.0.0 no GitHub</span>
+                        </a>
+                    </div>
+
+                    <p class="edicao-download-note">
+                        Disponibilizada em formato PDF oficial de alta fidelidade para estudo bíblico individual, leitura em tablets ou impressão sob demanda.
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Especificações Técnicas Oficiais da Edição Impressa -->
+                <div class="edicao-specs-container">
+                    <h3 class="specs-section-title">
+                        <span aria-hidden="true">📋</span> Ficha Técnica &amp; Especificações da Obra Impressa
+                    </h3>
+
+                    <table class="specs-table" aria-label="Especificações Técnicas da Bíblia Impressa">
+                        <tbody>
+                            <tr>
+                                <td class="spec-name">Título da Obra</td>
+                                <td class="spec-val"><strong>Bíblia Sagrada Unoteísta</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Subtítulo</td>
+                                <td class="spec-val"><em>o caminho da verdade</em></td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Registro ISBN</td>
+                                <td class="spec-val">
+                                    <span class="isbn-badge-code">978-65-02-41194-0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Órgão Emissor</td>
+                                <td class="spec-val">Câmara Brasileira do Livro (CBL) — Agência Brasileira do ISBN</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Titular / Autor</td>
+                                <td class="spec-val">Arthur Santos</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Editora / Chancela</td>
+                                <td class="spec-val">Caminho Da Verdade (1ª Edição — 2026)</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Extensão Total</td>
+                                <td class="spec-val"><strong>1.730 páginas</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Formato / Dimensões</td>
+                                <td class="spec-val"><strong>15,5 × 23,0 cm</strong> (Padrão Nobre de Biblioteca)</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Encadernação</td>
+                                <td class="spec-val"><strong>Capa Dura de Luxo</strong> (Hardcover com gravação e lombada estruturada)</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Papel do Miolo</td>
+                                <td class="spec-val"><strong>Papel Bíblia Especial</strong> (Alta opacidade, toque aveludado e leitura confortável)</td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Cânon Bíblico</td>
+                                <td class="spec-val">
+                                    <strong>69 Livros Sagrados</strong> (42 do Antigo Testamento + 27 do Novo Testamento)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="spec-name">Tratados Integrados</td>
+                                <td class="spec-val">
+                                    <strong>4 Tratados Teológicos Fundamentais:</strong>
+                                    <ul class="specs-treatises-list">
+                                        <li><em>Soteriologia Unoteísta</em> — A salvação e a certeza da fé</li>
+                                        <li><em>Communicatio Idiomatum</em> — Comunicação de atributos</li>
+                                        <li><em>O Batismo Bíblico</em> — O batismo em nome de Jesus</li>
+                                        <li><em>A Forma da Consciência</em> — Consciência divina e humana em Cristo</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: A Filosofia do Unoteísmo -->
+        <h2 class="secao-titulo" id="filosofia">A Filosofia do Unoteísmo</h2>
+        <p class="secao-sub">
+            Uma postura prática, ética e racional diante da verdade, da existência e do Criador.
+        </p>
+
+        <section class="cards cards-4">
+
+            <article class="card">
+                <h3>1. Busca e Defesa da Verdade</h3>
+                <p>
+                    A verdade não teme perguntas difíceis nem análise textual. Investigamos as línguas originais (hebraico, aramaico e grego) para extrair o sentido puro da revelação, sem dogmas impostos.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>2. Sem Viés Religioso</h3>
+                <p>
+                    Livre de corporativismos eclesiásticos, hierarquias clericais e cobranças denominacionais. Defendemos uma relação direta e lúcida entre o ser humano e o único Deus.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>3. Postura Prática de Vida</h3>
+                <p>
+                    Conhecer a verdade só tem sentido se transformar as atitudes: retidão moral, integridade da palavra, justiça prática, sobriedade e rejeição a qualquer hipocrisia.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>4. Harmonia Entre Fé e Raciocínio</h3>
+                <p>
+                    Fé bíblica genuína é convicção lúcida fundamentada na realidade do Deus que criou o cosmos e a inteligência humana. Coerência lógica contra contradições tardias.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- Seção: Respostas Claras Para as Grandes Perguntas -->
+        <h2 class="secao-titulo" id="respostas">Respostas Claras Para as Grandes Perguntas</h2>
+        <p class="secao-sub">
+            Onde a religião convencional impõe "mistérios incompreensíveis", o Unoteísmo apresenta coerência bíblica.
+        </p>
+
+        <section class="cards cards-4">
+
+            <article class="card">
+                <h3>Quem é Deus e Quem é Jesus?</h3>
+                <p>
+                    Há <strong>um só Deus, o Pai</strong>, que é Espírito. <strong>Jesus Cristo é o homem verdadeiro</strong> (o Filho do Homem), no qual o próprio Espírito de Deus se encarnou desde a concepção.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Como ler a Bíblia sem contradições?</h3>
+                <p>
+                    Examinando o Cânon de 69 livros no seu contexto histórico original e conferindo os termos gregos e hebraicos raiz por raiz, sem filtros doutrinários medievais.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>O que é a fé sem artifícios religiosos?</h3>
+                <p>
+                    A fé autêntica é a confiança serena nas promessas do Deus único, vivendo em paz e liberdade da consciência, sem o jugo do medo ou da culpa manipulada.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Qual o propósito da vida humana?</h3>
+                <p>
+                    A vida terrena é um período de aprendizado moral, prova e maturação na justiça, com a esperança inabalável da ressurreição para a imortalidade no Reino de Deus.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- Seção: Confissão de Fé Unoteísta -->
+        <h2 class="secao-titulo" id="confissao" data-edit="confissao.title" data-label="Título da seção" data-group="Confissão de Fé" data-type="text">Confissão de Fé Unoteísta</h2>
+        <p class="secao-sub" data-edit="confissao.sub" data-label="Subtítulo da seção" data-group="Confissão de Fé" data-type="text">
+            Síntese dos 12 artigos sobre Deus, o Pai, o Espírito Santo e Jesus Cristo.
+        </p>
+
+        <div class="artigos-grid">
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a1.num" data-label="Artigo 1 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 1 — Um só Deus</div>
+                <div class="artigo-texto" data-edit="confissao.a1.text" data-label="Artigo 1 — texto" data-group="Confissão de Fé">Cremos em um só Deus e Pai de todos, que é o Espírito, a Consciência eterna, uma só Pessoa divina, que permeia todas as coisas, possui vontade própria e julga todas as coisas segundo a sua vontade.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a2.num" data-label="Artigo 2 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 2 — O Espírito de Deus</div>
+                <div class="artigo-texto" data-edit="confissao.a2.text" data-label="Artigo 2 — texto" data-group="Confissão de Fé">Cremos que o Espírito é a própria Consciência divina, e que não há outro Espírito divino além daquele que é Deus. Deus é Espírito e existe eternamente como Consciência.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a3.num" data-label="Artigo 3 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 3 — O Logos e a Sabedoria</div>
+                <div class="artigo-texto" data-edit="confissao.a3.text" data-label="Artigo 3 — texto" data-group="Confissão de Fé">Cremos que Deus se manifesta na criação por meio do Ser criado chamado Logos, Palavra e Sabedoria, que possui mente e corpo espiritual e é o portador e a manifestação pessoal da Consciência divina.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a4.num" data-label="Artigo 4 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 4 — A manifestação de Deus</div>
+                <div class="artigo-texto" data-edit="confissao.a4.text" data-label="Artigo 4 — texto" data-group="Confissão de Fé">Cremos que, por ser manifestação da própria Consciência divina, o Logos é chamado pelos nomes Logos, Palavra, Sabedoria, Verbo e Espírito, e que o nome YHWH, próprio da Consciência divina, também lhe é atribuído por ser a manifestação pessoal de Deus.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a5.num" data-label="Artigo 5 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 5 — A criação e o corpo espiritual</div>
+                <div class="artigo-texto" data-edit="confissao.a5.text" data-label="Artigo 5 — texto" data-group="Confissão de Fé">Cremos que o Logos é o meio pelo qual Deus se relaciona com a criação, e que seu corpo espiritual é incorruptível. Cremos que Deus preparou também para os homens uma habitação espiritual, pela qual o corpo perecível será revestido daquilo que é imperecível.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a6.num" data-label="Artigo 6 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 6 — A encarnação</div>
+                <div class="artigo-texto" data-edit="confissao.a6.text" data-label="Artigo 6 — texto" data-group="Confissão de Fé">Cremos que a mesma Consciência divina, que é o Espírito, o Logos, a Palavra e a Sabedoria, encarnou no homem Jesus. O Verbo se fez carne e passou a manifestar-se por meio de uma mente e de um corpo humanos.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a7.num" data-label="Artigo 7 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 7 — Jesus Cristo</div>
+                <div class="artigo-texto" data-edit="confissao.a7.text" data-label="Artigo 7 — texto" data-group="Confissão de Fé">Cremos que Jesus é verdadeiramente homem: o Messias, o Filho do Homem, o Profeta e o Filho de Deus. Nele habita e se manifesta a própria Consciência divina, sem que exista uma segunda Pessoa divina.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a8.num" data-label="Artigo 8 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 8 — O Unigênito</div>
+                <div class="artigo-texto" data-edit="confissao.a8.text" data-label="Artigo 8 — texto" data-group="Confissão de Fé">Cremos que o Espírito passa a ser conhecido como Unigênito do Pai e ser chamado filho de Deus, por que o homem no qual a Consciência divina se encarnou e por meio do qual Deus se tornou conhecido em forma humana. Como Unigênito, pois em sua encarnação ele recebe do Pai a herança, as promessas, a autoridade, a honra e a glória.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a9.num" data-label="Artigo 9 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 9 — O nome de Deus em Cristo</div>
+                <div class="artigo-texto" data-edit="confissao.a9.text" data-label="Artigo 9 — texto" data-group="Confissão de Fé">Cremos que Deus deu a Jesus o seu próprio nome, pois o nome daquele que é Deus é atribuído ao homem por meio do qual Deus se manifesta. Por isso, Jesus é identificado com os nomes e títulos próprios da manifestação divina: Logos, Palavra, Sabedoria, Verbo, Espírito e YHWH.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a10.num" data-label="Artigo 10 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 10 — Morte e ressurreição</div>
+                <div class="artigo-texto" data-edit="confissao.a10.text" data-label="Artigo 10 — texto" data-group="Confissão de Fé">Cremos que Jesus morreu verdadeiramente segundo a carne e ressuscitou dentre os mortos. Na ressurreição, seu corpo perecível foi revestido e glorificado pelo corpo espiritual incorruptível, tornando-se o princípio e modelo da ressurreição dos homens.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a11.num" data-label="Artigo 11 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 11 — O Espírito nos homens</div>
+                <div class="artigo-texto" data-edit="confissao.a11.text" data-label="Artigo 11 — texto" data-group="Confissão de Fé">Cremos que o Espírito de Deus habita nos que pertencem a Deus. Nos homens, o Espírito não constitui uma segunda Pessoa divina, mas é a própria Consciência divina comunicada e presente neles os auxiliando e ensinando-lhes as verdades, os juízos e a certeza da fé. Em Cristo, porém, essa mesma Consciência divina encarnou constituindo seu ser.</div>
+            </div>
+
+            <div class="artigo-card">
+                <div class="artigo-num" data-edit="confissao.a12.num" data-label="Artigo 12 — rótulo" data-group="Confissão de Fé" data-type="text">Artigo 12 — Salvação e ressurreição</div>
+                <div class="artigo-texto" data-edit="confissao.a12.text" data-label="Artigo 12 — texto" data-group="Confissão de Fé">Cremos que Deus oferece salvação a todos os homens por meio de Cristo. A fé é dom de Deus, e o homem deve crer para receber aquilo que Deus oferece. Aquele que recebe a fé e crê é justificado, selado pelo Espírito da Verdade e guardado por Deus. Na ressurreição, receberá um corpo espiritual incorruptível, preparado por Deus, conforme o modelo de Cristo.</div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Rodapé Limpo -->
+    <footer class="footer">
+        <nav class="footer-links" aria-label="Rodapé">
+            <a href="/">Início</a>
+            <a href="/teologia">Teologia</a>
+            <a href="/soteriologia">Soteriologia</a>
+            <a href="/communicatio-idiomatum">Communicatio</a>
+            <a href="/batismo">Batismo</a>
+            <a href="/forma-da-consciencia">Consciência</a>
+            <a href="/biblia">Bíblia Online (69 Livros)</a>
+            <a href="/biblia?mode=int">Interlinear Grego</a>
+            <a href="/#edicao-impressa">Edição Impressa &amp; PDF</a>
+            <a href="/comparativo">Comparativo Teológico</a>
+            <a href="/#filosofia">A Filosofia</a>
+            <a href="/#respostas">Respostas Claras</a>
+            <a href="/#confissao">Confissão de Fé</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/privacidade">Privacidade</a>
+            <a href="https://www.youtube.com/@unoteismo" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.tiktok.com/@unoteismo" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://github.com/Unoalss/Unoteismo" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+        <p class="footer-copy">
+            &copy; 2026 UNOTEÍSMO — Cânon Sagrado &amp; Filosofia de Vida. Acesso público, aberto e gratuito à verdade.
+        </p>
+    </footer>
+
+    <script src="/site.js" defer></script>
+</body>
+
+</html>

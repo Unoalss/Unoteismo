@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="rYjJW0OeqtHHoSxkdebRaMzGb3eoxjKfHtVpzUdYm7E">
+
+    <!-- Título Principal & SEO Otimizado -->
+    <title>O Batismo Bíblico — Um Só Batismo em Nome de Jesus | Unoteísmo</title>
+    <meta name="description" content="Tratado sobre o Batismo no Unoteísmo: um só batismo em nome de Jesus Cristo, o batismo interior com o Espírito Santo e o batismo nas águas como confissão pública.">
+    <meta name="author" content="Unoteísmo">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo">
+
+    <!-- Open Graph (Redes Sociais, WhatsApp, Facebook) -->
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Unoteísmo">
+    <meta property="og:url" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo">
+    <meta property="og:title" content="O Batismo Bíblico — Um Só Batismo em Nome de Jesus">
+    <meta property="og:description" content="A doutrina bíblica do batismo: um só batismo, a invocação do nome de Jesus, a regeneração espiritual interior e a confissão pública pelas águas.">
+    <meta property="og:image" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="O Batismo Bíblico — Um Só Batismo em Nome de Jesus">
+    <meta name="twitter:description" content="A doutrina bíblica do batismo: um só batismo, a invocação do nome de Jesus, a regeneração espiritual interior e a confissão pública pelas águas.">
+    <meta name="twitter:image" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/og-image.png">
+
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Estilos do Design System Limpo -->
+    <link rel="stylesheet" href="/versao.css">
+    <link rel="stylesheet" href="/teologia.css">
+
+    <!-- Schema.org JSON-LD para Artigo Teológico e Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://unoteismo.arthurlazarodesousasantos.workers.dev/#website",
+          "url": "https://unoteismo.arthurlazarodesousasantos.workers.dev/",
+          "name": "Unoteísmo"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Início",
+              "item": "https://unoteismo.arthurlazarodesousasantos.workers.dev/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Batismo",
+              "item": "https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo"
+            }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo#article",
+          "headline": "O Batismo Bíblico — Um Só Batismo em Nome de Jesus",
+          "description": "Tratado bíblico sobre o batismo no Unoteísmo: realidade espiritual interior, invocação do nome de Jesus e confissão exterior pelas águas.",
+          "inLanguage": "pt-BR",
+          "mainEntityOfPage": "https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Unoteísmo",
+            "url": "https://unoteismo.arthurlazarodesousasantos.workers.dev/"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <!-- Barra de Navegação Superior Oficial -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <a href="/" class="logo">
+                <img src="/logo-64.png" alt="" width="12" height="32">
+                <span>UNOTEÍSMO</span>
+            </a>
+        </div>
+
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="topbar-menu">
+            <span class="hamburger-box">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+
+        <div class="menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
+
+        <nav class="menu" id="topbar-menu" aria-label="Principal">
+            <a href="/" class="nav-link">Início</a>
+
+            <!-- Dropdown Bíblia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Bíblia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Bíblia Sagrada</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/biblia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📖</span>
+                        <div class="nav-item-text">
+                            <strong>Bíblia (69 Livros)</strong>
+                            <small>Texto canônico com áudio narrado</small>
+                        </div>
+                    </a>
+                    <a href="/biblia?mode=int" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🏛️</span>
+                        <div class="nav-item-text">
+                            <strong>Interlinear Grego</strong>
+                            <small>Texto original com lemas e morfologia</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Teologia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+                    <span>Teologia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Tratados Teológicos</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/teologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Teologia Unoteísta</strong>
+                            <small>Fundamentos e síntese doutrinária</small>
+                        </div>
+                    </a>
+                    <a href="/soteriologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">✝️</span>
+                        <div class="nav-item-text">
+                            <strong>Soteriologia</strong>
+                            <small>A salvação, certeza da fé e crença</small>
+                        </div>
+                    </a>
+                    <a href="/communicatio-idiomatum" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🕊️</span>
+                        <div class="nav-item-text">
+                            <strong>Communicatio Idiomatum</strong>
+                            <small>Comunicação dos nomes e atributos</small>
+                        </div>
+                    </a>
+                    <a href="/batismo" class="nav-dropdown-item active">
+                        <span class="nav-item-icon">💧</span>
+                        <div class="nav-item-text">
+                            <strong>O Batismo Bíblico</strong>
+                            <small>Um só batismo em nome de Jesus</small>
+                        </div>
+                    </a>
+                    <a href="/forma-da-consciencia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🧠</span>
+                        <div class="nav-item-text">
+                            <strong>Forma da Consciência</strong>
+                            <small>Distinção entre as consciências e Cristo</small>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="/comparativo" class="nav-dropdown-item">
+                        <span class="nav-item-icon">⚖️</span>
+                        <div class="nav-item-text">
+                            <strong>Comparativo Teológico</strong>
+                            <small>Paralelo com trinitarismo e unicismo</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Filosofia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Filosofia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Filosofia & Busca da Verdade</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/#filosofia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💡</span>
+                        <div class="nav-item-text">
+                            <strong>A Filosofia</strong>
+                            <small>Vida e verdade sem viés religioso</small>
+                        </div>
+                    </a>
+                    <a href="/#respostas" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💬</span>
+                        <div class="nav-item-text">
+                            <strong>Respostas Claras</strong>
+                            <small>Esclarecimentos diretos às dúvidas</small>
+                        </div>
+                    </a>
+                    <a href="/#confissao" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Confissão de Fé</strong>
+                            <small>Declaração dos princípios fundamentais</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <a href="/sobre" class="nav-link">Sobre</a>
+
+            <a href="/biblia" class="menu-btn-cta"><span>Ler Bíblia →</span></a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container" id="conteudo">
+
+        <!-- Cabeçalho do Tratado -->
+        <div class="teologia-hero">
+            <span class="teologia-tag" data-edit="hero.tag" data-label="Etiqueta do cabeçalho" data-group="Cabeçalho" data-type="text">Tratado Bíblico &amp; Teológico</span>
+            <h1 class="titulo" data-edit="hero.title" data-label="Título da página (H1)" data-group="Cabeçalho" data-type="text">O Batismo Bíblico</h1>
+            <p class="subtitulo" data-edit="hero.subtitle" data-label="Subtítulo" data-group="Cabeçalho">
+                Um só batismo em nome de Jesus — A realidade espiritual interior e a confissão pública pelas águas.
+            </p>
+        </div>
+
+        <!-- Introdução Síntese -->
+        <section class="teologia-lead" data-edit="intro.lead" data-label="Texto de introdução" data-group="Introdução">
+            Cremos em <strong>um só batismo</strong>, fundado com clareza nas Sagradas Escrituras: uma obra interior e espiritual realizada por Deus através da fé e do selo do Espírito Santo, manifestada exteriormente diante dos homens pelas águas do batismo em nome do Senhor Jesus Cristo.
+        </section>
+
+        <!-- SEÇÃO 1: UM SÓ BATISMO -->
+        <section class="axioma-card">
+            <div class="axioma-card-header">
+                <span class="axioma-badge badge-ontologico" data-edit="sec1.badge" data-label="1. Etiqueta" data-group="1. Unicidade do Batismo" data-type="text">Seção 1 — O Fundamento Escriturístico</span>
+                <h2 class="axioma-title" data-edit="sec1.title" data-label="1. Título" data-group="1. Unicidade do Batismo" data-type="text">1. Um só batismo</h2>
+            </div>
+            <div class="axioma-card-body">
+                <p data-edit="sec1.p1" data-label="1. Declaração Inicial" data-group="1. Unicidade do Batismo">
+                    Cremos em <strong>um só batismo</strong>, conforme está expressamente escrito:
+                </p>
+                <div class="theology-highlight-box box-amber" style="font-size: 17px; line-height: 1.8; text-align: center;" data-edit="sec1.quote" data-label="1. Citação Efésios 4:5" data-group="1. Unicidade do Batismo">
+                    <strong>“Um só Senhor, uma só fé, um só batismo.”</strong><br>
+                    <span style="font-size: 14px; opacity: 0.85;">(Efésios 4:5)</span>
+                </div>
+                <p data-edit="sec1.p2" data-label="1. O Nome do Batismo" data-group="1. Unicidade do Batismo">
+                    Esse único batismo é realizado <strong>em nome de Jesus Cristo</strong>, pois é nele que recebemos a salvação e o Espírito de Deus.
+                </p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: O BATISMO EM NOME DE JESUS -->
+        <section class="axioma-card">
+            <div class="axioma-card-header">
+                <span class="axioma-badge badge-economico" data-edit="sec2.badge" data-label="2. Etiqueta" data-group="2. O Nome de Jesus" data-type="text">Seção 2 — O Testemunho Apostólico</span>
+                <h2 class="axioma-title" data-edit="sec2.title" data-label="2. Título" data-group="2. O Nome de Jesus" data-type="text">2. O batismo em nome de Jesus</h2>
+            </div>
+            <div class="axioma-card-body">
+                <p data-edit="sec2.p1" data-label="2. Introdução Bíblica" data-group="2. O Nome de Jesus">
+                    As Sagradas Escrituras registram de forma constante a prática apostólica:
+                </p>
+
+                <div class="theology-highlight-box box-green" style="margin-bottom: 14px;" data-edit="sec2.atos2" data-label="2. Atos 2:38" data-group="2. O Nome de Jesus">
+                    <strong>“Arrependei-vos, e cada um de vós seja batizado em nome de Jesus Cristo para remissão dos vossos pecados; e recebereis o dom do Espírito Santo.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(Atos 2:38)</span>
+                </div>
+
+                <div class="theology-highlight-box box-amber" style="margin-bottom: 14px;" data-edit="sec2.atos8" data-label="2. Atos 8:16" data-group="2. O Nome de Jesus">
+                    <strong>“Porque sobre nenhum deles tinha ainda descido; somente tinham sido batizados em nome do Senhor Jesus.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(Atos 8:16)</span>
+                </div>
+
+                <div class="theology-highlight-box box-green" style="margin-bottom: 14px;" data-edit="sec2.atos10" data-label="2. Atos 10:48" data-group="2. O Nome de Jesus">
+                    <strong>“E mandou que fossem batizados em nome de Jesus Cristo.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(Atos 10:48)</span>
+                </div>
+
+                <div class="theology-highlight-box box-amber" style="margin-bottom: 14px;" data-edit="sec2.atos19" data-label="2. Atos 19:5" data-group="2. O Nome de Jesus">
+                    <strong>“E, tendo eles ouvido isto, foram batizados em nome do Senhor Jesus.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(Atos 19:5)</span>
+                </div>
+
+                <div class="theology-highlight-box box-blue" style="text-align: center; font-weight: 700;" data-edit="sec2.conclusao" data-label="2. Conclusão" data-group="2. O Nome de Jesus">
+                    Assim, o batismo cristão é um só e tem como nome Jesus Cristo.
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: O VERDADEIRO BATISMO É INTERIOR -->
+        <section class="axioma-card">
+            <div class="axioma-card-header">
+                <span class="axioma-badge badge-pneumatologico" data-edit="sec3.badge" data-label="3. Etiqueta" data-group="3. Realidade Interior" data-type="text">Seção 3 — A Obra Interior</span>
+                <h2 class="axioma-title" data-edit="sec3.title" data-label="3. Título" data-group="3. Realidade Interior" data-type="text">3. O verdadeiro batismo é interior</h2>
+            </div>
+            <div class="axioma-card-body">
+                <p class="axioma-lead" data-edit="sec3.p1" data-label="3. Princípio Interior" data-group="3. Realidade Interior">
+                    O batismo que salva é a obra de Deus <strong>dentro do homem</strong>.
+                </p>
+                <p data-edit="sec3.p2" data-label="3. O Processo da Fé e do Selo" data-group="3. Realidade Interior">
+                    Quando a pessoa ouve a Palavra, recebe de Deus a fé, crê nela e estabelece essa relação de fé e crença, Deus a sela com o <strong>Espírito Santo</strong>:
+                </p>
+                <div class="theology-highlight-box box-green" style="margin-bottom: 12px;" data-edit="sec3.efesios1" data-label="3. Efésios 1:13" data-group="3. Realidade Interior">
+                    <strong>“Tendo também crido, fostes selados com o Espírito Santo da promessa.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(Efésios 1:13)</span>
+                </div>
+                <div class="theology-highlight-box box-green" style="margin-bottom: 14px;" data-edit="sec3.efesios4" data-label="3. Efésios 4:30" data-group="3. Realidade Interior">
+                    <strong>“Não entristeçais o Espírito Santo de Deus, no qual fostes selados para o dia da redenção.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(Efésios 4:30)</span>
+                </div>
+                <p data-edit="sec3.p3" data-label="3. Batismo no Espírito" data-group="3. Realidade Interior">
+                    Esse é o <strong>batismo com o Espírito Santo</strong>, pelo qual o homem é unido a Cristo e recebe a realidade da salvação:
+                </p>
+                <div class="theology-highlight-box box-amber" style="margin-bottom: 12px;" data-edit="sec3.corintios" data-label="3. 1 Coríntios 12:13" data-group="3. Realidade Interior">
+                    <strong>“Pois todos nós fomos batizados em um Espírito, formando um corpo.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(1 Coríntios 12:13)</span>
+                </div>
+                <p data-edit="sec3.p4" data-label="3. Promessa de Jesus" data-group="3. Realidade Interior">
+                    Jesus também declarou:
+                </p>
+                <div class="theology-highlight-box box-amber" style="margin-bottom: 14px;" data-edit="sec3.atos1" data-label="3. Atos 1:5" data-group="3. Realidade Interior">
+                    <strong>“Vós sereis batizados com o Espírito Santo.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(Atos 1:5)</span>
+                </div>
+                <div class="theology-highlight-box box-blue" style="font-size: 16px; line-height: 1.8;" data-edit="sec3.conclusao" data-label="3. Conclusão" data-group="3. Realidade Interior">
+                    Portanto, <strong>o verdadeiro batismo é espiritual e interior</strong>: Deus transforma o homem pela fé, concede-lhe o Espírito e o sela para a salvação.
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: O BATISMO NAS ÁGUAS -->
+        <section class="axioma-card">
+            <div class="axioma-card-header">
+                <span class="axioma-badge badge-cristologico" data-edit="sec4.badge" data-label="4. Etiqueta" data-group="4. O Batismo nas Águas" data-type="text">Seção 4 — A Manifestação Externa</span>
+                <h2 class="axioma-title" data-edit="sec4.title" data-label="4. Título" data-group="4. O Batismo nas Águas" data-type="text">4. O batismo nas águas</h2>
+            </div>
+            <div class="axioma-card-body">
+                <p class="axioma-lead" data-edit="sec4.p1" data-label="4. Definição da Água" data-group="4. O Batismo nas Águas">
+                    O batismo nas águas é a <strong>manifestação exterior daquilo que ocorreu interiormente</strong>.
+                </p>
+                <p data-edit="sec4.p2" data-label="4. Confissão Pública" data-group="4. O Batismo nas Águas">
+                    Aquele que creu publicamente confessa sua fé por meio da água, sendo batizado em nome de Jesus Cristo.
+                </p>
+                <p data-edit="sec4.p3" data-label="4. A Forma da Imersão" data-group="4. O Batismo nas Águas">
+                    A forma ordinária é a <strong>imersão</strong>, representando a união com Cristo em sua morte e ressurreição:
+                </p>
+                <div class="theology-highlight-box box-amber" style="margin-bottom: 14px;" data-edit="sec4.romanos" data-label="4. Romanos 6:4" data-group="4. O Batismo nas Águas">
+                    <strong>“Fomos sepultados com ele pelo batismo na morte, para que, como Cristo foi ressuscitado dentre os mortos pela glória do Pai, assim também andemos nós em novidade de vida.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(Romanos 6:4)</span>
+                </div>
+                <div class="theology-highlight-box box-green" style="font-size: 16px; line-height: 1.8;" data-edit="sec4.derramamento" data-label="4. Derramamento da Água" data-group="4. O Batismo nas Águas">
+                    Entretanto, quando a imersão não for possível, a água pode ser <strong>derramada sobre a cabeça</strong>, pois a realidade que salva não está na quantidade ou na forma da água, mas na obra interior realizada por Deus.
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: A ÁGUA NÃO SUBSTITUI A FÉ -->
+        <section class="axioma-card">
+            <div class="axioma-card-header">
+                <span class="axioma-badge badge-soteriologico" data-edit="sec5.badge" data-label="5. Etiqueta" data-group="5. Água e Fé" data-type="text">Seção 5 — Primazia da Fé</span>
+                <h2 class="axioma-title" data-edit="sec5.title" data-label="5. Título" data-group="5. Água e Fé" data-type="text">5. A água não substitui a fé</h2>
+            </div>
+            <div class="axioma-card-body">
+                <p data-edit="sec5.p1" data-label="5. A Água Não Salva" data-group="5. Água e Fé">
+                    O batismo nas águas é uma <strong>confissão pública da fé</strong>, mas a água, por si mesma, não salva.
+                </p>
+                <div class="theology-highlight-box box-amber" style="text-align: center; font-weight: 700;" data-edit="sec5.interior" data-label="5. Transformação Interior" data-group="5. Água e Fé">
+                    A verdadeira transformação acontece no interior do homem.
+                </div>
+                <p data-edit="sec5.p2" data-label="5. Risco de Rito Vazio" data-group="5. Água e Fé">
+                    Por isso, alguém pode passar pelas águas e, ainda assim, não possuir a realidade espiritual do batismo se não houver fé e crença verdadeira.
+                </p>
+                <div class="theology-highlight-box box-green" style="text-align: center; margin-bottom: 14px;" data-edit="sec5.romanos10" data-label="5. Romanos 10:10" data-group="5. Água e Fé">
+                    <strong>“Com o coração se crê para justiça.”</strong><br>
+                    <span style="font-size: 13.5px; opacity: 0.85;">(Romanos 10:10)</span>
+                </div>
+                <div class="definitions-grid" style="margin: 16px 0;">
+                    <div class="def-card">
+                        <div class="def-term">✦ Rito sem Realidade</div>
+                        <div class="def-desc" data-edit="sec5.card1" data-label="5. Card Rito sem Realidade" data-group="5. Água e Fé">A manifestação exterior sem a realidade interior é vazia.</div>
+                    </div>
+                    <div class="def-card">
+                        <div class="def-term">✦ O Papel das Águas</div>
+                        <div class="def-desc" data-edit="sec5.card2" data-label="5. Card Papel das Águas" data-group="5. Água e Fé">O batismo nas águas manifesta a fé; não produz a fé.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 6: QUANDO AS ÁGUAS NÃO PODEM SER RECEBIDAS -->
+        <section class="axioma-card">
+            <div class="axioma-card-header">
+                <span class="axioma-badge badge-ontologico" data-edit="sec6.badge" data-label="6. Etiqueta" data-group="6. Impossibilidade Material" data-type="text">Seção 6 — Impossibilidade Material</span>
+                <h2 class="axioma-title" data-edit="sec6.title" data-label="6. Título" data-group="6. Impossibilidade Material" data-type="text">6. Quando as águas não podem ser recebidas</h2>
+            </div>
+            <div class="axioma-card-body">
+                <p data-edit="sec6.p1" data-label="6. Garantia de Salvação" data-group="6. Impossibilidade Material">
+                    Se alguém recebeu a fé, creu na Palavra e foi selado com o Espírito Santo, mas não teve oportunidade de manifestar essa fé por meio do batismo nas águas, <strong>não perde a salvação por essa ausência</strong>.
+                </p>
+                <p data-edit="sec6.p2" data-label="6. Cadeia da Salvação" data-group="6. Impossibilidade Material">
+                    A salvação está na obra interior de Deus:
+                </p>
+                <div class="theology-highlight-box box-amber" style="text-align: center; font-weight: 700; font-size: 16px;" data-edit="sec6.chain" data-label="6. Cadeia Interior de Deus" data-group="6. Impossibilidade Material">
+                    Palavra → fé → crença → Espírito Santo → selo → salvação.
+                </div>
+                <p data-edit="sec6.p3" data-label="6. O Papel das Águas" data-group="6. Impossibilidade Material">
+                    As águas são a <strong>confissão pública</strong> dessa realidade.
+                </p>
+                <div class="theology-highlight-box box-green" style="text-align: center; font-size: 17px; font-weight: 700;" data-edit="sec6.axioma" data-label="6. Axioma Realidade e Manifestação" data-group="6. Impossibilidade Material">
+                    “O batismo interior é a realidade; o batismo nas águas é sua manifestação.”
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 7: SÍNTESE -->
+        <section class="axioma-card" style="border-top: 6px solid #1976d2;">
+            <div class="axioma-card-header">
+                <span class="axioma-badge" style="background: rgba(25, 118, 210, 0.12); color: #1976d2;" data-edit="sec7.badge" data-label="7. Etiqueta" data-group="7. Síntese do Batismo" data-type="text">Seção 7 — Síntese Conclusiva</span>
+                <h2 class="axioma-title" data-edit="sec7.title" data-label="7. Título" data-group="7. Síntese do Batismo" data-type="text">7. Síntese</h2>
+            </div>
+            <div class="axioma-card-body">
+                <div class="theology-highlight-box box-amber" style="font-size: 17px; line-height: 1.8; text-align: center;" data-edit="sec7.credo" data-label="7. Declaração do Credo" data-group="7. Síntese do Batismo">
+                    <strong>Cremos em um só batismo, em nome de Jesus Cristo.</strong>
+                </div>
+
+                <p data-edit="sec7.p1" data-label="7. Batismo com o Espírito Santo" data-group="7. Síntese do Batismo">
+                    Esse batismo é realizado verdadeiramente <strong>com o Espírito Santo</strong>, quando o homem recebe a fé por meio da Palavra, crê e é selado pelo Espírito Santo.
+                </p>
+
+                <p data-edit="sec7.p2" data-label="7. Batismo nas Águas" data-group="7. Síntese do Batismo">
+                    O <strong>batismo nas águas</strong> é a manifestação pública dessa fé, normalmente por imersão ou, quando necessário, pelo derramamento da água sobre a cabeça.
+                </p>
+
+                <div class="theology-highlight-box box-green" style="font-size: 16px; line-height: 1.8;" data-edit="sec7.causa" data-label="7. A Causa da Salvação" data-group="7. Síntese do Batismo">
+                    A água não é a causa da salvação. <strong>A salvação acontece pela obra interior de Deus.</strong>
+                </div>
+
+                <div class="theology-highlight-box box-amber" style="text-align: center; font-size: 17px; line-height: 1.8;" data-edit="sec7.quote" data-label="7. Citação Final Efésios 4:5" data-group="7. Síntese do Batismo">
+                    <strong>“Um só Senhor, uma só fé, um só batismo.”</strong><br>
+                    <span style="font-size: 14px; opacity: 0.85;">(Efésios 4:5)</span>
+                </div>
+
+                <div class="theology-highlight-box box-blue" style="text-align: center; font-size: 17px; font-weight: 700; line-height: 1.8;" data-edit="sec7.resolucao" data-label="7. Fórmula Resolutiva" data-group="7. Síntese do Batismo">
+                    Um só batismo. Um só nome: Jesus. Uma realidade interior e uma manifestação exterior.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé Limpo -->
+    <footer class="footer">
+        <nav class="footer-links" aria-label="Rodapé">
+            <a href="/">Início</a>
+            <a href="/teologia">Teologia</a>
+            <a href="/soteriologia">Soteriologia</a>
+            <a href="/communicatio-idiomatum">Communicatio</a>
+            <a href="/batismo">Batismo</a>
+            <a href="/forma-da-consciencia">Consciência</a>
+            <a href="/biblia">Bíblia Online (69 Livros)</a>
+            <a href="/biblia?mode=int">Interlinear Grego</a>
+            <a href="/comparativo">Comparativo Teológico</a>
+            <a href="/#filosofia">A Filosofia</a>
+            <a href="/#respostas">Respostas Claras</a>
+            <a href="/#confissao">Confissão de Fé</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/privacidade">Privacidade</a>
+            <a href="https://www.youtube.com/@unoteismo" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.tiktok.com/@unoteismo" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://github.com/Unoalss/Unoteismo" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+        <p class="footer-copy">
+            &copy; 2026 UNOTEÍSMO — Cânon Sagrado &amp; Filosofia de Vida. Acesso público, aberto e gratuito à verdade.
+        </p>
+    </footer>
+
+    <script src="/site.js" defer></script>
+</body>
+
+</html>

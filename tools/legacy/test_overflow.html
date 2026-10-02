@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<iframe src="http://localhost:8085/biblia.html" style="width:375px;height:812px;border:none;"></iframe>
+<script>
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const doc = document.querySelector('iframe').contentDocument;
+    const all = doc.querySelectorAll('*');
+    const bad = [];
+    for (const el of all) {
+      if (el.scrollWidth > 375 || el.offsetWidth > 375) {
+        bad.push({
+          tag: el.tagName,
+          id: el.id,
+          className: el.className,
+          offsetWidth: el.offsetWidth,
+          scrollWidth: el.scrollWidth
+        });
+      }
+    }
+    console.log('OVERFLOW_ELEMENTS:' + JSON.stringify(bad));
+  }, 1000);
+});
+</script>
+</body>
+</html>
