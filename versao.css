@@ -1100,57 +1100,31 @@ header.topbar .menu .menu-btn-cta:hover,
 
 .edicao-book-mockup {
     width: 100%;
-    max-width: 240px;
-    background: linear-gradient(145deg, #1e293b, #0f172a);
-    color: #ffffff;
-    border-radius: 8px;
-    padding: 20px 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
-    border-left: 6px solid #c5a059;
+    max-width: 210px;
+    border-radius: 6px;
     margin-bottom: 20px;
-    text-align: center;
+    position: relative;
+    box-shadow: 
+        -4px 0 8px rgba(0, 0, 0, 0.25),
+        6px 12px 28px rgba(0, 0, 0, 0.35),
+        0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    overflow: hidden;
+    background: #091016;
 }
 
-.edicao-mockup-tag {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #c5a059;
-    font-weight: 700;
+.edicao-book-mockup:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+        -6px 0 12px rgba(0, 0, 0, 0.3),
+        10px 18px 36px rgba(0, 0, 0, 0.45);
 }
 
-.edicao-mockup-title {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin: 8px 0 4px 0;
-    color: #ffffff;
-}
-
-.edicao-mockup-sub {
-    font-size: 11px;
-    font-style: italic;
-    color: #94a3b8;
-    margin-bottom: 12px;
-}
-
-.edicao-mockup-divider {
-    width: 32px;
-    height: 2px;
-    background: #c5a059;
-    margin: 0 auto 12px auto;
-}
-
-.edicao-mockup-author {
-    font-size: 12px;
-    font-weight: 600;
-    color: #e2e8f0;
-}
-
-.edicao-mockup-pages {
-    font-size: 10.5px;
-    color: #94a3b8;
-    margin-top: 4px;
+.edicao-cover-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
 }
 
 /* Código de Barras no Card */

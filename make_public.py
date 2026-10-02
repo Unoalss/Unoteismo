@@ -26,7 +26,8 @@ STYLES = ['versao.css', 'style.css', 'biblia.css', 'versao_biblia.css', 'teologi
 SCRIPTS = ['site.js', 'biblia.js', 'admin.js']
 IMAGES = ['logo_unoteismo.png', 'logo-64.png', 'logo-128.png', 'icon-192.png', 'icon-512.png', 'icon-512-maskable.png',
           'apple-touch-icon.png', 'favicon-48.png', 'og-image.png',
-          'codigo_de_barras_isbn_9786502411940.svg', 'codigo_de_barras_isbn_9786502411940.png']
+          'codigo_de_barras_isbn_9786502411940.svg', 'codigo_de_barras_isbn_9786502411940.png',
+          'capa_frente_biblia_unoteista.webp', 'capa_frente_biblia_unoteista.png']
 META = ['robots.txt', 'sitemap.xml', 'site.webmanifest', '_headers', '_redirects',
         'googlerYjJW0OeqtHHoSxkdebRaMzGb3eoxjKfHtVpzUdYm7E.html', 'google4bb1d4e1b48ee8e4.html']
 DATA = ['data/books.json', 'data/bible_search_index.json']
