@@ -3,11 +3,12 @@
 > **«A verdade sem viés religioso: respostas claras sobre a Bíblia, sobre a fé e sobre a vida.»**
 
 [![Website Oficial](https://img.shields.io/badge/Website-unoteismo.workers.dev-d4af37?style=for-the-badge&logo=google-chrome&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev)
+[![ISBN Oficial](https://img.shields.io/badge/ISBN-978--65--02--41194--0-blue?style=for-the-badge&logo=barcode&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 [![Teologia Unoteísta](https://img.shields.io/badge/Teologia-3_Axiomas-008080?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
 [![Bíblia Sagrada](https://img.shields.io/badge/Bíblia_Sagrada-69_Livros-blue?style=for-the-badge&logo=bookstack&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 [![Léxico Grego](https://img.shields.io/badge/Léxico_Grego-61.047_Verbetes-purple?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int)
-[![YouTube](https://img.shields.io/badge/YouTube-%40unoteismo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@unoteismo)
-[![TikTok](https://img.shields.io/badge/TikTok-%40unoteismo-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@unoteismo)
+[![YouTube](https://img.shields.io/badge/YouTube-unoteismo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@unoteismo)
+[![TikTok](https://img.shields.io/badge/TikTok-unoteismo-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@unoteismo)
 [![Licença](https://img.shields.io/badge/Acesso-Livre_e_Gratuito-success?style=for-the-badge)](#)
 
 ---
@@ -106,6 +107,15 @@ A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a
 | **Antigo Testamento** | **42 Livros** | Inclui os livros hebraicos e tradição da Septuaginta (LXX), preservando o Livro de Daniel com os 14 capítulos completos (Oração de Azarias e Cântico dos Três Jovens em Dn 3; História de Susana em Dn 13; e Bel e o Dragão em Dn 14). |
 | **Novo Testamento** | **27 Livros** | De Mateus ao Apocalipse de São João. |
 | **Total Canônico** | **69 Livros** | Cânon unoteísta fechado e integralmente traduzido em língua portuguesa. |
+| **Volume Total** | **1730 Páginas** | Formato 15,5 × 23,0 cm com introdução teológica, 69 livros canônicos e colofão. |
+
+> **Registro Editorial Internacional (CBL):**  
+> * **ISBN:** `978-65-02-41194-0`  
+> * **Título:** Bíblia Sagrada Unoteísta  
+> * **Subtítulo:** o caminho da verdade  
+> * **Titular dos Direitos:** Arthur Santos  
+> * **Órgão Emissor:** Câmara Brasileira do Livro (CBL) / Agência Brasileira do ISBN (Data de Registro: 01/10/2026)  
+> * **Veiculação:** Livro Físico (1730 páginas) e Distribuição Digital Aberta  
 
 ---
 
@@ -126,6 +136,10 @@ A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a
 
 * 🌐 **Portal Oficial do Unoteísmo:** [https://unoteismo.arthurlazarodesousasantos.workers.dev](https://unoteismo.arthurlazarodesousasantos.workers.dev)
 * 📜 **Tratado da Teologia Unoteísta (Os Três Axiomas):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
+* 🕊️ **Tratado de Soteriologia Unoteísta (A Doutrina da Salvação):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/soteriologia](https://unoteismo.arthurlazarodesousasantos.workers.dev/soteriologia)
+* 💡 **Tratado de Communicatio Idiomatum (A Comunicação de Nomes e Atributos):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/communicatio-idiomatum](https://unoteismo.arthurlazarodesousasantos.workers.dev/communicatio-idiomatum)
+* 🌊 **Tratado do Batismo Bíblico (Um só Batismo em Nome de Jesus):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo](https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo)
+* 🧠 **Tratado da Forma da Consciência (A Distinção entre as Consciências):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/forma-da-consciencia](https://unoteismo.arthurlazarodesousasantos.workers.dev/forma-da-consciencia)
 * 📖 **Leitor da Bíblia Sagrada (69 Livros):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 * 🔍 **Bíblia Interlinear & Léxico Grego Completo:** [https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int)
 * ⚖️ **Quadro Comparativo Teológico:** [https://unoteismo.arthurlazarodesousasantos.workers.dev/comparativo](https://unoteismo.arthurlazarodesousasantos.workers.dev/comparativo)
