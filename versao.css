@@ -2071,12 +2071,12 @@ header.topbar .menu .menu-btn-cta:hover,
 .modal-resposta-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(4px);
-    display: flex;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    display: none;
     align-items: center;
     justify-content: center;
-    z-index: 99999;
+    z-index: 999999;
     padding: 20px;
     opacity: 0;
     pointer-events: none;
@@ -2084,8 +2084,9 @@ header.topbar .menu .menu-btn-cta:hover,
 }
 
 .modal-resposta-backdrop.open {
-    opacity: 1;
-    pointer-events: auto;
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
 }
 
 .modal-resposta-dialog {

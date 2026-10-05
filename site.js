@@ -154,8 +154,12 @@
     currentMsg = MENSAGENS_DO_CEU[idx];
     if (txtEl) txtEl.textContent = '“' + currentMsg.texto + '”';
     if (refEl) refEl.textContent = currentMsg.ref;
+    modal.removeAttribute('hidden');
     modal.hidden = false;
-    modal.classList.add('open');
+    modal.style.display = 'flex';
+    requestAnimationFrame(function () {
+      modal.classList.add('open');
+    });
     document.body.style.overflow = 'hidden';
   };
 
@@ -163,7 +167,11 @@
     var modal = document.getElementById('modal-resposta-ceu');
     if (!modal) return;
     modal.classList.remove('open');
-    setTimeout(function () { modal.hidden = true; }, 200);
+    setTimeout(function () {
+      modal.hidden = true;
+      modal.setAttribute('hidden', '');
+      modal.style.display = 'none';
+    }, 200);
     document.body.style.overflow = '';
   };
 
@@ -173,6 +181,40 @@
     var msg = '🕊️ *Resposta do Céu*\n\n' + '“' + currentMsg.texto + '”\n— ' + currentMsg.ref + '\n\nReceba também sua palavra:\n' + url;
     window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(msg), '_blank');
   };
+
+  // Inicializa listeners diretos para Resposta do Céu
+  function initRespostaDoCeu() {
+    var btn = document.getElementById('btn-resposta-ceu');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.abrirRespostaDoCeu();
+      });
+    }
+    var modal = document.getElementById('modal-resposta-ceu');
+    if (modal) {
+      var closeBtns = modal.querySelectorAll('.modal-resposta-close, .btn-modal-close');
+      closeBtns.forEach(function (cb) {
+        cb.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.fecharRespostaDoCeu();
+        });
+      });
+      var shareBtn = document.getElementById('btn-compartilhar-resposta');
+      if (shareBtn) {
+        shareBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.compartilharRespostaWhatsApp();
+        });
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRespostaDoCeu);
+  } else {
+    initRespostaDoCeu();
+  }
 
   // Fecha o modal ao clicar fora ou apertar Esc
   document.addEventListener('click', function (e) {

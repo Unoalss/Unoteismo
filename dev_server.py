@@ -76,6 +76,22 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(body)
             return
 
+        if clean == '/api/prayers':
+            prayers_file = os.path.join(ROOT, 'prayer_requests.json')
+            if not os.path.exists(prayers_file):
+                prayers_file = os.path.join(ROOT, 'data', 'prayer_requests.json')
+            try:
+                with open(prayers_file, 'r', encoding='utf-8') as f:
+                    body = f.read().encode('utf-8')
+            except Exception:
+                body = b'[]'
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Content-Length', str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+
         if clean in ('/api/agent/posts', '/api/posts', '/api/admin/posts'):
             posts = agent_engine.get_posts_list()
             body = json.dumps({'success': True, 'posts': posts}, ensure_ascii=False).encode('utf-8')
@@ -146,6 +162,81 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
     def do_POST(self):
         clean = self.path.split('?', 1)[0]
+        if clean == '/api/prayers':
+            content_len = int(self.headers.get('Content-Length', 0))
+            post_body = self.rfile.read(content_len) if content_len > 0 else b'{}'
+            try:
+                payload = json.loads(post_body.decode('utf-8'))
+            except Exception:
+                payload = {}
+            action = payload.get('action', 'add')
+            prayers_file = os.path.join(ROOT, 'prayer_requests.json')
+            prayers_data_file = os.path.join(ROOT, 'data', 'prayer_requests.json')
+            try:
+                with open(prayers_file, 'r', encoding='utf-8') as f:
+                    prayers_list = json.load(f)
+            except Exception:
+                prayers_list = []
+
+            resp = {'success': True}
+            if action == 'add':
+                name = (payload.get('name') or '').strip() or 'Anônimo'
+                msg = (payload.get('message') or '').strip()
+                new_p = {
+                    'id': f"prayer_{int(time.time() * 1000)}",
+                    'name': name,
+                    'initials': ''.join([w[0] for w in name.split() if w])[:3].upper() or 'AN',
+                    'target': payload.get('target', 'Oração'),
+                    'reason': payload.get('reason', 'Vida e Família'),
+                    'message': msg,
+                    'prayers_count': 0,
+                    'is_public': True,
+                    'created_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                    'replies': []
+                }
+                prayers_list.insert(0, new_p)
+                resp = {'success': True, 'prayer': new_p}
+            elif action == 'pray':
+                p_id = payload.get('prayer_id')
+                for p in prayers_list:
+                    if p.get('id') == p_id:
+                        p['prayers_count'] = p.get('prayers_count', 0) + 1
+                        break
+                resp = {'success': True}
+            elif action == 'reply':
+                p_id = payload.get('prayer_id')
+                rep_name = (payload.get('name') or '').strip() or 'Irmão de Fé'
+                rep_msg = (payload.get('message') or '').strip()
+                new_reply = {
+                    'id': f"reply_{int(time.time() * 1000)}",
+                    'name': rep_name,
+                    'message': rep_msg,
+                    'created_at': datetime.datetime.now(datetime.timezone.utc).isoformat()
+                }
+                for p in prayers_list:
+                    if p.get('id') == p_id:
+                        if 'replies' not in p or not isinstance(p['replies'], list):
+                            p['replies'] = []
+                        p['replies'].append(new_reply)
+                        break
+                resp = {'success': True, 'reply': new_reply}
+
+            try:
+                with open(prayers_file, 'w', encoding='utf-8') as f:
+                    json.dump(prayers_list, f, ensure_ascii=False, indent=2)
+                with open(prayers_data_file, 'w', encoding='utf-8') as f:
+                    json.dump(prayers_list, f, ensure_ascii=False, indent=2)
+            except Exception as e:
+                print('Error saving prayers:', e)
+
+            body = json.dumps(resp, ensure_ascii=False).encode('utf-8')
+            self.send_response(200)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Content-Length', str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
+
         if clean in ('/api/admin/save-canvas', '/api/admin/save_canvas'):
             content_len = int(self.headers.get('Content-Length', 0))
             post_body = self.rfile.read(content_len) if content_len > 0 else b'{}'

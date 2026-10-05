@@ -19,7 +19,7 @@ const SECURITY_HEADERS = {
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   'Content-Security-Policy':
-    "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; " +
+    "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; " +
     "media-src 'self' data: blob:; connect-src 'self'; manifest-src 'self'; worker-src 'self'; " +
     "frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
 };
@@ -293,6 +293,147 @@ async function handleEditablePage(request, env, url, pageId) {
   });
 }
 
+async function handlePrayers(request, env, url) {
+  if (request.method === 'GET' || request.method === 'HEAD') {
+    if (env.DB) {
+      try {
+        const rows = await env.DB.prepare(
+          'SELECT id, name, initials, target, reason, message, prayers_count, is_public, created_at, replies FROM prayers WHERE is_public = 1 ORDER BY created_at DESC LIMIT 100'
+        ).all();
+        const list = (rows.results || []).map((r) => {
+          let replies = [];
+          try {
+            replies = typeof r.replies === 'string' ? JSON.parse(r.replies) : (r.replies || []);
+          } catch (e) {}
+          return {
+            id: r.id,
+            name: r.name,
+            initials: r.initials,
+            target: r.target,
+            reason: r.reason,
+            message: r.message,
+            prayers_count: r.prayers_count || 0,
+            is_public: r.is_public === 1,
+            created_at: r.created_at,
+            replies,
+          };
+        });
+        return json(list, 200, {
+          'Cache-Control': 'no-store, max-age=0',
+          'Access-Control-Allow-Origin': '*',
+        });
+      } catch (err) {
+        console.error('D1 prayers query error:', err);
+      }
+    }
+    try {
+      const assetRes = await env.ASSETS.fetch(new Request(new URL('/prayer_requests.json', url.origin)));
+      if (assetRes.ok) return assetRes;
+    } catch (e) {}
+    return json([], 200, { 'Cache-Control': 'no-store, max-age=0' });
+  }
+
+  if (request.method === 'POST') {
+    let body = {};
+    try {
+      body = await request.json();
+    } catch (e) {
+      return json({ error: 'Invalid JSON' }, 400);
+    }
+
+    const action = body.action || 'add';
+
+    if (action === 'add') {
+      const name = (body.name || '').trim().slice(0, 80) || 'Anônimo';
+      const message = (body.message || '').trim().slice(0, 1500);
+      if (!message) {
+        return json({ error: 'Mensagem obrigatória' }, 400);
+      }
+      const target = (body.target || 'Oração').trim().slice(0, 50);
+      const reason = (body.reason || 'Vida e Família').trim().slice(0, 50);
+      const id = 'prayer_' + Date.now();
+      const initials = name.split(' ').map((w) => w[0]).join('').slice(0, 3).toUpperCase() || 'AN';
+      const created_at = new Date().toISOString();
+
+      const newPrayer = {
+        id,
+        name,
+        initials,
+        target,
+        reason,
+        message,
+        prayers_count: 0,
+        is_public: true,
+        created_at,
+        replies: [],
+      };
+
+      if (env.DB) {
+        try {
+          await env.DB.prepare(
+            'INSERT INTO prayers (id, name, initials, target, reason, message, prayers_count, is_public, created_at, replies) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+          ).bind(id, name, initials, target, reason, message, 0, 1, created_at, '[]').run();
+        } catch (dbErr) {
+          console.error('D1 insert prayer error:', dbErr);
+        }
+      }
+
+      return json({ success: true, prayer: newPrayer }, 201);
+    }
+
+    if (action === 'pray') {
+      const prayerId = body.prayer_id;
+      if (!prayerId) return json({ error: 'prayer_id obrigatório' }, 400);
+      if (env.DB) {
+        try {
+          await env.DB.prepare(
+            'UPDATE prayers SET prayers_count = prayers_count + 1 WHERE id = ?'
+          ).bind(prayerId).run();
+        } catch (dbErr) {
+          console.error('D1 update pray error:', dbErr);
+        }
+      }
+      return json({ success: true });
+    }
+
+    if (action === 'reply') {
+      const prayerId = body.prayer_id;
+      const name = (body.name || '').trim().slice(0, 50) || 'Irmão de Fé';
+      const msg = (body.message || '').trim().slice(0, 300);
+      if (!prayerId || !msg) return json({ error: 'Dados incompletos' }, 400);
+
+      const reply = {
+        id: 'reply_' + Date.now(),
+        name,
+        message: msg,
+        created_at: new Date().toISOString(),
+      };
+
+      if (env.DB) {
+        try {
+          const row = await env.DB.prepare('SELECT replies FROM prayers WHERE id = ?').bind(prayerId).first();
+          let replies = [];
+          if (row && row.replies) {
+            try {
+              replies = typeof row.replies === 'string' ? JSON.parse(row.replies) : (row.replies || []);
+            } catch (e) {}
+          }
+          replies.push(reply);
+          await env.DB.prepare('UPDATE prayers SET replies = ? WHERE id = ?').bind(JSON.stringify(replies), prayerId).run();
+        } catch (dbErr) {
+          console.error('D1 update reply error:', dbErr);
+        }
+      }
+
+      return json({ success: true, reply });
+    }
+
+    return json({ error: 'Ação desconhecida' }, 400);
+  }
+
+  return json({ error: 'Method not allowed' }, 405, { Allow: 'GET, POST, HEAD' });
+}
+
 // ---------------------------------------------------------------------------
 export default {
   async fetch(request, env, ctx) {
@@ -319,6 +460,8 @@ export default {
         res = await env.ASSETS.fetch(new Request(new URL('/comparativo.html', url.origin)));
       } else if (pageIdForPath(p)) {
         res = await handleEditablePage(request, env, url, pageIdForPath(p));
+      } else if (p === '/api/prayers' || p === '/api/prayers/') {
+        res = await handlePrayers(request, env, url);
       } else if (p === '/api/admin' || p.startsWith('/api/admin/')) {
         res = await handleAdmin(request, env, url);
       } else if (p.startsWith('/api/')) {
