@@ -19,15 +19,23 @@ PAGES = {
     'sobre.html': ('sobre', '#conteudo'),
     'privacidade.html': ('privacidade', '#conteudo'),
     'comparativo.html': ('comparativo', '#conteudo'),
+    'pedidos-de-oracao.html': ('oracao', '#conteudo'),
+    'quizzes.html': ('quizzes', '#conteudo'),
+    'categoria.html': ('categoria', '#conteudo'),
 }
 
 
 def header(active):
     # Classes ativas
     cur_inicio = ' active" aria-current="page' if active == 'inicio' else ''
-    cur_biblia = ' active' if active == 'biblia' else ''
+    cur_biblia = ' active' if active in ('biblia', 'interlinear') else ''
     cur_teologia = ' active' if active in ('teologia', 'soteriologia', 'communicatio', 'batismo', 'consciencia', 'comparativo') else ''
+    cur_oracao = ' active" aria-current="page' if active == 'oracao' else ''
+    cur_quizzes = ' active" aria-current="page' if active == 'quizzes' else ''
     cur_sobre = ' active" aria-current="page' if active == 'sobre' else ''
+
+    act_biblia = ' active' if active == 'biblia' else ''
+    act_interlinear = ' active' if active == 'interlinear' else ''
 
     act_teologia_geral = ' active' if active == 'teologia' else ''
     act_soteriologia = ' active' if active == 'soteriologia' else ''
@@ -64,18 +72,26 @@ def header(active):
         '                </button>\n'
         '                <span class="mobile-section-label">Bíblia Sagrada</span>\n'
         '                <div class="nav-dropdown-menu">\n'
-        '                    <a href="/biblia" class="nav-dropdown-item">\n'
+        f'                    <a href="/biblia" class="nav-dropdown-item{act_biblia}">\n'
         '                        <span class="nav-item-icon">📖</span>\n'
         '                        <div class="nav-item-text">\n'
         '                            <strong>Bíblia (69 Livros)</strong>\n'
         '                            <small>Texto canônico com áudio narrado</small>\n'
         '                        </div>\n'
         '                    </a>\n'
-        '                    <a href="/biblia?mode=int" class="nav-dropdown-item">\n'
+        f'                    <a href="/biblia?mode=int" class="nav-dropdown-item{act_interlinear}">\n'
         '                        <span class="nav-item-icon">🏛️</span>\n'
         '                        <div class="nav-item-text">\n'
         '                            <strong>Interlinear Grego</strong>\n'
         '                            <small>Texto original com lemas e morfologia</small>\n'
+        '                        </div>\n'
+        '                    </a>\n'
+        '                    <div class="nav-dropdown-divider"></div>\n'
+        '                    <a href="/#edicao-impressa" class="nav-dropdown-item">\n'
+        '                        <span class="nav-item-icon">📥</span>\n'
+        '                        <div class="nav-item-text">\n'
+        '                            <strong>Edição Impressa &amp; PDF</strong>\n'
+        '                            <small>ISBN 978-65-02-41194-0 • Download PDF</small>\n'
         '                        </div>\n'
         '                    </a>\n'
         '                </div>\n'
@@ -168,6 +184,8 @@ def header(active):
         '                    </a>\n'
         '                </div>\n'
         '            </div>\n\n'
+        f'            <a href="/pedidos-de-oracao" class="nav-link{cur_oracao}">Oração</a>\n'
+        f'            <a href="/quizzes" class="nav-link{cur_quizzes}">Quizzes</a>\n'
         f'            <a href="/sobre" class="nav-link{cur_sobre}">Sobre</a>\n\n'
         '            <a href="/biblia" class="menu-btn-cta"><span>Ler Bíblia →</span></a>\n'
         '        </nav>\n'
@@ -185,15 +203,16 @@ FOOTER = (
     '            <a href="/batismo">Batismo</a>\n'
     '            <a href="/forma-da-consciencia">Consciência</a>\n'
     '            <a href="/biblia">Bíblia Online (69 Livros)</a>\n'
+    '            <a href="/pedidos-de-oracao">Pedidos de Oração</a>\n'
+    '            <a href="/quizzes">Quizzes Bíblicos</a>\n'
     '            <a href="/biblia?mode=int">Interlinear Grego</a>\n'
+    '            <a href="/#edicao-impressa">Edição Impressa &amp; PDF</a>\n'
     '            <a href="/comparativo">Comparativo Teológico</a>\n'
     '            <a href="/#filosofia">A Filosofia</a>\n'
     '            <a href="/#respostas">Respostas Claras</a>\n'
     '            <a href="/#confissao">Confissão de Fé</a>\n'
     '            <a href="/sobre">Sobre</a>\n'
     '            <a href="/privacidade">Privacidade</a>\n'
-    '            <a href="https://www.youtube.com/@unoteismo" target="_blank" rel="noopener">YouTube</a>\n'
-    '            <a href="https://www.tiktok.com/@unoteismo" target="_blank" rel="noopener">TikTok</a>\n'
     '            <a href="https://github.com/Unoalss/Unoteismo" target="_blank" rel="noopener">GitHub</a>\n'
     '        </nav>\n'
     '        <p class="footer-copy">\n'
