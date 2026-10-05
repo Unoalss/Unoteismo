@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+
+    <!-- Título Principal & SEO -->
+    <title>Quizzes Bíblicos e Teológicos — Unoteísmo</title>
+    <meta name="description" content="Teste seus conhecimentos bíblicos e teológicos com nossos quizzes interativos. Perguntas sobre os 69 livros, milagres de Jesus, versículos e história sagrada.">
+    <meta name="author" content="Unoteísmo">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://unoteismo.arthurlazarodesousasantos.workers.dev/quizzes">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Unoteísmo">
+    <meta property="og:url" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/quizzes">
+    <meta property="og:title" content="Quizzes Bíblicos e Teológicos — Unoteísmo">
+    <meta property="og:description" content="Aprenda e desafie seu conhecimento sobre as Escrituras e os fundamentos da fé unoteísta.">
+    <meta property="og:image" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/og-image.png">
+
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/versao.css">
+
+    <style>
+        /* ==========================================================================
+           Página de Quizzes Bíblicos (Preto & Branco)
+           ========================================================================== */
+        .quizzes-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+        }
+
+        .quizzes-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .quizzes-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f4f4f5;
+            color: #000000;
+            border: 1px solid #e4e4e7;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .quizzes-title {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #000000;
+            letter-spacing: -0.02em;
+            margin: 0 0 12px 0;
+            line-height: 1.2;
+        }
+
+        .quizzes-subtitle {
+            font-size: 1.1rem;
+            color: #555555;
+            max-width: 660px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Caixa de Instrução */
+        .quiz-info-box {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-bottom: 36px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+        }
+
+        .quiz-info-box h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #000000;
+            margin: 0 0 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .quiz-info-box p {
+            font-size: 0.98rem;
+            color: #555555;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.55;
+        }
+
+        /* Grade de Quizzes */
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .quiz-card {
+            background: #ffffff;
+            border: 1.5px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 26px 22px;
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+            text-align: left;
+        }
+
+        .quiz-card:hover {
+            transform: translateY(-3px);
+            border-color: #000000;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .quiz-card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #f4f4f4;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 16px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .quiz-card:hover .quiz-card-icon {
+            background: #ebebeb;
+            transform: scale(1.05);
+        }
+
+        .quiz-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #000000;
+            margin: 0 0 8px 0;
+            line-height: 1.3;
+        }
+
+        .quiz-card p {
+            font-size: 0.92rem;
+            color: #666666;
+            line-height: 1.5;
+            margin: 0 0 20px 0;
+            flex: 1;
+        }
+
+        .quiz-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 14px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .quiz-card-count {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #777777;
+        }
+
+        .quiz-card-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .quiz-card:hover .quiz-card-btn {
+            text-decoration: underline;
+        }
+
+        /* Modal do Quiz Interativo */
+        .quiz-runner-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .quiz-runner-modal.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .quiz-runner-panel {
+            background: #ffffff;
+            color: #000000;
+            border-radius: 18px;
+            border: 1px solid #e0e0e0;
+            max-width: 640px;
+            width: 100%;
+            padding: 32px 28px;
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
+            position: relative;
+            transform: scale(0.96);
+            transition: transform 0.25s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+
+        .quiz-runner-modal.open .quiz-runner-panel {
+            transform: scale(1);
+        }
+
+        .quiz-runner-close {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            font-size: 22px;
+            line-height: 1;
+            color: #444444;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .quiz-runner-close:hover {
+            color: #000000;
+            background: #e5e5e5;
+            border-color: #000000;
+            transform: scale(1.05);
+        }
+
+        /* Barra de Progresso */
+        .quiz-progress-wrap {
+            margin-bottom: 22px;
+            padding-right: 48px; /* Espaço seguro garantido para o botão X não ficar em cima do texto */
+        }
+
+        .quiz-progress-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #666666;
+            margin-bottom: 8px;
+            gap: 12px;
+        }
+
+        .quiz-progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #ececec;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .quiz-progress-fill {
+            height: 100%;
+            background: #000000;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .quiz-q-title {
+            font-size: 1.28rem;
+            font-weight: 700;
+            color: #000000;
+            margin: 0 0 20px 0;
+            line-height: 1.45;
+        }
+
+        .quiz-q-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-q-opt {
+            background: #ffffff;
+            border: 1.5px solid #dcdcdc;
+            border-radius: 10px;
+            padding: 13px 18px;
+            text-align: left;
+            font-size: 0.98rem;
+            font-weight: 600;
+            font-family: inherit;
+            color: #111111;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .quiz-q-opt:hover:not(:disabled) {
+            border-color: #000000;
+            background: #f8f8f8;
+        }
+
+        .quiz-q-opt.correct {
+            background: #f0fdf4 !important;
+            border-color: #16a34a !important;
+            color: #15803d !important;
+            font-weight: 700;
+        }
+
+        .quiz-q-opt.wrong {
+            background: #fef2f2 !important;
+            border-color: #dc2626 !important;
+            color: #b91c1c !important;
+            font-weight: 700;
+        }
+
+        .quiz-q-opt:disabled {
+            cursor: default;
+        }
+
+        .quiz-q-explain {
+            background: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            border-left: 4px solid #000000;
+            padding: 14px 16px;
+            border-radius: 8px;
+            font-size: 0.93rem;
+            color: #333333;
+            line-height: 1.55;
+            margin-bottom: 20px;
+            animation: fadeInQuiz 0.25s ease;
+        }
+
+        .quiz-q-explain strong {
+            color: #000000;
+        }
+
+        .quiz-runner-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .btn-quiz-next {
+            background: #000000;
+            color: #ffffff;
+            border: 1px solid #000000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-quiz-next:hover {
+            background: #222222;
+        }
+
+        /* Tela de Resultado Final */
+        .quiz-final-view {
+            text-align: center;
+            padding: 16px 10px;
+        }
+
+        .quiz-final-score-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #000000;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .quiz-final-score-circle .score-num {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .quiz-final-score-circle .score-label {
+            font-size: 13px;
+            font-weight: 600;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        .quiz-final-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #000000;
+            margin: 0 0 10px 0;
+        }
+
+        .quiz-final-desc {
+            font-size: 1rem;
+            color: #555555;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            line-height: 1.55;
+        }
+
+        .quiz-final-verse {
+            background: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            border-left: 4px solid #000000;
+            padding: 16px;
+            border-radius: 10px;
+            font-style: italic;
+            color: #222222;
+            font-family: 'Georgia', serif;
+            font-size: 0.98rem;
+            line-height: 1.6;
+            margin: 0 auto 24px;
+            text-align: left;
+        }
+
+        .quiz-final-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-final-retry {
+            background: #000000;
+            color: #ffffff;
+            border: 1px solid #000000;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-final-retry:hover {
+            background: #222222;
+        }
+
+        .btn-final-share {
+            background: #f5f5f5;
+            color: #000000;
+            border: 1px solid #dcdcdc;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-final-share:hover {
+            background: #e8e8e8;
+            border-color: #000000;
+        }
+
+        @media (max-width: 600px) {
+            .quizzes-title {
+                font-size: 1.8rem;
+            }
+
+            .quiz-runner-panel {
+                padding: 24px 18px;
+            }
+
+            .quiz-final-actions {
+                flex-direction: column;
+            }
+
+            .btn-final-retry,
+            .btn-final-share {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <a href="/" class="logo">
+                <img src="/logo-64.png" alt="" width="12" height="32">
+                <span>UNOTEÍSMO</span>
+            </a>
+        </div>
+
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="topbar-menu">
+            <span class="hamburger-box">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+
+        <div class="menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
+
+        <nav class="menu" id="topbar-menu" aria-label="Principal">
+            <a href="/" class="nav-link">Início</a>
+
+            <!-- Dropdown Bíblia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Bíblia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Bíblia Sagrada</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/biblia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📖</span>
+                        <div class="nav-item-text">
+                            <strong>Bíblia (69 Livros)</strong>
+                            <small>Texto canônico com áudio narrado</small>
+                        </div>
+                    </a>
+                    <a href="/biblia?mode=int" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🏛️</span>
+                        <div class="nav-item-text">
+                            <strong>Interlinear Grego</strong>
+                            <small>Texto original com lemas e morfologia</small>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="/#edicao-impressa" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📥</span>
+                        <div class="nav-item-text">
+                            <strong>Edição Impressa &amp; PDF</strong>
+                            <small>ISBN 978-65-02-41194-0 • Download PDF</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Teologia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Teologia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Tratados Teológicos</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/teologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Teologia Unoteísta</strong>
+                            <small>Fundamentos e síntese doutrinária</small>
+                        </div>
+                    </a>
+                    <a href="/soteriologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">✝️</span>
+                        <div class="nav-item-text">
+                            <strong>Soteriologia</strong>
+                            <small>A salvação, certeza da fé e crença</small>
+                        </div>
+                    </a>
+                    <a href="/communicatio-idiomatum" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🕊️</span>
+                        <div class="nav-item-text">
+                            <strong>Communicatio Idiomatum</strong>
+                            <small>Comunicação dos nomes e atributos</small>
+                        </div>
+                    </a>
+                    <a href="/batismo" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💧</span>
+                        <div class="nav-item-text">
+                            <strong>O Batismo Bíblico</strong>
+                            <small>Um só batismo em nome de Jesus</small>
+                        </div>
+                    </a>
+                    <a href="/forma-da-consciencia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🧠</span>
+                        <div class="nav-item-text">
+                            <strong>Forma da Consciência</strong>
+                            <small>Distinção entre as consciências e Cristo</small>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="/comparativo" class="nav-dropdown-item">
+                        <span class="nav-item-icon">⚖️</span>
+                        <div class="nav-item-text">
+                            <strong>Comparativo Teológico</strong>
+                            <small>Paralelo com trinitarismo e unicismo</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Filosofia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Filosofia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Filosofia & Busca da Verdade</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/#filosofia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💡</span>
+                        <div class="nav-item-text">
+                            <strong>A Filosofia</strong>
+                            <small>Vida e verdade sem viés religioso</small>
+                        </div>
+                    </a>
+                    <a href="/#respostas" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💬</span>
+                        <div class="nav-item-text">
+                            <strong>Respostas Claras</strong>
+                            <small>Esclarecimentos diretos às dúvidas</small>
+                        </div>
+                    </a>
+                    <a href="/#confissao" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Confissão de Fé</strong>
+                            <small>Declaração dos princípios fundamentais</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <a href="/pedidos-de-oracao" class="nav-link">Oração</a>
+            <a href="/quizzes" class="nav-link active" aria-current="page">Quizzes</a>
+            <a href="/sobre" class="nav-link">Sobre</a>
+
+            <a href="/biblia" class="menu-btn-cta"><span>Ler Bíblia →</span></a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="quizzes-container" id="conteudo">
+
+        <div class="quizzes-header">
+            <span class="quizzes-tag">🧩 Desafio Bíblico &amp; Teológico</span>
+            <h1 class="quizzes-title">Quizzes Bíblicos</h1>
+            <p class="quizzes-subtitle">
+                Teste e aprofunde seus conhecimentos sobre histórias sagradas, personagens, milagres, livros canônicos e teologia bíblica.
+            </p>
+        </div>
+
+        <div class="quiz-info-box">
+            <h2>📖 Como funciona o desafio?</h2>
+            <p>
+                Escolha um quiz temático abaixo, responda às perguntas e acompanhe sua pontuação em tempo real. Cada questão traz uma explicação bíblica com referências para enriquecer seu estudo.
+            </p>
+        </div>
+
+        <!-- Grade de Quizzes -->
+        <div class="quiz-grid" id="quizGrid"></div>
+
+    </main>
+
+    <!-- Modal do Quiz Interativo -->
+    <div class="quiz-runner-modal" id="quizRunnerModal" role="dialog" aria-modal="true" aria-labelledby="modalQuizTitle">
+        <div class="quiz-runner-panel">
+            <button type="button" class="quiz-runner-close" onclick="fecharQuizModal()" aria-label="Fechar quiz">&times;</button>
+            <div id="quizRunnerBody"></div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <nav class="footer-links" aria-label="Rodapé">
+            <a href="/">Início</a>
+            <a href="/teologia">Teologia</a>
+            <a href="/soteriologia">Soteriologia</a>
+            <a href="/communicatio-idiomatum">Communicatio</a>
+            <a href="/batismo">Batismo</a>
+            <a href="/forma-da-consciencia">Consciência</a>
+            <a href="/biblia">Bíblia Online (69 Livros)</a>
+            <a href="/pedidos-de-oracao">Pedidos de Oração</a>
+            <a href="/quizzes">Quizzes Bíblicos</a>
+            <a href="/biblia?mode=int">Interlinear Grego</a>
+            <a href="/#edicao-impressa">Edição Impressa &amp; PDF</a>
+            <a href="/comparativo">Comparativo Teológico</a>
+            <a href="/#filosofia">A Filosofia</a>
+            <a href="/#respostas">Respostas Claras</a>
+            <a href="/#confissao">Confissão de Fé</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/privacidade">Privacidade</a>
+            <a href="https://github.com/Unoalss/Unoteismo" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+        <p class="footer-copy">
+            &copy; 2026 UNOTEÍSMO — Cânon Sagrado &amp; Filosofia de Vida. Acesso público, aberto e gratuito à verdade.
+        </p>
+    </footer>
+
+    <!-- Lógica dos Quizzes -->
+    <script>
+    (function () {
+        'use strict';
+
+        const QUIZZES = [
+            {
+                id: 'milagres',
+                icon: '✨',
+                title: 'Milagres de Jesus',
+                desc: 'Teste o quanto você conhece sobre os sinais, curas e manifestações de poder realizadas por Cristo nos Evangelhos.',
+                perguntas: [
+                    {
+                        q: 'Qual foi o primeiro milagre público realizado por Jesus Cristo?',
+                        op: ['Cura do cego de Jericó', 'Transformar água em vinho nas bodas de Caná', 'Multiplicação dos pães', 'Ressurreição de Lázaro'],
+                        r: 1,
+                        e: 'O primeiro milagre ocorreu nas bodas de Caná da Galileia, manifestando a sua glória (João 2:1-11).'
+                    },
+                    {
+                        q: 'Quantos pães e peixes foram usados na primeira multiplicação para alimentar a multidão?',
+                        op: ['7 pães e alguns peixinhos', '5 pães e 2 peixes', '12 pães e 5 peixes', '3 pães e 1 peixe'],
+                        r: 1,
+                        e: 'Um jovem tinha 5 pães de cevada e 2 peixinhos, alimentando cerca de 5.000 homens além de mulheres e crianças (Mateus 14:17).'
+                    },
+                    {
+                        q: 'Sobre o que Jesus caminhou durante a tempestade no mar da Galileia?',
+                        op: ['Sobre uma ponte de pedra', 'Sobre uma grande nuvem', 'Sobre as águas do mar', 'Sobre um banco de areia'],
+                        r: 2,
+                        e: 'Jesus caminhou por cima das águas e convidou Pedro a encontrá-lo (Mateus 14:25).'
+                    },
+                    {
+                        q: 'Em qual cidade Jesus curou o cego de nascença chamado Bartimeu?',
+                        op: ['Cafarnaum', 'Jerusalém', 'Jericó', 'Nazaré'],
+                        r: 2,
+                        e: 'O cego Bartimeu clamou pelo Filho de Davi ao sair de Jericó (Marcos 10:46-52).'
+                    },
+                    {
+                        q: 'Quantos leprosos Jesus curou conjuntamente no caminho entre Samaria e Galileia?',
+                        op: ['7 leprosos', '10 leprosos', '12 leprosos', '5 leprosos'],
+                        r: 1,
+                        e: 'Jesus curou 10 leprosos de uma vez, mas apenas um samaritano voltou para agradecer (Lucas 17:11-19).'
+                    },
+                    {
+                        q: 'O que Jesus disse para acalmar a violenta tempestade que ameaçava o barco dos discípulos?',
+                        op: ['"Que se faça a luz"', '"Cala-te, aquieta-te"', '"Não temais"', '"Afastem-se das águas"'],
+                        r: 1,
+                        e: 'Jesus repreendeu o vento e ordenou ao mar: "Cala-te, aquieta-te", e houve grande bonança (Marcos 4:39).'
+                    },
+                    {
+                        q: 'A quem Jesus ressuscitou depois de já estar há quatro dias sepultado em Betânia?',
+                        op: ['O filho da viúva de Naim', 'A filha de Jairo', 'Lázaro, irmão de Marta e Maria', 'Estêvão'],
+                        r: 2,
+                        e: 'Jesus clamou com voz forte: "Lázaro, vem para fora!" e o que estivera morto saiu (João 11:43-44).'
+                    }
+                ]
+            },
+            {
+                id: 'livros',
+                icon: '📖',
+                title: 'Livros Sagrados e o Cânon',
+                desc: 'Você conhece a estrutura das Escrituras, autores, divisões testamentárias e o cânon sagrado?',
+                perguntas: [
+                    {
+                        q: 'Qual é o primeiro livro do Antigo Testamento e de toda a Bíblia?',
+                        op: ['Êxodo', 'Gênesis', 'Levítico', 'Jó'],
+                        r: 1,
+                        e: 'Gênesis abre as Escrituras sagradas narrando as origens da criação e a história dos patriarcas.'
+                    },
+                    {
+                        q: 'Qual o significado da palavra grega "Gênesis"?',
+                        op: ['Pacto Sagrado', 'Princípio ou Origem', 'Livro da Lei', 'Fé e Justiça'],
+                        r: 1,
+                        e: 'Gênesis provém do grego e significa origem, nascimento ou princípio de todas as coisas.'
+                    },
+                    {
+                        q: 'Qual é o livro das Escrituras composto por 150 capítulos de orações, súplicas e cânticos de louvor?',
+                        op: ['Provérbios', 'Eclesiastes', 'Salmos', 'Cânticos'],
+                        r: 2,
+                        e: 'O livro de Salmos (Tehilim) é a coletânea poética mais extensa, contendo 150 salmos.'
+                    },
+                    {
+                        q: 'Qual é o último livro do Novo Testamento?',
+                        op: ['Judas', 'Hebreus', 'Apocalipse (Revelação)', '3 João'],
+                        r: 2,
+                        e: 'O Apocalipse, revelado ao apóstolo João na ilha de Patmos, encerra o Novo Testamento.'
+                    },
+                    {
+                        q: 'Quantos livros compõem o Cânon Sagrado Unoteísta integral?',
+                        op: ['66 livros', '69 livros (incluindo os 3 livros de Enoque)', '73 livros', '81 livros'],
+                        r: 1,
+                        e: 'O cânon unoteísta preserva os 66 livros tradicionais acrescidos dos 3 livros históricos e proféticos de Enoque.'
+                    },
+                    {
+                        q: 'Quem foi o autor do terceiro Evangelho e também do livro histórico de Atos dos Apóstolos?',
+                        op: ['Lucas, o médico amado', 'Pedro, o apóstolo', 'Marcos', 'Barnabé'],
+                        r: 0,
+                        e: 'Lucas, cooperador de Paulo e historiador cuidadoso, escreveu o Evangelho e Atos.'
+                    },
+                    {
+                        q: 'Qual é a epístola mais curta do Novo Testamento em quantidade de versículos?',
+                        op: ['Filemom', 'Judas', '2 João', '3 João'],
+                        r: 3,
+                        e: '3 João é a epístola mais breve do Novo Testamento, contendo apenas 14 versículos.'
+                    }
+                ]
+            },
+            {
+                id: 'versiculos',
+                icon: '📜',
+                title: 'Versículos Famosos e Doutrina',
+                desc: 'Identifique o contexto e a mensagem dos versículos mais marcantes da Bíblia Sagrada.',
+                perguntas: [
+                    {
+                        q: '"No princípio era o Logos, e o Logos estava com Deus, e Deus era o Logos." Em qual livro está?',
+                        op: ['Evangelho segundo Mateus', 'Evangelho segundo João (1:1)', 'Primeira Epístola de João', 'Gênesis'],
+                        r: 1,
+                        e: 'João 1:1 abre o quarto evangelho apresentando o Logos eterno que se fez carne em Jesus Cristo.'
+                    },
+                    {
+                        q: '"O Senhor é o meu pastor; de nada terei falta." Qual é a referência deste amado texto?',
+                        op: ['Salmo 91', 'Salmo 23', 'Salmo 119', 'Salmo 1'],
+                        r: 1,
+                        e: 'O célebre Salmo 23, composto pelo rei Davi, expressa a plena confiança e cuidado do Supremo Pastor.'
+                    },
+                    {
+                        q: '"Tudo posso naquele que me fortalece." Quem escreveu este versículo em Filipenses 4:13?',
+                        op: ['O apóstolo Pedro', 'O apóstolo Paulo', 'Tiago', 'João Batista'],
+                        r: 1,
+                        e: 'Paulo escreveu aos Filipenses agradecendo o apoio e declarando seu contentamento em Cristo.'
+                    },
+                    {
+                        q: '"Buscai primeiro o Reino de Deus e a sua justiça, e todas estas coisas vos serão acrescentadas." Onde Jesus proferiu isto?',
+                        op: ['No Sermão do Monte (Mateus 6:33)', 'Na ceia da Páscoa', 'Na crucificação', 'No templo com os doutores'],
+                        r: 0,
+                        e: 'A advertência contra a ansiedade e o chamado à prioridade do Reino é parte central do Sermão do Monte.'
+                    },
+                    {
+                        q: '"Eu sou o caminho, a verdade e a vida; ninguém vem ao Pai senão por mim." Quem proferiu esta declaração?',
+                        op: ['João Batista', 'Moisés', 'Jesus Cristo (João 14:6)', 'O profeta Isaías'],
+                        r: 2,
+                        e: 'Jesus consolou seus apóstolos no cenáculo revelando ser o único mediador entre Deus e os homens.'
+                    },
+                    {
+                        q: '"Ora, a fé é a certeza das coisas que se esperam e a prova das coisas que se não veem." Onde está escrito?',
+                        op: ['Hebreus 11:1', 'Romanos 8:28', 'Tiago 2:14', '1 Coríntios 13:13'],
+                        r: 0,
+                        e: 'Hebreus 11 é conhecido como a grande galeria da fé, definindo a essência da confiança em Deus.'
+                    },
+                    {
+                        q: 'Qual capítulo do Novo Testamento é consagrado universalmente como o "Hino do Amor"?',
+                        op: ['Romanos 12', '1 Coríntios 13', 'Gálatas 5', 'Efésios 6'],
+                        r: 1,
+                        e: '1 Coríntios 13 descreve o amor verdadeiro como o caminho mais excelente que jamais perece.'
+                    }
+                ]
+            },
+            {
+                id: 'historias',
+                icon: '🕊️',
+                title: 'Grandes Histórias Bíblicas',
+                desc: 'Coloque à prova sua memória sobre os relatos da Criação, Patriarcas, Juízes e Apóstolos.',
+                perguntas: [
+                    {
+                        q: 'Em quantos dias Deus consumou as obras da Criação segundo o livro de Gênesis?',
+                        op: ['3 dias', '6 dias (e descansou no 7º)', '7 dias inteiros de trabalho', '10 dias'],
+                        r: 1,
+                        e: 'Deus criou todas as coisas em seis dias e no sétimo dia abençoou e descansou de toda a sua obra.'
+                    },
+                    {
+                        q: 'Quem foi lançado na cova dos leões famintos por não abrir mão de suas orações diárias a Deus?',
+                        op: ['Ezequiel', 'Jeremias', 'Daniel', 'Misael'],
+                        r: 2,
+                        e: 'O profeta Daniel permaneceu fiel a Deus e um anjo fechou a boca dos leões na Babilônia (Daniel 6).'
+                    },
+                    {
+                        q: 'Qual profeta foi arrebatado aos céus num redemoinho com uma carruagem e cavalos de fogo?',
+                        op: ['Eliseu', 'Enoque', 'Elias', 'Isaías'],
+                        r: 2,
+                        e: 'O profeta Elias foi levado ao céu perante os olhos de seu discípulo Eliseu (2 Reis 2:11).'
+                    },
+                    {
+                        q: 'Em qual cidade da Judeia nasceu Jesus, cumprindo a profecia de Miqueias?',
+                        op: ['Nazaré', 'Jerusalém', 'Belém', 'Jericó'],
+                        r: 2,
+                        e: 'Jesus nasceu em Belém de Judá durante o recenseamento ordenado por César Augusto (Mateus 2:1).'
+                    },
+                    {
+                        q: 'Quem guiou o povo de Israel através do Mar Vermelho durante o Êxodo do Egito?',
+                        op: ['Josué', 'Moisés', 'Arão', 'Gideão'],
+                        r: 1,
+                        e: 'Moisés estendeu a vara sobre o mar e o Senhor abriu as águas por um forte vento oriental (Êxodo 14).'
+                    },
+                    {
+                        q: 'Quem enfrentou e venceu o gigante filisteu Golias com uma funda e uma pedra?',
+                        op: ['Sansão', 'Saul', 'Davi', 'Jônatas'],
+                        r: 2,
+                        e: 'O jovem pastor Davi declarou: "Tu vens a mim com espada, mas eu vou a ti em nome do Senhor" (1 Sm 17).'
+                    },
+                    {
+                        q: 'Qual apóstolo negou Jesus três vezes antes do cantar do galo, e depois foi restaurado por Ele?',
+                        op: ['Judas Iscariotes', 'Tomé', 'Simão Pedro', 'Tiago Maior'],
+                        r: 2,
+                        e: 'Pedro chorou amargamente após a negação e posteriormente reafirmou seu amor a Jesus (João 21).'
+                    }
+                ]
+            },
+            {
+                id: 'unoteismo',
+                icon: '🧠',
+                title: 'Teologia & Filosofia Unoteísta',
+                desc: 'Aprofunde-se nos axiomas, distinções ontológicas e princípios da busca da verdade sem viés religioso.',
+                perguntas: [
+                    {
+                        q: 'Ontologicamente, quem é Deus segundo o axioma fundamental do Unoteísmo?',
+                        op: ['Três pessoas distintas em uma só substância', 'Uma só Consciência e uma só Pessoa divina, o Pai', 'Uma força impessoal do universo', 'Apenas uma criação da mente humana'],
+                        r: 1,
+                        e: 'Deus é o Espírito, a Consciência eterna e indivisível. Há uma só Consciência e uma só Pessoa divina.'
+                    },
+                    {
+                        q: 'Qual é a distinção unoteísta sobre o Espírito Santo nos homens em comparação a Cristo?',
+                        op: ['Nos homens é a própria Consciência divina presente e comunicada neles; em Cristo essa mesma Consciência encarnou', 'O Espírito é uma pessoa separada que habita apenas alguns homens', 'Não há distinção entre os seres humanos e Cristo', 'O Espírito Santo é apenas uma metáfora'],
+                        r: 0,
+                        e: 'Nos crentes o Espírito auxilia e ensina as verdades. Em Cristo, a Consciência divina encarnou plenamente.'
+                    },
+                    {
+                        q: 'Em nome de quem o batismo bíblico era administrado pelos apóstolos no livro de Atos?',
+                        op: ['Em nenhum nome em particular', 'Em nome de Jesus Cristo (Atos 2:38, 8:16, 10:48, 19:5)', 'Apenas no nome do Pai', 'No nome dos apóstolos'],
+                        r: 1,
+                        e: 'A Bíblia registra historicamente que os apóstolos batizavam sempre e exclusivamente em nome de Jesus Cristo.'
+                    },
+                    {
+                        q: 'Como o Unoteísmo define sua abordagem investigativa?',
+                        op: ['Como um dogma rígido sem questionamentos', 'Como uma busca sincera e defesa da verdade, sem viés nem sectarismo religioso', 'Como uma religião formal com hierarquia sacerdotal', 'Apenas como debate acadêmico secular'],
+                        r: 1,
+                        e: 'O Unoteísmo é uma filosofia de vida fundamentada na busca da verdade bíblica e racional sem viés religioso.'
+                    },
+                    {
+                        q: 'O que o Unoteísmo ensina a respeito da certeza da salvação para aquele que crê?',
+                        op: ['Que a salvação é incerta até a morte', 'Que a fé é dom de Deus e aquele que crê é justificado e selado pelo Espírito da Verdade', 'Que depende de boas obras para ser conquistada', 'Que todos são salvos automaticamente sem fé'],
+                        r: 1,
+                        e: 'A salvação é graça recebida pela fé; quem crê tem a promessa da vida eterna e a certeza da ressurreição.'
+                    },
+                    {
+                        q: 'O que significa o conceito de "Communicatio Idiomatum" em relação aos títulos de Deus e de Cristo?',
+                        op: ['A comunicação mútua de propriedades e nomes onde Cristo recebe a glória do Pai por herança ontológica', 'A separação total de Cristo e de Deus', 'A fusão mitológica dos deuses', 'Apenas uma convenção gramatical'],
+                        r: 0,
+                        e: 'O Filho herdou o Nome supremo que está sobre todo o nome, manifestando a plenitude do Pai na terra.'
+                    }
+                ]
+            }
+        ];
+
+        let state = {
+            quizIdx: 0,
+            qIdx: 0,
+            score: 0,
+            userAnswers: []
+        };
+
+        function buildQuizGrid() {
+            const grid = document.getElementById('quizGrid');
+            if (!grid) return;
+
+            grid.innerHTML = QUIZZES.map(function (quiz, idx) {
+                return '<div class="quiz-card" onclick="iniciarQuiz(' + idx + ')" role="button" tabindex="0" aria-label="Iniciar quiz ' + quiz.title + '">' +
+                    '  <div class="quiz-card-icon" aria-hidden="true">' + quiz.icon + '</div>' +
+                    '  <h3>' + quiz.title + '</h3>' +
+                    '  <p>' + quiz.desc + '</p>' +
+                    '  <div class="quiz-card-footer">' +
+                    '    <span class="quiz-card-count">' + quiz.perguntas.length + ' questões</span>' +
+                    '    <span class="quiz-card-btn">Iniciar Desafio →</span>' +
+                    '  </div>' +
+                    '</div>';
+            }).join('');
+        }
+
+        window.iniciarQuiz = function (idx) {
+            state = {
+                quizIdx: idx,
+                qIdx: 0,
+                score: 0,
+                userAnswers: []
+            };
+
+            const modal = document.getElementById('quizRunnerModal');
+            if (modal) {
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            renderQuestion();
+        };
+
+        window.fecharQuizModal = function () {
+            const modal = document.getElementById('quizRunnerModal');
+            if (modal) {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        };
+
+        function renderQuestion() {
+            const quiz = QUIZZES[state.quizIdx];
+            const q = quiz.perguntas[state.qIdx];
+            const total = quiz.perguntas.length;
+            const currentNum = state.qIdx + 1;
+            const pct = Math.round((state.qIdx / total) * 100);
+            const body = document.getElementById('quizRunnerBody');
+
+            let optionsHtml = q.op.map(function (optionText, optIdx) {
+                return '<button type="button" class="quiz-q-opt" onclick="responderQuestao(' + optIdx + ', this)">' +
+                    String.fromCharCode(65 + optIdx) + ') ' + optionText +
+                    '</button>';
+            }).join('');
+
+            body.innerHTML = '' +
+                '<div class="quiz-progress-wrap">' +
+                '  <div class="quiz-progress-meta">' +
+                '    <span>' + quiz.icon + ' ' + quiz.title + '</span>' +
+                '    <span>Questão ' + currentNum + ' de ' + total + '</span>' +
+                '  </div>' +
+                '  <div class="quiz-progress-bar"><div class="quiz-progress-fill" style="width: ' + pct + '%;"></div></div>' +
+                '</div>' +
+                '<h2 class="quiz-q-title" id="modalQuizTitle">' + q.q + '</h2>' +
+                '<div class="quiz-q-options">' + optionsHtml + '</div>' +
+                '<div id="qExplainBox" class="quiz-q-explain" hidden></div>' +
+                '<div id="qFooterNav" class="quiz-runner-footer" hidden>' +
+                '  <button type="button" class="btn-quiz-next" onclick="proximaQuestao()">' +
+                (currentNum === total ? 'Ver Resultado Final 🏆' : 'Próxima Questão →') +
+                '  </button>' +
+                '</div>';
+        }
+
+        window.responderQuestao = function (chosenIdx, btnEl) {
+            const quiz = QUIZZES[state.quizIdx];
+            const q = quiz.perguntas[state.qIdx];
+            const isCorrect = (chosenIdx === q.r);
+
+            if (isCorrect) state.score++;
+            state.userAnswers.push({ chosen: chosenIdx, correct: q.r });
+
+            // Desabilita opções e marca respostas
+            const allBtns = document.querySelectorAll('.quiz-q-opt');
+            allBtns.forEach(function (b, idx) {
+                b.disabled = true;
+                if (idx === q.r) {
+                    b.classList.add('correct');
+                    b.innerHTML = '✅ ' + b.innerHTML;
+                } else if (idx === chosenIdx) {
+                    b.classList.add('wrong');
+                    b.innerHTML = '❌ ' + b.innerHTML;
+                }
+            });
+
+            // Exibe explicação
+            const expBox = document.getElementById('qExplainBox');
+            if (expBox) {
+                expBox.innerHTML = '<strong>' + (isCorrect ? 'Correto! 🕊️ ' : 'Atenção: ') + '</strong>' + q.e;
+                expBox.hidden = false;
+            }
+
+            // Exibe botão de avançar
+            const footNav = document.getElementById('qFooterNav');
+            if (footNav) footNav.hidden = false;
+        };
+
+        window.proximaQuestao = function () {
+            const quiz = QUIZZES[state.quizIdx];
+            if (state.qIdx + 1 < quiz.perguntas.length) {
+                state.qIdx++;
+                renderQuestion();
+            } else {
+                renderFinalScore();
+            }
+        };
+
+        function renderFinalScore() {
+            const quiz = QUIZZES[state.quizIdx];
+            const total = quiz.perguntas.length;
+            const score = state.score;
+            const pct = Math.round((score / total) * 100);
+            const body = document.getElementById('quizRunnerBody');
+
+            let title = '';
+            let desc = '';
+            let verse = '';
+
+            if (pct === 100) {
+                title = 'Perfeito! Conhecimento Notável 🏆';
+                desc = 'Você acertou todas as questões! Sua dedicação ao estudo das Escrituras e da verdade é exemplar.';
+                verse = '“Lâmpada para os meus pés é a tua palavra e luz para o meu caminho.” — Salmos 119:105';
+            } else if (pct >= 70) {
+                title = 'Muito Bom! Excelente Desempenho 🌟';
+                desc = 'Você demonstrou um sólido conhecimento das Escrituras e dos princípios da fé.';
+                verse = '“Buscai e achareis; batei e abrir-se-vos-á.” — Mateus 7:7';
+            } else {
+                title = 'Bom Esforço! Continue Aprendendo 📖';
+                desc = 'Cada desafio é uma oportunidade de crescimento. Continue investigando e aprofundando seus estudos no Unoteísmo.';
+                verse = '“Conhecereis a verdade, e a verdade vos libertará.” — João 8:32';
+            }
+
+            body.innerHTML = '' +
+                '<div class="quiz-final-view">' +
+                '  <div class="quiz-final-score-circle">' +
+                '    <span class="score-num">' + pct + '%</span>' +
+                '    <span class="score-label">' + score + ' de ' + total + '</span>' +
+                '  </div>' +
+                '  <h2 class="quiz-final-title">' + title + '</h2>' +
+                '  <p class="quiz-final-desc">' + desc + '</p>' +
+                '  <div class="quiz-final-verse">' + verse + '</div>' +
+                '  <div class="quiz-final-actions">' +
+                '    <button type="button" class="btn-final-retry" onclick="iniciarQuiz(' + state.quizIdx + ')">🔄 Tentar Novamente</button>' +
+                '    <button type="button" class="btn-final-share" onclick="compartilharResultado(' + pct + ')">📤 Compartilhar no WhatsApp</button>' +
+                '    <button type="button" class="btn-final-retry" style="background:#444;" onclick="fecharQuizModal()">📋 Outros Quizzes</button>' +
+                '  </div>' +
+                '</div>';
+        }
+
+        window.compartilharResultado = function (pct) {
+            const quiz = QUIZZES[state.quizIdx];
+            const msg = '🧩 *Desafio Bíblico — Unoteísmo*\n\n' +
+                'Acabei de fazer o quiz *"' + quiz.title + '"* e acertei *' + pct + '%* das questões!\n\n' +
+                'Aceita o desafio? Teste seus conhecimentos aqui:\n' +
+                window.location.origin + '/quizzes';
+            window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(msg), '_blank');
+        };
+
+        // Fecha modal ao clicar fora ou apertar Esc
+        document.addEventListener('click', function (e) {
+            const modal = document.getElementById('quizRunnerModal');
+            if (modal && modal.classList.contains('open') && e.target === modal) {
+                fecharQuizModal();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('quizRunnerModal');
+                if (modal && modal.classList.contains('open')) {
+                    fecharQuizModal();
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            buildQuizGrid();
+
+            // Abre quiz direto se houver hash (ex: #milagres)
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                const idx = QUIZZES.findIndex(function (q) { return q.id === hash; });
+                if (idx >= 0) {
+                    setTimeout(function () {
+                        iniciarQuiz(idx);
+                    }, 200);
+                }
+            }
+        });
+    })();
+    </script>
+    <script src="/site.js" defer></script>
+</body>
+
+</html>

@@ -8,7 +8,7 @@
     "binding": "ASSETS",
     // 404 real (404.html) para rotas inexistentes; o Worker só roda para a API, a Bíblia e páginas editáveis (/ e /teologia)
     "not_found_handling": "404-page",
-    "run_worker_first": ["/", "/api/*", "/biblia", "/biblia/*", "/teologia"]
+    "run_worker_first": ["/", "/api/*", "/biblia", "/biblia/*", "/teologia", "/posts", "/posts/*", "/categoria", "/categoria/*", "/pedidos-de-oracao", "/quizzes", "/quiz", "/admin"]
   },
   "vars": {
     // Origem canônica usada no HTML gerado pelo Worker (troque ao migrar para domínio próprio)

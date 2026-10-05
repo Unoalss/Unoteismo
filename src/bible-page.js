@@ -150,6 +150,12 @@ export function renderChapterPage(shell, { site, book, chapter, verses, books })
   html = setElementText(html, 'header-book-greek', book.greek || '');
   html = setElementText(html, 'header-chap-title', `Capítulo ${chapter}`);
   html = setElementText(html, 'header-canon-badge', badge);
+  html = setElementText(html, 'chapter-header-title', `${book.name} ${chapter}`);
+  html = setElementText(html, 'chapter-header-sub', `${verses.length} versículos`);
+  html = setElementText(html, 'top-chap-info', `${chapter} / ${book.chapters_count}`);
+  html = setElementText(html, 'breadcrumb-book-link', book.name);
+  html = setElementText(html, 'breadcrumb-chap-current', `Capítulo ${chapter}`);
+  html = html.replace(/id="breadcrumb-book-link"\s+href="[^"]*"/, `id="breadcrumb-book-link" href="/biblia/${esc(book.slug)}/"`);
   html = setElementText(html, 'current-book-name', book.name);
   html = setElementText(html, 'current-book-greek', book.greek ? `(${book.greek})` : '');
   html = setElementText(html, 'current-chap-num', String(chapter));

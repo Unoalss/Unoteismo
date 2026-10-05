@@ -1,0 +1,8 @@
+{
+  "provider": "unoteista_engine",
+  "api_key": "",
+  "custom_model": "deepseek/deepseek-v4-flash",
+  "auto_publish_default": true,
+  "temperature": 0.7,
+  "style": "unoteista_sobrio"
+}

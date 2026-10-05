@@ -1,0 +1,860 @@
+/* ==========================================================================
+   PÁGINA DE CATEGORIAS E POSTS (PRETO & BRANCO — UNOTEÍSMO)
+   ========================================================================== */
+
+/* Breadcrumbs */
+.ci-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #666666;
+    margin: 24px 0 16px;
+    flex-wrap: wrap;
+}
+
+.ci-breadcrumbs a {
+    color: #111111;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.ci-breadcrumbs a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.ci-breadcrumbs span {
+    color: #999999;
+}
+
+.ci-breadcrumbs strong {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Hero da Categoria */
+.ci-hero {
+    background: #000000;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 44px 32px 38px;
+    text-align: center;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.ci-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1), transparent 60%);
+    pointer-events: none;
+}
+
+.ci-hero-icon {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.ci-hero h1 {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+}
+
+.ci-hero p {
+    font-size: 1.05rem;
+    color: #d1d5db;
+    max-width: 660px;
+    margin: 0 auto 18px;
+    line-height: 1.55;
+}
+
+.ci-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 5px 18px;
+    letter-spacing: 0.3px;
+}
+
+/* Barra de Navegação entre Categorias (Pills) */
+.ci-categories-nav-wrap {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.ci-categories-nav {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 6px 2px 14px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.ci-categories-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.ci-cat-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 18px;
+    border-radius: 30px;
+    border: 1.5px solid #e2e8f0;
+    background: #ffffff;
+    color: #334155;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.ci-cat-tab:hover {
+    border-color: #000000;
+    color: #000000;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.ci-cat-tab.active {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Barra de Filtro e Busca */
+.ci-filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 26px;
+    flex-wrap: wrap;
+}
+
+.ci-search-box {
+    position: relative;
+    flex: 1;
+    min-width: 260px;
+    max-width: 440px;
+}
+
+.ci-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.ci-search-input {
+    width: 100%;
+    padding: 11px 16px 11px 40px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.ci-search-input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.ci-results-count {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Grid de Postagens */
+.ci-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+.ci-card {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.ci-card:hover {
+    transform: translateY(-5px);
+    border-color: #000000;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.09);
+}
+
+/* Capa do Card da Categoria */
+.ci-card-cover-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f1f5f9;
+    position: relative;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.ci-card-cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ci-card:hover .ci-card-cover-img {
+    transform: scale(1.04);
+}
+
+/* Cabeçalho do Card (Banner Gráfico Monocromático) */
+.ci-card-header {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 20px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #1e293b;
+}
+
+.ci-card-cat-badge {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ci-card-verse-badge {
+    font-size: 0.82rem;
+    color: #e2e8f0;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Corpo do Card */
+.ci-card-body {
+    padding: 20px 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.ci-card-meta {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ci-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 10px;
+    line-height: 1.35;
+    transition: color 0.2s ease;
+}
+
+.ci-card:hover h3 {
+    color: #000000;
+}
+
+.ci-snippet {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0 0 18px;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Rodapé do Card */
+.ci-footer {
+    padding: 14px 22px 18px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ci-read-btn {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #000000;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s ease;
+}
+
+.ci-card:hover .ci-read-btn {
+    transform: translateX(4px);
+}
+
+.ci-share-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ci-share-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35);
+}
+
+/* Estado Vazio */
+.ci-empty-state {
+    text-align: center;
+    padding: 60px 24px;
+    background: #fafafa;
+    border: 1.5px dashed #cbd5e1;
+    border-radius: 18px;
+    margin-bottom: 40px;
+}
+
+.ci-empty-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.ci-empty-state h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 8px;
+}
+
+.ci-empty-state p {
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   VISUALIZAÇÃO COMPLETA DO POST (LEITURA DETALHADA)
+   ========================================================================== */
+.post-view-wrap {
+    margin-bottom: 50px;
+    animation: fadeInPost 0.25s ease;
+}
+
+@keyframes fadeInPost {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-post-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    margin-bottom: 24px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.btn-post-back:hover {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.post-article {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 40px 36px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    margin-bottom: 36px;
+}
+
+.post-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+}
+
+.post-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.post-cat-pill {
+    background: #000000;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.post-date-badge,
+.post-time-badge {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.post-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+}
+
+.post-subtitle {
+    font-size: 1.15rem;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Imagem de Capa do Post (Artigo Completo) */
+.post-cover-wrap {
+    width: 100%;
+    max-height: 460px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 24px 0 28px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    background: #f1f5f9;
+}
+
+.post-cover-img {
+    width: 100%;
+    height: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Versículo em Destaque no Post */
+.post-scripture-quote {
+    background: #f8fafc;
+    border-left: 5px solid #000000;
+    border-radius: 0 14px 14px 0;
+    padding: 22px 26px;
+    margin: 28px 0;
+    border-top: 1px solid #f1f5f9;
+    border-right: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.post-scripture-quote p {
+    font-family: 'Georgia', serif;
+    font-size: 1.18rem;
+    font-style: italic;
+    color: #1e293b;
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
+
+.post-scripture-quote cite {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+}
+
+/* Resumo / Sumário */
+.post-summary-box {
+    background: #fafafa;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 22px;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 28px;
+}
+
+/* Seções do Post */
+.post-section {
+    margin-bottom: 28px;
+}
+
+.post-section h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 12px;
+    line-height: 1.3;
+}
+
+.post-section p {
+    font-size: 1.05rem;
+    color: #334155;
+    line-height: 1.7;
+    margin: 0 0 14px;
+}
+
+/* Tabela Comparativa / Teológica */
+.post-table-wrap {
+    margin: 32px 0;
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.post-table-title {
+    background: #0f172a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 14px 20px;
+    margin: 0;
+}
+
+.post-table-container {
+    overflow-x: auto;
+}
+
+.post-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+    text-align: left;
+}
+
+.post-table th {
+    background: #f8fafc;
+    color: #0f172a;
+    font-weight: 700;
+    padding: 12px 16px;
+    border-bottom: 1.5px solid #e2e8f0;
+}
+
+.post-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+
+.post-table tr:last-child td {
+    border-bottom: none;
+}
+
+.post-table tr:hover td {
+    background: #f8fafc;
+}
+
+/* Quiz Interativo no Post */
+.post-quiz-box {
+    margin: 32px 0;
+    background: #fafafa;
+    border: 1.5px solid #000000;
+    border-radius: 16px;
+    padding: 24px 26px;
+}
+
+.post-quiz-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #000000;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-quiz-question {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 16px;
+}
+
+.post-quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post-quiz-btn {
+    text-align: left;
+    background: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    font-weight: 500;
+    color: #1e293b;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.post-quiz-btn:hover:not(:disabled) {
+    border-color: #000000;
+    background: #f1f5f9;
+    transform: translateX(2px);
+}
+
+.post-quiz-btn.correct {
+    background: #f0fdf4 !important;
+    border-color: #16a34a !important;
+    color: #15803d !important;
+    font-weight: 700;
+}
+
+.post-quiz-btn.wrong {
+    background: #fef2f2 !important;
+    border-color: #dc2626 !important;
+    color: #b91c1c !important;
+    font-weight: 700;
+}
+
+.post-quiz-explanation {
+    margin-top: 14px;
+    background: #f1f5f9;
+    border-left: 4px solid #000000;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 0.92rem;
+    color: #334155;
+    line-height: 1.5;
+}
+
+/* Oração de Encerramento */
+.post-prayer-box {
+    margin: 32px 0;
+    background: #fffdf0;
+    border: 1px solid #fef08a;
+    border-left: 5px solid #000000;
+    border-radius: 12px;
+    padding: 22px 26px;
+}
+
+.post-prayer-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-prayer-text {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #1e293b;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Barra de Ações e Compartilhamento */
+.post-actions-bar {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 24px;
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.post-share-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.post-share-group span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.btn-share-social {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-family: inherit;
+}
+
+.btn-share-whatsapp {
+    background: #25D366;
+    color: #ffffff;
+}
+
+.btn-share-whatsapp:hover {
+    background: #1eb954;
+    transform: translateY(-1px);
+}
+
+.btn-share-copy {
+    background: #f1f5f9;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-share-copy:hover {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.btn-bible-cta {
+    background: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s ease;
+}
+
+.btn-bible-cta:hover {
+    background: #222222;
+}
+
+/* Postagens Relacionadas */
+.post-related-section {
+    margin-top: 48px;
+}
+
+.post-related-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #000000;
+    margin: 0 0 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .ci-hero {
+        padding: 32px 20px 28px;
+        border-radius: 16px;
+    }
+
+    .ci-hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .ci-hero p {
+        font-size: 0.98rem;
+    }
+
+    .ci-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .post-article {
+        padding: 24px 18px;
+        border-radius: 16px;
+    }
+
+    .post-title {
+        font-size: 1.7rem;
+    }
+
+    .post-actions-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .post-share-group {
+        justify-content: flex-start;
+    }
+
+    .btn-bible-cta {
+        justify-content: center;
+    }
+}

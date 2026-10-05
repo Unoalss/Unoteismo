@@ -229,6 +229,8 @@
                 </div>
             </div>
 
+            <a href="/pedidos-de-oracao" class="nav-link">Oração</a>
+            <a href="/quizzes" class="nav-link">Quizzes</a>
             <a href="/sobre" class="nav-link">Sobre</a>
 
             <a href="/biblia" class="menu-btn-cta"><span>Ler Bíblia →</span></a>
@@ -304,6 +306,426 @@
 
         </section>
 
+        <!-- ======================================================== -->
+        <!-- SEÇÃO: BÍBLIA SAGRADA ONLINE — CÂNON DE 69 LIVROS        -->
+        <!-- ======================================================== -->
+        <section class="bible-books-section" id="livros-sagrados" aria-label="Bíblia Sagrada Online — Cânon dos 69 Livros">
+            <div class="bb-header">
+                <h2><span>📖</span> Bíblia Sagrada Online</h2>
+                <p>69 livros, 1.283 capítulos. Clique no livro para ver os capítulos.</p>
+            </div>
+
+            <div class="bb-tabs" role="tablist" aria-label="Testamentos">
+                <button type="button" role="tab" class="bb-tab active" id="tab-antigo" aria-controls="bb-antigo" aria-selected="true" onclick="mostrarTestamento('antigo', this)">ANTIGO TESTAMENTO</button>
+                <button type="button" role="tab" class="bb-tab" id="tab-novo" aria-controls="bb-novo" aria-selected="false" onclick="mostrarTestamento('novo', this)">NOVO TESTAMENTO</button>
+            </div>
+
+            <div id="bb-antigo" class="bb-testamento bb-active" role="tabpanel" aria-labelledby="tab-antigo">
+                <div class="bb-books-grid">
+                    <a href="/biblia/genesis/" class="bb-book" title="Ver capítulos de Gênesis">Gênesis</a>
+                    <a href="/biblia/exodo/" class="bb-book" title="Ver capítulos de Êxodo">Êxodo</a>
+                    <a href="/biblia/levitico/" class="bb-book" title="Ver capítulos de Levítico">Levítico</a>
+                    <a href="/biblia/numeros/" class="bb-book" title="Ver capítulos de Números">Números</a>
+                    <a href="/biblia/deuteronomio/" class="bb-book" title="Ver capítulos de Deuteronômio">Deuteronômio</a>
+                    <a href="/biblia/josue/" class="bb-book" title="Ver capítulos de Josué">Josué</a>
+                    <a href="/biblia/juizes/" class="bb-book" title="Ver capítulos de Juízes">Juízes</a>
+                    <a href="/biblia/rute/" class="bb-book" title="Ver capítulos de Rute">Rute</a>
+                    <a href="/biblia/1-samuel/" class="bb-book" title="Ver capítulos de 1 Samuel">1 Samuel</a>
+                    <a href="/biblia/2-samuel/" class="bb-book" title="Ver capítulos de 2 Samuel">2 Samuel</a>
+                    <a href="/biblia/1-reis/" class="bb-book" title="Ver capítulos de 1 Reis">1 Reis</a>
+                    <a href="/biblia/2-reis/" class="bb-book" title="Ver capítulos de 2 Reis">2 Reis</a>
+                    <a href="/biblia/1-cronicas/" class="bb-book" title="Ver capítulos de 1 Crônicas">1 Crônicas</a>
+                    <a href="/biblia/2-cronicas/" class="bb-book" title="Ver capítulos de 2 Crônicas">2 Crônicas</a>
+                    <a href="/biblia/esdras/" class="bb-book" title="Ver capítulos de Esdras">Esdras</a>
+                    <a href="/biblia/neemias/" class="bb-book" title="Ver capítulos de Neemias">Neemias</a>
+                    <a href="/biblia/ester/" class="bb-book" title="Ver capítulos de Ester">Ester</a>
+                    <a href="/biblia/jo/" class="bb-book" title="Ver capítulos de Jó">Jó</a>
+                    <a href="/biblia/salmos/" class="bb-book" title="Ver capítulos de Salmos">Salmos</a>
+                    <a href="/biblia/proverbios/" class="bb-book" title="Ver capítulos de Provérbios">Provérbios</a>
+                    <a href="/biblia/eclesiastes/" class="bb-book" title="Ver capítulos de Eclesiastes">Eclesiastes</a>
+                    <a href="/biblia/cantico-dos-canticos/" class="bb-book" title="Ver capítulos de Cantares">Cantares</a>
+                    <a href="/biblia/sabedoria-de-salomao/" class="bb-book" title="Ver capítulos de Sabedoria de Salomão">Sabedoria</a>
+                    <a href="/biblia/eclesiastico/" class="bb-book" title="Ver capítulos de Eclesiástico">Eclesiástico</a>
+                    <a href="/biblia/isaias/" class="bb-book" title="Ver capítulos de Isaías">Isaías</a>
+                    <a href="/biblia/jeremias/" class="bb-book" title="Ver capítulos de Jeremias">Jeremias</a>
+                    <a href="/biblia/lamentacoes/" class="bb-book" title="Ver capítulos de Lamentações">Lamentações</a>
+                    <a href="/biblia/baruque/" class="bb-book" title="Ver capítulos de Baruque">Baruque</a>
+                    <a href="/biblia/ezequiel/" class="bb-book" title="Ver capítulos de Ezequiel">Ezequiel</a>
+                    <a href="/biblia/daniel/" class="bb-book" title="Ver capítulos de Daniel">Daniel</a>
+                    <a href="/biblia/oseias/" class="bb-book" title="Ver capítulos de Oséias">Oséias</a>
+                    <a href="/biblia/joel/" class="bb-book" title="Ver capítulos de Joel">Joel</a>
+                    <a href="/biblia/amos/" class="bb-book" title="Ver capítulos de Amós">Amós</a>
+                    <a href="/biblia/obadias/" class="bb-book" title="Ver capítulos de Obadias">Obadias</a>
+                    <a href="/biblia/jonas/" class="bb-book" title="Ver capítulos de Jonas">Jonas</a>
+                    <a href="/biblia/miqueias/" class="bb-book" title="Ver capítulos de Miquéias">Miquéias</a>
+                    <a href="/biblia/naum/" class="bb-book" title="Ver capítulos de Naum">Naum</a>
+                    <a href="/biblia/habacuque/" class="bb-book" title="Ver capítulos de Habacuque">Habacuque</a>
+                    <a href="/biblia/sofonias/" class="bb-book" title="Ver capítulos de Sofonias">Sofonias</a>
+                    <a href="/biblia/ageu/" class="bb-book" title="Ver capítulos de Ageu">Ageu</a>
+                    <a href="/biblia/zacarias/" class="bb-book" title="Ver capítulos de Zacarias">Zacarias</a>
+                    <a href="/biblia/malaquias/" class="bb-book" title="Ver capítulos de Malaquias">Malaquias</a>
+                </div>
+            </div>
+
+            <div id="bb-novo" class="bb-testamento" role="tabpanel" aria-labelledby="tab-novo">
+                <div class="bb-books-grid">
+                    <a href="/biblia/mateus/" class="bb-book" title="Ver capítulos de Mateus">Mateus</a>
+                    <a href="/biblia/marcos/" class="bb-book" title="Ver capítulos de Marcos">Marcos</a>
+                    <a href="/biblia/lucas/" class="bb-book" title="Ver capítulos de Lucas">Lucas</a>
+                    <a href="/biblia/joao/" class="bb-book" title="Ver capítulos de João">João</a>
+                    <a href="/biblia/atos-dos-apostolos/" class="bb-book" title="Ver capítulos de Atos dos Apóstolos">Atos</a>
+                    <a href="/biblia/romanos/" class="bb-book" title="Ver capítulos de Romanos">Romanos</a>
+                    <a href="/biblia/1-corintios/" class="bb-book" title="Ver capítulos de 1 Coríntios">1 Coríntios</a>
+                    <a href="/biblia/2-corintios/" class="bb-book" title="Ver capítulos de 2 Coríntios">2 Coríntios</a>
+                    <a href="/biblia/galatas/" class="bb-book" title="Ver capítulos de Gálatas">Gálatas</a>
+                    <a href="/biblia/efesios/" class="bb-book" title="Ver capítulos de Efésios">Efésios</a>
+                    <a href="/biblia/filipenses/" class="bb-book" title="Ver capítulos de Filipenses">Filipenses</a>
+                    <a href="/biblia/colossenses/" class="bb-book" title="Ver capítulos de Colossenses">Colossenses</a>
+                    <a href="/biblia/1-tessalonicenses/" class="bb-book" title="Ver capítulos de 1 Tessalonicenses">1 Tessalonicenses</a>
+                    <a href="/biblia/2-tessalonicenses/" class="bb-book" title="Ver capítulos de 2 Tessalonicenses">2 Tessalonicenses</a>
+                    <a href="/biblia/1-timoteo/" class="bb-book" title="Ver capítulos de 1 Timóteo">1 Timóteo</a>
+                    <a href="/biblia/2-timoteo/" class="bb-book" title="Ver capítulos de 2 Timóteo">2 Timóteo</a>
+                    <a href="/biblia/tito/" class="bb-book" title="Ver capítulos de Tito">Tito</a>
+                    <a href="/biblia/filemom/" class="bb-book" title="Ver capítulos de Filemom">Filemom</a>
+                    <a href="/biblia/hebreus/" class="bb-book" title="Ver capítulos de Hebreus">Hebreus</a>
+                    <a href="/biblia/tiago/" class="bb-book" title="Ver capítulos de Tiago">Tiago</a>
+                    <a href="/biblia/1-pedro/" class="bb-book" title="Ver capítulos de 1 Pedro">1 Pedro</a>
+                    <a href="/biblia/2-pedro/" class="bb-book" title="Ver capítulos de 2 Pedro">2 Pedro</a>
+                    <a href="/biblia/1-joao/" class="bb-book" title="Ver capítulos de 1 João">1 João</a>
+                    <a href="/biblia/2-joao/" class="bb-book" title="Ver capítulos de 2 João">2 João</a>
+                    <a href="/biblia/3-joao/" class="bb-book" title="Ver capítulos de 3 João">3 João</a>
+                    <a href="/biblia/judas/" class="bb-book" title="Ver capítulos de Judas">Judas</a>
+                    <a href="/biblia/apocalipse/" class="bb-book" title="Ver capítulos de Apocalipse">Apocalipse</a>
+                </div>
+            </div>
+
+            <div class="bb-action-wrap">
+                <a href="/biblia" class="btn-bb-complete">
+                    <span aria-hidden="true">📖</span> Abrir Bíblia Completa
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção: Resposta do Céu & Pedido de Oração -->
+        <section class="actions-section" aria-label="Ações de Fé e Oração">
+            <div class="actions-grid">
+                <!-- Card 1: Resposta do Céu -->
+                <div class="action-card">
+                    <div class="action-card-body">
+                        <h2 class="action-card-title">Resposta do Céu</h2>
+                        <p class="action-card-text">Clique no botão e receba uma palavra especial para seu momento.</p>
+                        <button type="button" class="btn-action" id="btn-resposta-ceu" onclick="abrirRespostaDoCeu()">
+                            <span aria-hidden="true">🤍</span> Receber Palavra
+                        </button>
+                    </div>
+                    <div class="action-card-badge" aria-hidden="true">🕊️</div>
+                </div>
+
+                <!-- Card 2: Pedido de Oração -->
+                <div class="action-card">
+                    <div class="action-card-body">
+                        <h2 class="action-card-title">Pedido de Oração</h2>
+                        <p class="action-card-text">Nossa comunidade estará orando por você e sua família.</p>
+                        <a href="/pedidos-de-oracao" class="btn-action">
+                            <span aria-hidden="true">🙏</span> Fazer Pedido
+                        </a>
+                    </div>
+                    <div class="action-card-badge" aria-hidden="true">🙏</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- SEÇÃO: EXPLORE NOSSOS PRINCIPAIS TEMAS (8 CATEGORIAS)     -->
+        <!-- ======================================================== -->
+        <section class="themes-section" id="temas-principais" aria-label="Explore Nossos Principais Temas">
+            <div class="themes-header">
+                <h2 class="themes-title">Explore Nossos Principais <span>Temas</span></h2>
+                <p class="themes-subtitle">Conteúdos bíblicos organizados para fortalecer a sua caminhada com o Deus Único.</p>
+            </div>
+
+            <div class="themes-grid">
+                <!-- 1. Versículo do Dia -->
+                <a href="/posts/versiculo-do-dia/" class="theme-card" data-category="versiculo_do_dia" aria-label="Abrir categoria Versículo do Dia">
+                    <div class="theme-card-icon" aria-hidden="true">📜</div>
+                    <h3 class="theme-card-title">Versículo do Dia</h3>
+                    <p class="theme-card-desc">Comece o dia com uma passagem bíblica selecionada e uma reflexão profunda da Palavra.</p>
+                    <span class="theme-card-action">Ver todas as postagens →</span>
+                </a>
+
+                <!-- 2. Palavra do Dia -->
+                <a href="/posts/palavra-do-dia/" class="theme-card" data-category="palavra_do_dia" aria-label="Abrir categoria Palavra do Dia">
+                    <div class="theme-card-icon" aria-hidden="true">📖</div>
+                    <h3 class="theme-card-title">Palavra do Dia</h3>
+                    <p class="theme-card-desc">Conheça o significado original de palavras hebraicas e gregas e como vivê-las hoje.</p>
+                    <span class="theme-card-action">Ver todas as postagens →</span>
+                </a>
+
+                <!-- 3. Salmos do Dia -->
+                <a href="/posts/salmos-do-dia/" class="theme-card" data-category="salmos_do_dia" aria-label="Abrir categoria Salmos do Dia">
+                    <div class="theme-card-icon" aria-hidden="true">🕊️</div>
+                    <h3 class="theme-card-title">Salmos do Dia</h3>
+                    <p class="theme-card-desc">Salmos selecionados para trazer consolo, renovação espiritual e louvor ao Deus Único.</p>
+                    <span class="theme-card-action">Ver todas as postagens →</span>
+                </a>
+
+                <!-- 4. Devocional do Dia -->
+                <a href="/posts/devocional-do-dia/" class="theme-card" data-category="devocional_do_dia" aria-label="Abrir categoria Devocional do Dia">
+                    <div class="theme-card-icon" aria-hidden="true">✨</div>
+                    <h3 class="theme-card-title">Devocional do Dia</h3>
+                    <p class="theme-card-desc">Reflexões diárias práticas que aproximam você do Criador e fortalecem sua fé.</p>
+                    <span class="theme-card-action">Ver todas as postagens →</span>
+                </a>
+
+                <!-- 5. Histórias da Bíblia -->
+                <a href="/posts/historias-da-biblia/" class="theme-card" data-category="historias_da_biblia" aria-label="Abrir categoria Histórias da Bíblia">
+                    <div class="theme-card-icon" aria-hidden="true">🏛️</div>
+                    <h3 class="theme-card-title">Histórias da Bíblia</h3>
+                    <p class="theme-card-desc">Narrativas inspiradoras de fé, providência divina e perseverança dos servos de Deus.</p>
+                    <span class="theme-card-action">Ver todas as postagens →</span>
+                </a>
+
+                <!-- 6. Curiosidades Bíblicas -->
+                <a href="/posts/curiosidades-biblicas/" class="theme-card" data-category="curiosidades_biblicas" aria-label="Abrir categoria Curiosidades Bíblicas">
+                    <div class="theme-card-icon" aria-hidden="true">🔍</div>
+                    <h3 class="theme-card-title">Curiosidades Bíblicas</h3>
+                    <p class="theme-card-desc">Fatos históricos fascinantes, arqueologia bíblica, manuscritos e costumes antigos.</p>
+                    <span class="theme-card-action">Ver todas as postagens →</span>
+                </a>
+
+                <!-- 7. Ensinamentos de Jesus -->
+                <a href="/posts/ensinamentos-de-jesus/" class="theme-card" data-category="ensinamentos_de_jesus" aria-label="Abrir categoria Ensinamentos de Jesus">
+                    <div class="theme-card-icon" aria-hidden="true">👑</div>
+                    <h3 class="theme-card-title">Ensinamentos de Jesus</h3>
+                    <p class="theme-card-desc">As parábolas, sermões e mandamentos do Messias Yeshua sobre o Reino de Deus.</p>
+                    <span class="theme-card-action">Ver todas as postagens →</span>
+                </a>
+
+                <!-- 8. Ensino Bíblico -->
+                <a href="/posts/ensino-biblico/" class="theme-card" data-category="ensino_biblico" aria-label="Abrir categoria Ensino Bíblico">
+                    <div class="theme-card-icon" aria-hidden="true">📚</div>
+                    <h3 class="theme-card-title">Ensino Bíblico</h3>
+                    <p class="theme-card-desc">Estudos teológicos e doutrinários fundamentados na verdade sobre o Deus Único e Sua aliança.</p>
+                    <span class="theme-card-action">Ver todas as postagens →</span>
+                </a>
+            </div>
+
+            <!-- Faixa Destaque / Chamada Inspiradora -->
+            <div class="themes-banner">
+                <span class="banner-icon" aria-hidden="true">✝</span>
+                <div class="banner-content">
+                    <strong>Avivamento espiritual:</strong> a Palavra de Deus é viva e eficaz. Permita que ela toque o seu coração e transforme a sua vida hoje.
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- SEÇÃO: ÚLTIMAS PUBLICAÇÕES (8 CARDS DE CONTEÚDO RECENTE)  -->
+        <!-- ======================================================== -->
+        <section class="latest-posts-section" id="ultimas-publicacoes" aria-label="Últimas Publicações">
+            <div class="latest-posts-header">
+                <h2 class="latest-posts-title">
+                    <span class="title-icon" aria-hidden="true">📖</span> Últimas <span class="highlight-word">Publicações</span>
+                </h2>
+                <p class="latest-posts-sub">Conteúdos recentes para nutrir a sua fé e o seu espírito.</p>
+            </div>
+
+            <div class="latest-posts-grid" id="latest-posts-grid">
+                <!-- 1. Versículo do Dia -->
+                <article class="latest-post-card">
+                    <a href="/posts/versiculo-do-dia/versiculo-do-dia-deuteronomio-6-4-o-senhor-nosso-deus-e-o-unico-senhor" class="latest-post-cover-link" aria-label="Ler artigo: Versículo do Dia">
+                        <img src="/images/posts/cover_versiculo_dia_1791173917229.jpg" alt="Versículo do Dia: O Senhor Nosso Deus é o Único Senhor" class="latest-post-img" loading="lazy">
+                    </a>
+                    <div class="latest-post-body">
+                        <h3 class="latest-post-title">
+                            <a href="/posts/versiculo-do-dia/versiculo-do-dia-deuteronomio-6-4-o-senhor-nosso-deus-e-o-unico-senhor">Versículo do Dia: O Senhor Nosso Deus é o Único Senhor</a>
+                        </h3>
+                        <p class="latest-post-snippet">
+                            <span class="latest-post-icon" aria-hidden="true">📜</span> A pedra angular de toda a revelação bíblica e o alicerce da nossa fé.
+                        </p>
+                        <div class="latest-post-footer">
+                            <a href="/posts/versiculo-do-dia/versiculo-do-dia-deuteronomio-6-4-o-senhor-nosso-deus-e-o-unico-senhor" class="latest-post-read-btn">Ler artigo <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Palavra do Dia -->
+                <article class="latest-post-card">
+                    <a href="/posts/palavra-do-dia/palavra-do-dia-hesed-a-fidelidade-e-misericordia-leal-de-deus" class="latest-post-cover-link" aria-label="Ler artigo: Palavra do Dia">
+                        <img src="/images/posts/cover_palavra_dia_1791173939501.jpg" alt="A Palavra do Dia: 'Hesed' – O Amor Leal e Inabalável do Criador" class="latest-post-img" loading="lazy">
+                    </a>
+                    <div class="latest-post-body">
+                        <h3 class="latest-post-title">
+                            <a href="/posts/palavra-do-dia/palavra-do-dia-hesed-a-fidelidade-e-misericordia-leal-de-deus">A Palavra do Dia: 'Hesed' – O Amor Leal e Inabalável do Criador</a>
+                        </h3>
+                        <p class="latest-post-snippet">
+                            <span class="latest-post-icon" aria-hidden="true">📖</span> O significado bíblico da graça que nunca desiste de você.
+                        </p>
+                        <div class="latest-post-footer">
+                            <a href="/posts/palavra-do-dia/palavra-do-dia-hesed-a-fidelidade-e-misericordia-leal-de-deus" class="latest-post-read-btn">Ler artigo <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Salmos do Dia -->
+                <article class="latest-post-card">
+                    <a href="/posts/salmos-do-dia/salmos-do-dia-salmo-121-o-socorro-que-vem-do-criador" class="latest-post-cover-link" aria-label="Ler artigo: Salmos do Dia">
+                        <img src="/images/posts/cover_salmos_dia_1791173964006.jpg" alt="Salmos do Dia: Salmo 121 – O Teu Socorro Vem do Criador" class="latest-post-img" loading="lazy">
+                    </a>
+                    <div class="latest-post-body">
+                        <h3 class="latest-post-title">
+                            <a href="/posts/salmos-do-dia/salmos-do-dia-salmo-121-o-socorro-que-vem-do-criador">Salmos do Dia: Salmo 121 – O Teu Socorro Vem do Criador</a>
+                        </h3>
+                        <p class="latest-post-snippet">
+                            <span class="latest-post-icon" aria-hidden="true">🕊️</span> Elevo os olhos para os montes: a segurança do guarda que não dorme.
+                        </p>
+                        <div class="latest-post-footer">
+                            <a href="/posts/salmos-do-dia/salmos-do-dia-salmo-121-o-socorro-que-vem-do-criador" class="latest-post-read-btn">Ler artigo <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Devocional do Dia -->
+                <article class="latest-post-card">
+                    <a href="/posts/devocional-do-dia/devocional-do-dia-renovando-a-mente-no-silencio-com-deus" class="latest-post-cover-link" aria-label="Ler artigo: Devocional do Dia">
+                        <img src="/images/posts/cover_devocional_dia.jpg" alt="Devocional do Dia: Renovando a Mente no Silêncio Diante de Deus" class="latest-post-img" loading="lazy">
+                    </a>
+                    <div class="latest-post-body">
+                        <h3 class="latest-post-title">
+                            <a href="/posts/devocional-do-dia/devocional-do-dia-renovando-a-mente-no-silencio-com-deus">Devocional do Dia: Renovando a Mente no Silêncio Diante de Deus</a>
+                        </h3>
+                        <p class="latest-post-snippet">
+                            <span class="latest-post-icon" aria-hidden="true">✨</span> Como encontrar quietude e renovação espiritual no meio da correria.
+                        </p>
+                        <div class="latest-post-footer">
+                            <a href="/posts/devocional-do-dia/devocional-do-dia-renovando-a-mente-no-silencio-com-deus" class="latest-post-read-btn">Ler artigo <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Histórias da Bíblia -->
+                <article class="latest-post-card">
+                    <a href="/posts/historias-da-biblia/historias-da-biblia-daniel-e-a-fidelidade-inabalavel-na-babilonia" class="latest-post-cover-link" aria-label="Ler artigo: Histórias da Bíblia">
+                        <img src="/images/posts/cover_historias_biblia.jpg" alt="Histórias da Bíblia: Daniel e a Fidelidade Inabalável na Babilônia" class="latest-post-img" loading="lazy">
+                    </a>
+                    <div class="latest-post-body">
+                        <h3 class="latest-post-title">
+                            <a href="/posts/historias-da-biblia/historias-da-biblia-daniel-e-a-fidelidade-inabalavel-na-babilonia">Histórias da Bíblia: Daniel e a Fidelidade na Babilônia</a>
+                        </h3>
+                        <p class="latest-post-snippet">
+                            <span class="latest-post-icon" aria-hidden="true">🏛️</span> Coragem exemplar de quem escolheu não se contaminar e foi honrado por Deus.
+                        </p>
+                        <div class="latest-post-footer">
+                            <a href="/posts/historias-da-biblia/historias-da-biblia-daniel-e-a-fidelidade-inabalavel-na-babilonia" class="latest-post-read-btn">Ler artigo <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Curiosidades Bíblicas -->
+                <article class="latest-post-card">
+                    <a href="/posts/curiosidades-biblicas/curiosidades-biblicas-a-precisao-milimetrica-dos-escribas-massoretas" class="latest-post-cover-link" aria-label="Ler artigo: Curiosidades Bíblicas">
+                        <img src="/images/posts/cover_curiosidades_biblicas.jpg" alt="Curiosidades Bíblicas: A Incrível Precisão dos Escribas" class="latest-post-img" loading="lazy">
+                    </a>
+                    <div class="latest-post-body">
+                        <h3 class="latest-post-title">
+                            <a href="/posts/curiosidades-biblicas/curiosidades-biblicas-a-precisao-milimetrica-dos-escribas-massoretas">Curiosidades Bíblicas: A Incrível Precisão dos Escribas</a>
+                        </h3>
+                        <p class="latest-post-snippet">
+                            <span class="latest-post-icon" aria-hidden="true">🔍</span> As regras milimétricas e o rigor sagrado na cópia dos textos bíblicos.
+                        </p>
+                        <div class="latest-post-footer">
+                            <a href="/posts/curiosidades-biblicas/curiosidades-biblicas-a-precisao-milimetrica-dos-escribas-massoretas" class="latest-post-read-btn">Ler artigo <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. Ensinamentos de Jesus -->
+                <article class="latest-post-card">
+                    <a href="/posts/ensinamentos-de-jesus/ensinamentos-de-jesus-o-sermao-do-monte-e-a-etica-do-reino" class="latest-post-cover-link" aria-label="Ler artigo: Ensinamentos de Jesus">
+                        <img src="/images/posts/cover_ensinamentos_jesus.jpg" alt="Ensinamentos de Jesus: As Bem-Aventuranças e o Coração do Reino" class="latest-post-img" loading="lazy">
+                    </a>
+                    <div class="latest-post-body">
+                        <h3 class="latest-post-title">
+                            <a href="/posts/ensinamentos-de-jesus/ensinamentos-de-jesus-o-sermao-do-monte-e-a-etica-do-reino">Ensinamentos de Jesus: As Bem-Aventuranças do Reino</a>
+                        </h3>
+                        <p class="latest-post-snippet">
+                            <span class="latest-post-icon" aria-hidden="true">👑</span> O Sermão da Montanha e os princípios eternos de justiça, pureza e amor.
+                        </p>
+                        <div class="latest-post-footer">
+                            <a href="/posts/ensinamentos-de-jesus/ensinamentos-de-jesus-o-sermao-do-monte-e-a-etica-do-reino" class="latest-post-read-btn">Ler artigo <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8. Ensino Bíblico -->
+                <article class="latest-post-card">
+                    <a href="/posts/ensino-biblico/ensino-biblico-a-unidade-de-deus-e-a-identidade-do-messias-em-joao-17-3" class="latest-post-cover-link" aria-label="Ler artigo: Ensino Bíblico">
+                        <img src="/images/posts/cover_ensino_biblico.jpg" alt="Ensino Bíblico: A Vida Eterna e o Conhecimento do Único Deus" class="latest-post-img" loading="lazy">
+                    </a>
+                    <div class="latest-post-body">
+                        <h3 class="latest-post-title">
+                            <a href="/posts/ensino-biblico/ensino-biblico-a-unidade-de-deus-e-a-identidade-do-messias-em-joao-17-3">Ensino Bíblico: A Vida Eterna e o Conhecimento do Único Deus</a>
+                        </h3>
+                        <p class="latest-post-snippet">
+                            <span class="latest-post-icon" aria-hidden="true">📚</span> A verdade revelada em João 17:3 e o alicerce teológico inabalável.
+                        </p>
+                        <div class="latest-post-footer">
+                            <a href="/posts/ensino-biblico/ensino-biblico-a-unidade-de-deus-e-a-identidade-do-messias-em-joao-17-3" class="latest-post-read-btn">Ler artigo <span class="arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="latest-posts-cta-wrap">
+                <a href="/posts/devocional-do-dia/" class="btn-latest-all">
+                    <span aria-hidden="true">✨</span> Ver todos os devocionais
+                </a>
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- SEÇÃO: RECEBA UMA PALAVRA ESPECIAL AGORA (20 TEMAS)       -->
+        <!-- ======================================================== -->
+        <section class="palavra-coracao-section" id="palavra-coracao" aria-label="Receba uma Palavra Especial Agora">
+            <div class="palavra-coracao-card">
+                <div class="palavra-pill">
+                    <span class="palavra-pill-sq" aria-hidden="true">■</span> PALAVRA PARA O SEU CORAÇÃO
+                </div>
+                <h2 class="palavra-title">Receba uma Palavra Especial Agora</h2>
+                <p class="palavra-subtitle">Clique no tema que mais combina com o seu momento e receba uma palavra de fé, versículo bíblico e oração para fortalecer o seu coração.</p>
+
+                <div class="palavra-topics-grid" role="group" aria-label="Temas para o seu coração">
+                    <button type="button" class="palavra-topic-btn" data-topic="ansiedade">😰 Ansiedade</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="familia">👨‍👩‍👧‍👦 Família</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="cura">🩺 Cura</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="protecao">🛡️ Proteção</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="financas">💰 Finanças</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="casamento">💍 Casamento</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="filhos">👶 Filhos</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="trabalho">💼 Trabalho</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="paz">☮️ Paz</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="libertacao">⛓️ Libertação</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="milagre">✨ Milagre</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="gratidao">🙌 Gratidão</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="perdao">🤝 Perdão</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="forca">💪 Força</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="fe">🙏 Fé</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="esperanca">🌅 Esperança</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="tristeza">😢 Tristeza</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="novos_caminhos">🌄 Novos Caminhos</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="sabedoria">🦉 Sabedoria</button>
+                    <button type="button" class="palavra-topic-btn" data-topic="direcao_de_deus">🧭 Direção de Deus</button>
+                </div>
+
+                <div id="palavra-result-box" class="palavra-result-box" aria-live="polite">
+                    <div class="palavra-empty-state">
+                        <h3 class="palavra-empty-title"><span class="empty-icon" aria-hidden="true">📖</span> Escolha um tema acima</h3>
+                        <p class="palavra-empty-desc">A palavra de Deus para o seu momento aparecerá aqui.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Texto Bíblico em Destaque 1 -->
         <section class="versiculo">
             <p>
@@ -315,12 +737,36 @@
         </section>
 
         <!-- Texto Bíblico em Destaque 2: Axioma Teológico -->
-        <section class="versiculo" style="border-left-color: #0d47a1;">
+        <section class="versiculo" style="border-left-color: #000000;">
             <p>
                 “Ontologicamente, Deus é o Espírito, a Consciência eterna que permeia todas as coisas, possui vontade própria e julga todas as coisas segundo a sua vontade. Há uma só Consciência e uma só Pessoa divina.”
             </p>
             <div class="referencia">
                 Axioma Ontológico Fundamental — Teologia Unoteísta
+            </div>
+        </section>
+
+        <!-- Seção Quiz Interativo: Momento de Fé -->
+        <section class="section-quiz" id="quiz" aria-label="Momento de Fé e Quiz">
+            <div class="quiz-box">
+                <h2 class="quiz-box-title">🙏 Qual é o seu momento de fé hoje?</h2>
+                <p class="quiz-box-subtitle">Responda e descubra o conteúdo que mais combina com o seu coração agora.</p>
+
+                <div class="quiz-question">Como você está se sentindo hoje?</div>
+                <div class="quiz-options">
+                    <button type="button" class="quiz-option-btn" onclick="showQuizResult('ansiedade', this)">A) Ansioso, sem paz, preciso de calma</button>
+                    <button type="button" class="quiz-option-btn" onclick="showQuizResult('forca', this)">B) Cansado, precisando de força e renovo</button>
+                    <button type="button" class="quiz-option-btn" onclick="showQuizResult('gratidao', this)">C) Agradecido, querendo louvar a Deus</button>
+                    <button type="button" class="quiz-option-btn" onclick="showQuizResult('milagre', this)">D) Esperando um milagre na minha vida</button>
+                </div>
+
+                <div class="quiz-result-box" id="quizResult" hidden></div>
+
+                <div class="quiz-footer-cta">
+                    <a href="/quizzes" class="btn-quiz-all">
+                        <span aria-hidden="true">📖</span> Ver todos os quizzes
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -606,6 +1052,8 @@
             <a href="/batismo">Batismo</a>
             <a href="/forma-da-consciencia">Consciência</a>
             <a href="/biblia">Bíblia Online (69 Livros)</a>
+            <a href="/pedidos-de-oracao">Pedidos de Oração</a>
+            <a href="/quizzes">Quizzes Bíblicos</a>
             <a href="/biblia?mode=int">Interlinear Grego</a>
             <a href="/#edicao-impressa">Edição Impressa &amp; PDF</a>
             <a href="/comparativo">Comparativo Teológico</a>
@@ -623,7 +1071,48 @@
         </p>
     </footer>
 
+    <!-- Modal: Resposta do Céu -->
+    <div id="modal-resposta-ceu" class="modal-resposta-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-resposta-titulo" hidden>
+        <div class="modal-resposta-dialog">
+            <button type="button" class="modal-resposta-close" onclick="fecharRespostaDoCeu()" aria-label="Fechar mensagem">&times;</button>
+            <div class="modal-resposta-icon" aria-hidden="true">🕊️</div>
+            <h3 id="modal-resposta-titulo" class="modal-resposta-title">Resposta do Céu</h3>
+            <blockquote class="modal-resposta-quote" id="modal-resposta-texto">
+                “Buscai primeiro o Reino de Deus e a sua justiça, e todas estas coisas vos serão acrescentadas.”
+            </blockquote>
+            <p class="modal-resposta-ref" id="modal-resposta-ref">Mateus 6:33</p>
+            <div class="modal-resposta-actions">
+                <button type="button" class="btn-modal-share" id="btn-compartilhar-resposta" onclick="compartilharRespostaWhatsApp()">
+                    <span aria-hidden="true">📤</span> Compartilhar no WhatsApp
+                </button>
+                <button type="button" class="btn-modal-close" onclick="fecharRespostaDoCeu()">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Leitor do Tema Selecionado (Preto & Branco) -->
+    <div id="modal-tema-leitor" class="modal-tema-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-tema-title" hidden>
+        <div class="modal-tema-dialog">
+            <button type="button" class="modal-tema-close" onclick="fecharTemaModal()" aria-label="Fechar">&times;</button>
+            <div class="modal-tema-header">
+                <span id="modal-tema-badge" class="modal-tema-badge">📜 Versículo do Dia</span>
+                <h3 id="modal-tema-title" class="modal-tema-title">Carregando conteúdo…</h3>
+                <p id="modal-tema-subtitle" class="modal-tema-subtitle"></p>
+            </div>
+            <div class="modal-tema-body" id="modal-tema-body">
+                <!-- Conteúdo dinâmico com versículo, seções, tabela e quiz -->
+            </div>
+            <div class="modal-tema-footer">
+                <a href="/biblia" class="btn-tema-bible">📖 Abrir na Bíblia Online</a>
+                <button type="button" class="btn-tema-close" onclick="fecharTemaModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
     <script src="/site.js" defer></script>
+    <script src="/palavra_coracao.js" defer></script>
 </body>
 
 </html>

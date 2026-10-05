@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+
+    <!-- Título Principal & SEO -->
+    <title>Pedidos de Oração — Unoteísmo</title>
+    <meta name="description" content="Apresente seu pedido de oração à nossa comunidade ou interceda por quem precisa. A oração da fé fortalece, edifica e consola o coração.">
+    <meta name="author" content="Unoteísmo">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://unoteismo.arthurlazarodesousasantos.workers.dev/pedidos-de-oracao">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Unoteísmo">
+    <meta property="og:url" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/pedidos-de-oracao">
+    <meta property="og:title" content="Pedidos de Oração — Unoteísmo">
+    <meta property="og:description" content="Faça seu pedido de oração ou ore por vidas da comunidade. Espaço gratuito e aberto de intercessão e acolhimento.">
+    <meta property="og:image" content="https://unoteismo.arthurlazarodesousasantos.workers.dev/og-image.png">
+
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/versao.css">
+
+    <style>
+        /* ==========================================================================
+           Estilos Exclusivos: Pedidos de Oração (Tema Preto & Branco)
+           ========================================================================== */
+        .prayer-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+        }
+
+        .prayer-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .prayer-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f4f4f5;
+            color: #000000;
+            border: 1px solid #e4e4e7;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .prayer-title {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: #000000;
+            letter-spacing: -0.02em;
+            margin: 0 0 12px 0;
+            line-height: 1.2;
+        }
+
+        .prayer-subtitle {
+            font-size: 1.1rem;
+            color: #555555;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Card do Formulário */
+        .prayer-form-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 16px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            margin-bottom: 40px;
+            transition: border-color 0.25s ease;
+        }
+
+        .prayer-form-card:focus-within {
+            border-color: #000000;
+        }
+
+        .prayer-form-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #000000;
+            margin: 0 0 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .prayer-form-desc {
+            font-size: 0.95rem;
+            color: #666666;
+            margin: 0 0 20px 0;
+        }
+
+        .prayer-input-group {
+            margin-bottom: 16px;
+        }
+
+        .prayer-input,
+        .prayer-textarea {
+            width: 100%;
+            padding: 13px 16px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #000000;
+            background: #ffffff;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .prayer-input:focus,
+        .prayer-textarea:focus {
+            border-color: #000000;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+        }
+
+        .prayer-textarea {
+            min-height: 120px;
+            resize: vertical;
+            line-height: 1.5;
+        }
+
+        .prayer-btn-submit {
+            background: #000000;
+            color: #ffffff;
+            border: 1px solid #000000;
+            padding: 14px 28px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: inherit;
+        }
+
+        .prayer-btn-submit:hover {
+            background: #222222;
+            transform: translateY(-1px);
+        }
+
+        .prayer-btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-feedback {
+            margin-top: 14px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: center;
+            min-height: 22px;
+        }
+
+        .form-feedback.success {
+            color: #000000;
+        }
+
+        .form-feedback.error {
+            color: #b91c1c;
+        }
+
+        /* Contador de Pessoas Orando */
+        .prayer-live-bar {
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: #555555;
+        }
+
+        .prayer-live-bar strong {
+            color: #000000;
+            font-size: 1.15rem;
+            font-weight: 800;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .prayer-live-bar strong.bump {
+            transform: scale(1.2);
+        }
+
+        /* Lista de Pedidos */
+        .prayer-feed-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e5e5e5;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .prayer-feed-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #000000;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .prayer-feed-count {
+            font-size: 0.9rem;
+            color: #666666;
+            background: #f4f4f5;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        .prayer-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .prayer-card:hover {
+            border-color: #000000;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .prayer-card.featured {
+            border: 2px solid #000000;
+        }
+
+        .prayer-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .prayer-author {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #000000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .prayer-author-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f4f4f4;
+            border: 1px solid #e0e0e0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        .prayer-time {
+            font-size: 0.85rem;
+            color: #777777;
+            font-weight: 500;
+        }
+
+        .prayer-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #222222;
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .prayer-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .btn-pray,
+        .btn-share-prayer {
+            border: 1px solid #000000;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            line-height: 1;
+        }
+
+        .btn-pray {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .btn-pray:hover {
+            background: #222222;
+            transform: translateY(-1px);
+        }
+
+        .btn-pray.done {
+            background: #ffffff;
+            color: #000000;
+            border-color: #000000;
+            cursor: default;
+            transform: none;
+        }
+
+        .btn-share-prayer {
+            background: #f5f5f5;
+            color: #000000;
+            border-color: #dcdcdc;
+        }
+
+        .btn-share-prayer:hover {
+            background: #e8e8e8;
+            border-color: #000000;
+        }
+
+        /* Respostas nos Pedidos */
+        .prayer-replies {
+            margin-bottom: 16px;
+        }
+
+        .prayer-reply-item {
+            background: #f9f9f9;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 0.92rem;
+            line-height: 1.5;
+            border-left: 3px solid #000000;
+            color: #333333;
+            word-wrap: break-word;
+        }
+
+        .prayer-reply-item strong {
+            color: #000000;
+            margin-right: 4px;
+        }
+
+        .prayer-reply-time {
+            display: block;
+            font-size: 0.8rem;
+            color: #888888;
+            margin-top: 4px;
+        }
+
+        /* Formulário de Resposta Rápida */
+        .reply-box {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .reply-input-name {
+            flex: 0 0 130px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #dcdcdc;
+            font-size: 0.9rem;
+            outline: none;
+            background: #ffffff;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .reply-input-text {
+            flex: 1;
+            min-width: 160px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #dcdcdc;
+            font-size: 0.9rem;
+            outline: none;
+            background: #ffffff;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .reply-input-name:focus,
+        .reply-input-text:focus {
+            border-color: #000000;
+        }
+
+        .btn-reply-send {
+            padding: 10px 18px;
+            border: 1px solid #000000;
+            border-radius: 8px;
+            background: #000000;
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .btn-reply-send:hover {
+            background: #222222;
+        }
+
+        .btn-reply-send:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Paginação */
+        .prayer-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .prayer-pagination a,
+        .prayer-pagination span {
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: #ffffff;
+            border: 1px solid #dcdcdc;
+            color: #000000;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .prayer-pagination a:hover {
+            border-color: #000000;
+            background: #f5f5f5;
+        }
+
+        .prayer-pagination .active {
+            background: #000000;
+            color: #ffffff;
+            border-color: #000000;
+        }
+
+        @media (max-width: 640px) {
+            .prayer-title {
+                font-size: 1.8rem;
+            }
+
+            .prayer-form-card {
+                padding: 22px 18px;
+            }
+
+            .prayer-actions {
+                flex-direction: column;
+            }
+
+            .btn-pray,
+            .btn-share-prayer {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .reply-box {
+                flex-direction: column;
+            }
+
+            .reply-input-name,
+            .reply-input-text,
+            .btn-reply-send {
+                width: 100%;
+                flex: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <!-- Barra Superior -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <a href="/" class="logo">
+                <img src="/logo-64.png" alt="" width="12" height="32">
+                <span>UNOTEÍSMO</span>
+            </a>
+        </div>
+
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="topbar-menu">
+            <span class="hamburger-box">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+
+        <div class="menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
+
+        <nav class="menu" id="topbar-menu" aria-label="Principal">
+            <a href="/" class="nav-link">Início</a>
+
+            <!-- Dropdown Bíblia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Bíblia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Bíblia Sagrada</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/biblia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📖</span>
+                        <div class="nav-item-text">
+                            <strong>Bíblia (69 Livros)</strong>
+                            <small>Texto canônico com áudio narrado</small>
+                        </div>
+                    </a>
+                    <a href="/biblia?mode=int" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🏛️</span>
+                        <div class="nav-item-text">
+                            <strong>Interlinear Grego</strong>
+                            <small>Texto original com lemas e morfologia</small>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="/#edicao-impressa" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📥</span>
+                        <div class="nav-item-text">
+                            <strong>Edição Impressa &amp; PDF</strong>
+                            <small>ISBN 978-65-02-41194-0 • Download PDF</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Teologia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Teologia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Tratados Teológicos</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/teologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Teologia Unoteísta</strong>
+                            <small>Fundamentos e síntese doutrinária</small>
+                        </div>
+                    </a>
+                    <a href="/soteriologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">✝️</span>
+                        <div class="nav-item-text">
+                            <strong>Soteriologia</strong>
+                            <small>A salvação, certeza da fé e crença</small>
+                        </div>
+                    </a>
+                    <a href="/communicatio-idiomatum" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🕊️</span>
+                        <div class="nav-item-text">
+                            <strong>Communicatio Idiomatum</strong>
+                            <small>Comunicação dos nomes e atributos</small>
+                        </div>
+                    </a>
+                    <a href="/batismo" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💧</span>
+                        <div class="nav-item-text">
+                            <strong>O Batismo Bíblico</strong>
+                            <small>Um só batismo em nome de Jesus</small>
+                        </div>
+                    </a>
+                    <a href="/forma-da-consciencia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🧠</span>
+                        <div class="nav-item-text">
+                            <strong>Forma da Consciência</strong>
+                            <small>Distinção entre as consciências e Cristo</small>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="/comparativo" class="nav-dropdown-item">
+                        <span class="nav-item-icon">⚖️</span>
+                        <div class="nav-item-text">
+                            <strong>Comparativo Teológico</strong>
+                            <small>Paralelo com trinitarismo e unicismo</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Filosofia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Filosofia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Filosofia & Busca da Verdade</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/#filosofia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💡</span>
+                        <div class="nav-item-text">
+                            <strong>A Filosofia</strong>
+                            <small>Vida e verdade sem viés religioso</small>
+                        </div>
+                    </a>
+                    <a href="/#respostas" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💬</span>
+                        <div class="nav-item-text">
+                            <strong>Respostas Claras</strong>
+                            <small>Esclarecimentos diretos às dúvidas</small>
+                        </div>
+                    </a>
+                    <a href="/#confissao" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Confissão de Fé</strong>
+                            <small>Declaração dos princípios fundamentais</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <a href="/pedidos-de-oracao" class="nav-link active" aria-current="page">Oração</a>
+            <a href="/quizzes" class="nav-link">Quizzes</a>
+            <a href="/sobre" class="nav-link">Sobre</a>
+
+            <a href="/biblia" class="menu-btn-cta"><span>Ler Bíblia →</span></a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="prayer-container" id="conteudo">
+
+        <div class="prayer-header">
+            <span class="prayer-tag">Comunidade &amp; Fé</span>
+            <h1 class="prayer-title">Pedidos de Oração</h1>
+            <p class="prayer-subtitle">
+                Apresente suas súplicas à comunidade ou una-se em intercessão pelas necessidades de nossos irmãos.
+            </p>
+        </div>
+
+        <!-- Formulário de Envio -->
+        <section class="prayer-form-card" aria-labelledby="form-prayer-heading">
+            <h2 id="form-prayer-heading" class="prayer-form-title">
+                <span aria-hidden="true">🙏</span> Faça Seu Pedido de Oração
+            </h2>
+            <p class="prayer-form-desc">
+                “Tudo o que pedirdes em oração, crendo, recebereis.” (Mateus 21:22)
+            </p>
+
+            <form id="prayerPageForm" onsubmit="submitPagePrayer(event)">
+                <div class="prayer-input-group">
+                    <label for="ppName" class="sr-only">Seu nome ou iniciais</label>
+                    <input type="text" id="ppName" class="prayer-input" maxlength="60" placeholder="Seu nome ou iniciais (opcional)">
+                </div>
+
+                <div class="prayer-input-group">
+                    <label for="ppPedido" class="sr-only">Seu pedido de oração</label>
+                    <textarea id="ppPedido" class="prayer-textarea" maxlength="600" placeholder="Escreva seu pedido com sinceridade e fé..." required></textarea>
+                </div>
+
+                <button type="submit" id="ppSubmitBtn" class="prayer-btn-submit">
+                    <span aria-hidden="true">🕊️</span> Enviar Pedido de Oração
+                </button>
+            </form>
+
+            <div id="ppFormMsg" class="form-feedback" role="status" aria-live="polite"></div>
+
+            <div class="prayer-live-bar">
+                <span>✨ Pessoas unidas em oração neste instante:</span>
+                <strong id="ppPeopleOnline">1.240</strong>
+            </div>
+        </section>
+
+        <!-- Feed de Pedidos -->
+        <section aria-labelledby="feed-prayer-heading">
+            <div class="prayer-feed-header">
+                <h2 id="feed-prayer-heading" class="prayer-feed-title">
+                    <span>Mural de Intercessão</span>
+                </h2>
+                <span class="prayer-feed-count" id="prayerTotalCountLabel">Carregando pedidos...</span>
+            </div>
+
+            <div id="prayerPageList" role="feed" aria-busy="true">
+                <div style="text-align:center;padding:3rem;color:#777777;font-size:1.05rem;">
+                    Carregando pedidos de oração...
+                </div>
+            </div>
+
+            <!-- Paginação -->
+            <div class="prayer-pagination" id="prayerPagination" aria-label="Paginação de pedidos"></div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <nav class="footer-links" aria-label="Rodapé">
+            <a href="/">Início</a>
+            <a href="/teologia">Teologia</a>
+            <a href="/soteriologia">Soteriologia</a>
+            <a href="/communicatio-idiomatum">Communicatio</a>
+            <a href="/batismo">Batismo</a>
+            <a href="/forma-da-consciencia">Consciência</a>
+            <a href="/biblia">Bíblia Online (69 Livros)</a>
+            <a href="/pedidos-de-oracao">Pedidos de Oração</a>
+            <a href="/quizzes">Quizzes Bíblicos</a>
+            <a href="/biblia?mode=int">Interlinear Grego</a>
+            <a href="/#edicao-impressa">Edição Impressa &amp; PDF</a>
+            <a href="/comparativo">Comparativo Teológico</a>
+            <a href="/#filosofia">A Filosofia</a>
+            <a href="/#respostas">Respostas Claras</a>
+            <a href="/#confissao">Confissão de Fé</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/privacidade">Privacidade</a>
+            <a href="https://github.com/Unoalss/Unoteismo" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+        <p class="footer-copy">
+            &copy; 2026 UNOTEÍSMO — Cânon Sagrado &amp; Filosofia de Vida. Acesso público, aberto e gratuito à verdade.
+        </p>
+    </footer>
+
+    <!-- Lógica dos Pedidos de Oração -->
+    <script>
+    (function () {
+        'use strict';
+
+        const ITEMS_PER_PAGE = 8;
+        let allPublicPrayers = [];
+        let currentPage = 1;
+
+        function timeAgo(dateStr) {
+            if (!dateStr) return 'recentemente';
+            const now = new Date();
+            const date = new Date(dateStr);
+            const diff = Math.floor((now - date) / 1000);
+            if (isNaN(diff) || diff < 60) return 'agora mesmo';
+            if (diff < 3600) {
+                const m = Math.floor(diff / 60);
+                return 'há ' + m + (m === 1 ? ' minuto' : ' minutos');
+            }
+            if (diff < 86400) {
+                const h = Math.floor(diff / 3600);
+                return 'há ' + h + (h === 1 ? ' hora' : ' horas');
+            }
+            if (diff < 604800) {
+                const d = Math.floor(diff / 86400);
+                return 'há ' + d + (d === 1 ? ' dia' : ' dias');
+            }
+            const w = Math.floor(diff / 604800);
+            return 'há ' + w + (w === 1 ? ' semana' : ' semanas');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = (text == null ? '' : String(text));
+            return div.innerHTML;
+        }
+
+        function getPrayedSet() {
+            try {
+                return JSON.parse(localStorage.getItem('unoteismo_prayed_prayers') || '[]');
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function markAsPrayedLocal(prayerId) {
+            try {
+                const set = getPrayedSet();
+                if (!set.includes(prayerId)) {
+                    set.push(prayerId);
+                    localStorage.setItem('unoteismo_prayed_prayers', JSON.stringify(set));
+                }
+            } catch (e) {}
+        }
+
+        window.prayForRequest = async function (prayerId, btnEl) {
+            if (btnEl.classList.contains('done')) return;
+            const counter = btnEl.querySelector('.contagem-orando');
+            const currentCount = parseInt(counter.textContent, 10) || 0;
+            const newCount = currentCount + 1;
+
+            // Feedback visual imediato
+            counter.textContent = newCount;
+            btnEl.classList.add('done');
+            btnEl.innerHTML = '🙏 Você está orando <span class="contagem-orando">' + newCount + '</span>';
+            markAsPrayedLocal(prayerId);
+
+            // Atualiza no array em memória
+            const p = allPublicPrayers.find(x => x.id === prayerId);
+            if (p) p.prayers_count = newCount;
+
+            // Envia para o servidor
+            try {
+                const res = await fetch('/api/prayers', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ action: 'pray', prayer_id: prayerId })
+                });
+                if (!res.ok) {
+                    // Fallback para save_prayer.php
+                    await fetch('/save_prayer.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ action: 'pray', prayer_id: prayerId })
+                    });
+                }
+            } catch (err) {
+                console.warn('Registro offline/local de oração:', err);
+            }
+        };
+
+        window.sharePrayer = function (prayerId) {
+            const card = document.getElementById(prayerId);
+            if (!card) return;
+            const nome = card.querySelector('.prayer-author-name') ? card.querySelector('.prayer-author-name').innerText : 'Irmão em Cristo';
+            const texto = card.querySelector('.prayer-text') ? card.querySelector('.prayer-text').innerText : '';
+            const link = window.location.origin + window.location.pathname + '#' + prayerId;
+            const msg = '🙏 *Pedido de Oração — Unoteísmo*\n\n' +
+                '*De:* ' + nome + '\n' +
+                '“' + texto + '”\n\n' +
+                'Ore também por esta vida:\n' + link;
+            window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(msg), '_blank');
+        };
+
+        window.submitReply = async function (prayerId, btnEl) {
+            const card = document.getElementById(prayerId);
+            if (!card) return;
+            const nomeInput = card.querySelector('.reply-input-name');
+            const textoInput = card.querySelector('.reply-input-text');
+            const name = (nomeInput.value || '').trim() || 'Irmão de Fé';
+            const message = (textoInput.value || '').trim();
+
+            if (!message) {
+                alert('Por favor, escreva uma palavra de fé ou edificação para responder.');
+                textoInput.focus();
+                return;
+            }
+
+            btnEl.disabled = true;
+            const originalText = btnEl.textContent;
+            btnEl.textContent = 'Enviando…';
+
+            try {
+                let replyData = null;
+                try {
+                    const res = await fetch('/api/prayers', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ action: 'reply', prayer_id: prayerId, name: name, message: message })
+                    });
+                    const data = await res.json();
+                    if (data && data.success) replyData = data.reply;
+                } catch (e) {
+                    const res2 = await fetch('/save_prayer.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ action: 'reply', prayer_id: prayerId, name: name, message: message })
+                    });
+                    const data2 = await res2.json();
+                    if (data2 && data2.success) replyData = data2.reply;
+                }
+
+                if (!replyData) {
+                    replyData = {
+                        name: name,
+                        message: message,
+                        created_at: new Date().toISOString()
+                    };
+                }
+
+                // Renderiza resposta imediatamente
+                const respostasDiv = card.querySelector('.prayer-replies');
+                const nova = document.createElement('div');
+                nova.className = 'prayer-reply-item';
+                nova.innerHTML = '<strong>' + escapeHtml(replyData.name) + ':</strong> ' +
+                    escapeHtml(replyData.message) +
+                    '<span class="prayer-reply-time">' + timeAgo(replyData.created_at) + '</span>';
+                respostasDiv.appendChild(nova);
+
+                // Atualiza objeto em memória
+                const p = allPublicPrayers.find(x => x.id === prayerId);
+                if (p) {
+                    if (!p.replies) p.replies = [];
+                    p.replies.push(replyData);
+                }
+
+                nomeInput.value = '';
+                textoInput.value = '';
+            } catch (err) {
+                alert('Não foi possível enviar a resposta no momento. Tente novamente.');
+            } finally {
+                btnEl.disabled = false;
+                btnEl.textContent = originalText;
+            }
+        };
+
+        function renderReply(reply) {
+            const time = reply.created_at ? timeAgo(reply.created_at) : '';
+            return '<div class="prayer-reply-item">' +
+                '<strong>' + escapeHtml(reply.name || 'Irmão de Fé') + ':</strong> ' +
+                escapeHtml(reply.message || '') +
+                (time ? '<span class="prayer-reply-time">' + time + '</span>' : '') +
+                '</div>';
+        }
+
+        function renderPrayerCard(prayer, isFeatured) {
+            const prayedSet = getPrayedSet();
+            const hasPrayed = prayedSet.includes(prayer.id);
+            const displayName = prayer.name || prayer.initials || 'Anônimo';
+            const msgText = (prayer.message || '').replace(/<[^>]*>?/gm, '');
+            const replies = Array.isArray(prayer.replies) ? prayer.replies : [];
+            const count = prayer.prayers_count || 0;
+            const repliesHtml = replies.map(renderReply).join('');
+
+            return '<article class="prayer-card' + (isFeatured ? ' featured' : '') + '" id="' + prayer.id + '" data-created="' + (prayer.created_at || '') + '">' +
+                '  <header class="prayer-card-top">' +
+                '    <div class="prayer-author">' +
+                '      <span class="prayer-author-avatar" aria-hidden="true">🕊️</span>' +
+                '      <span class="prayer-author-name">' + escapeHtml(displayName) + '</span>' +
+                '    </div>' +
+                '    <time class="prayer-time" data-time datetime="' + (prayer.created_at || '') + '">' + timeAgo(prayer.created_at) + '</time>' +
+                '  </header>' +
+                '  <p class="prayer-text">' + escapeHtml(msgText) + '</p>' +
+                '  <div class="prayer-actions">' +
+                '    <button type="button" class="btn-pray' + (hasPrayed ? ' done' : '') + '" onclick="prayForRequest(\'' + prayer.id + '\', this)">' +
+                (hasPrayed ? '🙏 Você está orando' : '🙏 Estou Orando') + ' <span class="contagem-orando">' + count + '</span></button>' +
+                '    <button type="button" class="btn-share-prayer" onclick="sharePrayer(\'' + prayer.id + '\')">' +
+                '      <span aria-hidden="true">📤</span> Compartilhar' +
+                '    </button>' +
+                '  </div>' +
+                '  <div class="prayer-replies">' + repliesHtml + '</div>' +
+                '  <div class="reply-box">' +
+                '    <input type="text" class="reply-input-name" maxlength="40" placeholder="Seu nome" aria-label="Seu nome">' +
+                '    <input type="text" class="reply-input-text" maxlength="280" placeholder="Escreva uma palavra de fé..." aria-label="Mensagem de resposta">' +
+                '    <button type="button" class="btn-reply-send" onclick="submitReply(\'' + prayer.id + '\', this)">Responder</button>' +
+                '  </div>' +
+                '</article>';
+        }
+
+        function renderPage(page) {
+            currentPage = page;
+            const listEl = document.getElementById('prayerPageList');
+            const paginationEl = document.getElementById('prayerPagination');
+            const countLabel = document.getElementById('prayerTotalCountLabel');
+            listEl.removeAttribute('aria-busy');
+
+            if (countLabel) {
+                countLabel.textContent = allPublicPrayers.length + (allPublicPrayers.length === 1 ? ' pedido' : ' pedidos');
+            }
+
+            const totalPages = Math.max(1, Math.ceil(allPublicPrayers.length / ITEMS_PER_PAGE));
+            const start = (page - 1) * ITEMS_PER_PAGE;
+            const pagePrayers = allPublicPrayers.slice(start, start + ITEMS_PER_PAGE);
+
+            if (pagePrayers.length === 0) {
+                listEl.innerHTML = '<div style="text-align:center;color:#666666;padding:3rem;font-size:1.05rem;background:#ffffff;border-radius:14px;border:1px solid #e0e0e0;">' +
+                    'Ainda não há pedidos de oração cadastrados. Seja o primeiro a compartilhar sua petição! 🙏' +
+                    '</div>';
+                paginationEl.innerHTML = '';
+                return;
+            }
+
+            listEl.innerHTML = pagePrayers.map(function (p, i) {
+                return renderPrayerCard(p, page === 1 && i === 0);
+            }).join('');
+
+            // Paginação limpa
+            let pagHtml = '';
+            if (totalPages > 1) {
+                for (let i = 1; i <= totalPages; i++) {
+                    if (i === page) {
+                        pagHtml += '<span class="active" aria-current="page">' + i + '</span>';
+                    } else {
+                        pagHtml += '<a href="javascript:void(0)" onclick="renderPrayerPage(' + i + ')">' + i + '</a>';
+                    }
+                }
+            }
+            paginationEl.innerHTML = pagHtml;
+        }
+
+        window.renderPrayerPage = function (page) {
+            renderPage(page);
+            const feedTop = document.querySelector('.prayer-feed-header');
+            if (feedTop) feedTop.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+
+        window.submitPagePrayer = async function (e) {
+            e.preventDefault();
+            const nameEl = document.getElementById('ppName');
+            const pedidoEl = document.getElementById('ppPedido');
+            const msgEl = document.getElementById('ppFormMsg');
+            const btn = document.getElementById('ppSubmitBtn');
+
+            const name = (nameEl.value || '').trim() || 'Anônimo';
+            const pedido = (pedidoEl.value || '').trim();
+
+            if (!pedido) {
+                msgEl.className = 'form-feedback error';
+                msgEl.textContent = 'Por favor, escreva o seu pedido de oração.';
+                pedidoEl.focus();
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<span aria-hidden="true">⏳</span> Enviando Pedido…';
+            msgEl.textContent = '';
+
+            const payload = {
+                action: 'add',
+                name: name,
+                message: pedido,
+                is_public: true,
+                target: 'Oração',
+                reason: 'Vida e Família'
+            };
+
+            try {
+                let success = false;
+                let newPrayer = null;
+
+                try {
+                    const res = await fetch('/api/prayers', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const data = await res.json();
+                    if (data && data.success) {
+                        success = true;
+                        newPrayer = data.prayer;
+                    }
+                } catch (e1) {
+                    const res2 = await fetch('/save_prayer.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    const data2 = await res2.json();
+                    if (data2 && data2.success) {
+                        success = true;
+                        newPrayer = data2.prayer;
+                    }
+                }
+
+                if (!newPrayer) {
+                    newPrayer = {
+                        id: 'prayer_' + Date.now(),
+                        name: name,
+                        message: pedido,
+                        prayers_count: 0,
+                        is_public: true,
+                        created_at: new Date().toISOString(),
+                        replies: []
+                    };
+                    success = true;
+                }
+
+                if (success) {
+                    msgEl.className = 'form-feedback success';
+                    msgEl.textContent = '✅ Seu pedido de oração foi recebido! Estaremos orando por você.';
+                    nameEl.value = '';
+                    pedidoEl.value = '';
+
+                    // Adiciona no topo da lista
+                    allPublicPrayers.unshift(newPrayer);
+                    renderPage(1);
+
+                    setTimeout(function () {
+                        msgEl.textContent = '';
+                    }, 5000);
+                } else {
+                    msgEl.className = 'form-feedback error';
+                    msgEl.textContent = 'Não foi possível registrar o pedido. Tente novamente.';
+                }
+            } catch (err) {
+                msgEl.className = 'form-feedback error';
+                msgEl.textContent = 'Erro de comunicação ao enviar. Tente novamente.';
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<span aria-hidden="true">🕊️</span> Enviar Pedido de Oração';
+            }
+        };
+
+        async function loadPrayers() {
+            try {
+                let list = null;
+                try {
+                    const res = await fetch('/api/prayers?t=' + Date.now());
+                    if (res.ok) list = await res.json();
+                } catch (e) {}
+
+                if (!list) {
+                    try {
+                        const res2 = await fetch('/prayer_requests.json?t=' + Date.now());
+                        if (res2.ok) list = await res2.json();
+                    } catch (e) {}
+                }
+
+                if (!list) {
+                    try {
+                        const res3 = await fetch('/data/prayer_requests.json?t=' + Date.now());
+                        if (res3.ok) list = await res3.json();
+                    } catch (e) {}
+                }
+
+                allPublicPrayers = (Array.isArray(list) ? list : []).filter(function (p) {
+                    return p && p.is_public !== false;
+                });
+
+                renderPage(1);
+            } catch (err) {
+                const listEl = document.getElementById('prayerPageList');
+                listEl.removeAttribute('aria-busy');
+                listEl.innerHTML = '<div style="text-align:center;color:#b91c1c;padding:2rem;">Erro ao carregar pedidos de oração. Recarregue a página.</div>';
+            }
+        }
+
+        // Simulação suave do contador de pessoas orando online
+        function startLiveCounter() {
+            const el = document.getElementById('ppPeopleOnline');
+            if (!el) return;
+            let current = 1240 + Math.floor(Math.random() * 50);
+            el.textContent = current.toLocaleString('pt-BR');
+
+            setInterval(function () {
+                const delta = Math.floor(Math.random() * 11) - 5;
+                current = Math.max(100, current + delta);
+                el.textContent = current.toLocaleString('pt-BR');
+                el.classList.add('bump');
+                setTimeout(function () {
+                    el.classList.remove('bump');
+                }, 300);
+            }, 4500);
+        }
+
+        // Atualizador de timestamps relativos
+        function startTimeRefresh() {
+            setInterval(function () {
+                document.querySelectorAll('.prayer-card [data-time]').forEach(function (el) {
+                    const card = el.closest('.prayer-card');
+                    const created = card ? card.dataset.created : null;
+                    if (created) el.textContent = timeAgo(created);
+                });
+            }, 30000);
+        }
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            await loadPrayers();
+            startLiveCounter();
+            startTimeRefresh();
+
+            // Rola até o pedido se houver hash na URL
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+                const idx = allPublicPrayers.findIndex(function (p) { return p.id === hash; });
+                if (idx >= 0) {
+                    const targetPage = Math.floor(idx / ITEMS_PER_PAGE) + 1;
+                    if (targetPage !== currentPage) renderPage(targetPage);
+                    setTimeout(function () {
+                        const el = document.getElementById(hash);
+                        if (el) {
+                            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            el.style.borderColor = '#000000';
+                            el.style.boxShadow = '0 0 0 3px rgba(0,0,0,0.15)';
+                            setTimeout(function () { el.style.boxShadow = ''; }, 3000);
+                        }
+                    }, 300);
+                }
+            }
+        });
+    })();
+    </script>
+    <script src="/site.js" defer></script>
+</body>
+
+</html>

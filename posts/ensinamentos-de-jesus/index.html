@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+
+    <!-- SEO Principal -->
+    <title>Temas Bíblicos e Postagens — Unoteísmo</title>
+    <meta name="description" content="Explore reflexões diárias, versículos, salmos, devocionais e ensinamentos bíblicos organizados para fortalecer a sua caminhada na verdade do Deus Único.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://unoteismo.arthurlazarodesousasantos.workers.dev/posts/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/versao.css">
+    <link rel="stylesheet" href="/categoria.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <!-- Barra Superior Fiel ao Padrão Unoteísta -->
+    <header class="topbar">
+        <div class="topbar-left">
+            <a href="/" class="logo">
+                <img src="/logo-64.png" alt="" width="12" height="32">
+                <span>UNOTEÍSMO</span>
+            </a>
+        </div>
+
+        <button class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="topbar-menu">
+            <span class="hamburger-box">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </span>
+        </button>
+
+        <div class="menu-backdrop" id="menu-backdrop" aria-hidden="true"></div>
+
+        <nav class="menu" id="topbar-menu" aria-label="Principal">
+            <a href="/" class="nav-link">Início</a>
+
+            <!-- Dropdown Bíblia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Bíblia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Bíblia Sagrada</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/biblia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📖</span>
+                        <div class="nav-item-text">
+                            <strong>Bíblia (69 Livros)</strong>
+                            <small>Texto canônico com áudio narrado</small>
+                        </div>
+                    </a>
+                    <a href="/biblia?mode=int" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🏛️</span>
+                        <div class="nav-item-text">
+                            <strong>Interlinear Grego</strong>
+                            <small>Texto original com lemas e morfologia</small>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="/#edicao-impressa" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📥</span>
+                        <div class="nav-item-text">
+                            <strong>Edição Impressa &amp; PDF</strong>
+                            <small>ISBN 978-65-02-41194-0 • Download PDF</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Teologia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Teologia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Tratados Teológicos</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/teologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Teologia Unoteísta</strong>
+                            <small>Fundamentos e síntese doutrinária</small>
+                        </div>
+                    </a>
+                    <a href="/soteriologia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">✝️</span>
+                        <div class="nav-item-text">
+                            <strong>Soteriologia</strong>
+                            <small>A salvação, certeza da fé e crença</small>
+                        </div>
+                    </a>
+                    <a href="/communicatio-idiomatum" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🕊️</span>
+                        <div class="nav-item-text">
+                            <strong>Communicatio Idiomatum</strong>
+                            <small>Comunicação dos nomes e atributos</small>
+                        </div>
+                    </a>
+                    <a href="/batismo" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💧</span>
+                        <div class="nav-item-text">
+                            <strong>O Batismo Bíblico</strong>
+                            <small>Um só batismo em nome de Jesus</small>
+                        </div>
+                    </a>
+                    <a href="/forma-da-consciencia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">🧠</span>
+                        <div class="nav-item-text">
+                            <strong>Forma da Consciência</strong>
+                            <small>Distinção entre as consciências e Cristo</small>
+                        </div>
+                    </a>
+                    <div class="nav-dropdown-divider"></div>
+                    <a href="/comparativo" class="nav-dropdown-item">
+                        <span class="nav-item-icon">⚖️</span>
+                        <div class="nav-item-text">
+                            <strong>Comparativo Teológico</strong>
+                            <small>Paralelo com trinitarismo e unicismo</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Dropdown Filosofia -->
+            <div class="nav-item-dropdown">
+                <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                    <span>Filosofia</span>
+                    <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <span class="mobile-section-label">Filosofia & Busca da Verdade</span>
+                <div class="nav-dropdown-menu">
+                    <a href="/#filosofia" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💡</span>
+                        <div class="nav-item-text">
+                            <strong>A Filosofia</strong>
+                            <small>Vida e verdade sem viés religioso</small>
+                        </div>
+                    </a>
+                    <a href="/#respostas" class="nav-dropdown-item">
+                        <span class="nav-item-icon">💬</span>
+                        <div class="nav-item-text">
+                            <strong>Respostas Claras</strong>
+                            <small>Esclarecimentos diretos às dúvidas</small>
+                        </div>
+                    </a>
+                    <a href="/#confissao" class="nav-dropdown-item">
+                        <span class="nav-item-icon">📜</span>
+                        <div class="nav-item-text">
+                            <strong>Confissão de Fé</strong>
+                            <small>Declaração dos princípios fundamentais</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <a href="/pedidos-de-oracao" class="nav-link">Oração</a>
+            <a href="/quizzes" class="nav-link">Quizzes</a>
+            <a href="/sobre" class="nav-link">Sobre</a>
+
+            <a href="/biblia" class="menu-btn-cta"><span>Ler Bíblia →</span></a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container" id="conteudo">
+
+        <!-- Breadcrumbs -->
+        <nav class="ci-breadcrumbs" aria-label="Navegação estrutural">
+            <a href="/">Início</a>
+            <span>/</span>
+            <a href="/#temas-principais">Temas Bíblicos</a>
+            <span>/</span>
+            <strong id="ci-crumb-current">Categoria</strong>
+        </nav>
+
+        <!-- Visualização da Listagem da Categoria -->
+        <div id="category-list-view">
+
+            <!-- Hero da Categoria -->
+            <header class="ci-hero" role="banner">
+                <div class="ci-hero-icon" id="ci-hero-icon" aria-hidden="true">✨</div>
+                <h1 id="ci-hero-title">Devocional do Dia</h1>
+                <p id="ci-hero-desc">Reflexões diárias práticas que aproximam você do Criador e fortalecem sua fé.</p>
+                <span class="ci-badge" id="ci-hero-badge">✦ Carregando postagens...</span>
+            </header>
+
+            <!-- Seletor de Categorias (Abas em Pílula) -->
+            <div class="ci-categories-nav-wrap">
+                <nav class="ci-categories-nav" aria-label="Outras Categorias">
+                    <a href="/posts/versiculo-do-dia/" class="ci-cat-tab" data-cat="versiculo_do_dia" onclick="window.trocarCategoria('versiculo_do_dia', event)">
+                        <span>📜</span> Versículo do Dia
+                    </a>
+                    <a href="/posts/palavra-do-dia/" class="ci-cat-tab" data-cat="palavra_do_dia" onclick="window.trocarCategoria('palavra_do_dia', event)">
+                        <span>📖</span> Palavra do Dia
+                    </a>
+                    <a href="/posts/salmos-do-dia/" class="ci-cat-tab" data-cat="salmos_do_dia" onclick="window.trocarCategoria('salmos_do_dia', event)">
+                        <span>🕊️</span> Salmos do Dia
+                    </a>
+                    <a href="/posts/devocional-do-dia/" class="ci-cat-tab active" data-cat="devocional_do_dia" onclick="window.trocarCategoria('devocional_do_dia', event)">
+                        <span>✨</span> Devocional do Dia
+                    </a>
+                    <a href="/posts/historias-da-biblia/" class="ci-cat-tab" data-cat="historias_da_biblia" onclick="window.trocarCategoria('historias_da_biblia', event)">
+                        <span>🏛️</span> Histórias da Bíblia
+                    </a>
+                    <a href="/posts/curiosidades-biblicas/" class="ci-cat-tab" data-cat="curiosidades_biblicas" onclick="window.trocarCategoria('curiosidades_biblicas', event)">
+                        <span>🔍</span> Curiosidades Bíblicas
+                    </a>
+                    <a href="/posts/ensinamentos-de-jesus/" class="ci-cat-tab" data-cat="ensinamentos_de_jesus" onclick="window.trocarCategoria('ensinamentos_de_jesus', event)">
+                        <span>👑</span> Ensinamentos de Jesus
+                    </a>
+                    <a href="/posts/ensino-biblico/" class="ci-cat-tab" data-cat="ensino_biblico" onclick="window.trocarCategoria('ensino_biblico', event)">
+                        <span>📚</span> Ensino Bíblico
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Barra de Busca e Filtro -->
+            <div class="ci-filter-bar">
+                <div class="ci-search-box">
+                    <span class="ci-search-icon" aria-hidden="true">🔍</span>
+                    <label for="ci-search-input" class="sr-only">Pesquisar postagens nesta categoria</label>
+                    <input type="search" id="ci-search-input" class="ci-search-input" placeholder="Pesquisar por título, versículo ou palavra-chave…" autocomplete="off">
+                </div>
+                <div class="ci-results-count" id="ci-results-count">Carregando…</div>
+            </div>
+
+            <!-- Grid de Cards de Postagens -->
+            <div class="ci-grid" id="posts-grid">
+                <!-- Preenchido dinamicamente por categoria.js -->
+            </div>
+
+            <!-- Estado Vazio -->
+            <div class="ci-empty-state" id="posts-empty" style="display: none;">
+                <div class="ci-empty-icon" aria-hidden="true">📜</div>
+                <h3>Nenhuma postagem encontrada</h3>
+                <p>Nenhum conteúdo publicado nesta categoria no momento ou sua busca não retornou resultados.</p>
+                <a href="/admin" class="btn-post-back" style="display: inline-block;">🤖 Gerar postagens com Agente IA no Admin</a>
+            </div>
+
+        </div>
+
+        <!-- Visualização do Post Detalhado -->
+        <div id="post-detail-view" class="post-view-wrap" style="display: none;">
+            <!-- Preenchido dinamicamente quando o usuário abre um post -->
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <nav class="footer-links" aria-label="Rodapé">
+            <a href="/">Início</a>
+            <a href="/teologia">Teologia</a>
+            <a href="/soteriologia">Soteriologia</a>
+            <a href="/communicatio-idiomatum">Communicatio</a>
+            <a href="/batismo">Batismo</a>
+            <a href="/forma-da-consciencia">Consciência</a>
+            <a href="/biblia">Bíblia Online (69 Livros)</a>
+            <a href="/pedidos-de-oracao">Pedidos de Oração</a>
+            <a href="/quizzes">Quizzes Bíblicos</a>
+            <a href="/biblia?mode=int">Interlinear Grego</a>
+            <a href="/#edicao-impressa">Edição Impressa &amp; PDF</a>
+            <a href="/comparativo">Comparativo Teológico</a>
+            <a href="/#filosofia">A Filosofia</a>
+            <a href="/#respostas">Respostas Claras</a>
+            <a href="/#confissao">Confissão de Fé</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/privacidade">Privacidade</a>
+            <a href="https://www.youtube.com/@unoteismo" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.tiktok.com/@unoteismo" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://github.com/Unoalss/Unoteismo" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+        <p class="footer-copy">
+            &copy; 2026 UNOTEÍSMO — Cânon Sagrado &amp; Filosofia de Vida. Acesso público, aberto e gratuito à verdade.
+        </p>
+    </footer>
+
+    <script src="/site.js" defer></script>
+    <script src="/categoria.js" defer></script>
+</body>
+
+</html>

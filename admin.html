@@ -42,31 +42,400 @@
                 <span>UNOTEÍSMO <small>Painel</small></span>
             </a>
             <nav class="adm-actions" aria-label="Ações">
-                <a id="view-site" href="/" target="_blank" rel="noopener">Ver página ↗</a>
+                <button type="button" id="btn-nav-canvas" class="link-btn active">🎨 Editor Canvas</button>
+                <button type="button" id="btn-nav-postagem" class="link-btn">📝 Postagem</button>
+                <button type="button" id="btn-nav-programar" class="link-btn">📅 Programar</button>
+                <button type="button" id="btn-nav-gerenciar" class="link-btn">📋 Gerenciar</button>
+                <button type="button" id="btn-agent" class="link-btn">🤖 Agente IA</button>
+                <button type="button" id="btn-prayers" class="link-btn">Pedidos de Oração</button>
                 <button type="button" id="btn-security" class="link-btn">Segurança</button>
+                <a id="view-site" href="/" target="_blank" rel="noopener">Ver site ↗</a>
                 <button type="button" id="btn-logout" class="link-btn">Sair</button>
             </nav>
         </header>
 
         <main class="adm-main" id="conteudo">
-            <div class="adm-tabs" id="page-tabs" role="tablist" aria-label="Páginas editáveis"></div>
+            <!-- ======================================================== -->
+            <!-- VISUAL CANVAS STUDIO (EDITOR ESTILO CANVAS WYSIWYG)       -->
+            <!-- ======================================================== -->
+            <section id="editor-view" aria-label="Editor Visual Canvas">
+                <!-- Barra de Controle Superior do Canvas -->
+                <div class="canvas-control-bar">
+                    <!-- Esquerda: Seleção de Página e Modos -->
+                    <div class="canvas-bar-left">
+                        <div class="canvas-page-picker">
+                            <span class="canvas-picker-icon" aria-hidden="true">📄</span>
+                            <select id="canvas-page-select" class="canvas-select" aria-label="Selecionar página para editar">
+                                <option value="/" selected>Página Inicial (index.html)</option>
+                                <option value="/teologia">Teologia (teologia.html)</option>
+                                <option value="/soteriologia">Soteriologia (soteriologia.html)</option>
+                                <option value="/communicatio-idiomatum">Communicatio (communicatio-idiomatum.html)</option>
+                                <option value="/batismo">Batismo (batismo.html)</option>
+                                <option value="/forma-da-consciencia">Consciência (forma-da-consciencia.html)</option>
+                                <option value="/sobre">Sobre (sobre.html)</option>
+                                <option value="/privacidade">Privacidade (privacidade.html)</option>
+                                <option value="/pedidos-de-oracao">Pedidos de Oração (pedidos-de-oracao.html)</option>
+                                <option value="/quizzes">Quizzes Bíblicos (quizzes.html)</option>
+                                <option value="/posts/devocional-do-dia/">Temas / Categorias (categoria.html)</option>
+                            </select>
+                        </div>
 
-            <!-- Editor da página -->
-            <section id="editor-view" aria-labelledby="page-title">
-                <div class="adm-toolbar">
-                    <div>
-                        <h1 id="page-title">Carregando…</h1>
-                        <p id="page-meta" class="muted"></p>
+                        <div class="canvas-mode-group" role="group" aria-label="Modo de Operação">
+                            <button type="button" id="btn-canvas-mode-edit" class="canvas-mode-btn active" title="Clique em qualquer elemento para editar o texto">
+                                <span aria-hidden="true">✏️</span> Modo Editar
+                            </button>
+                            <button type="button" id="btn-canvas-mode-browse" class="canvas-mode-btn" title="Navegar livremente e testar links">
+                                <span aria-hidden="true">👁️</span> Modo Navegar
+                            </button>
+                        </div>
                     </div>
-                    <div class="toolbar-right">
-                        <label class="sr-only" for="filter">Filtrar blocos</label>
-                        <input id="filter" type="search" placeholder="Filtrar blocos…" autocomplete="off">
-                        <button type="button" id="btn-save-all" class="btn-primary" disabled>Salvar alterações</button>
+
+                    <!-- Centro: Dispositivos e Zoom -->
+                    <div class="canvas-bar-center">
+                        <div class="canvas-device-group" role="group" aria-label="Simulador de Dispositivo">
+                            <button type="button" id="btn-device-desktop" class="canvas-dev-btn active" title="Visualização Desktop (100%)">
+                                <span aria-hidden="true">🖥️</span> Desktop
+                            </button>
+                            <button type="button" id="btn-device-tablet" class="canvas-dev-btn" title="Visualização Tablet (768px)">
+                                <span aria-hidden="true">📟</span> Tablet
+                            </button>
+                            <button type="button" id="btn-device-mobile" class="canvas-dev-btn" title="Visualização Mobile (375px)">
+                                <span aria-hidden="true">📱</span> Mobile
+                            </button>
+                        </div>
+
+                        <div class="canvas-zoom-group">
+                            <button type="button" id="btn-zoom-out" class="canvas-tool-btn" title="Diminuir Zoom">－</button>
+                            <span id="canvas-zoom-label" class="canvas-zoom-val">100%</span>
+                            <button type="button" id="btn-zoom-in" class="canvas-tool-btn" title="Aumentar Zoom">＋</button>
+                            <button type="button" id="btn-zoom-reset" class="canvas-tool-btn" title="Resetar escala">100%</button>
+                        </div>
+                    </div>
+
+                    <!-- Direita: Formatação Rápida e Salvar -->
+                    <div class="canvas-bar-right">
+                        <div class="canvas-format-group">
+                            <button type="button" id="btn-fmt-bold" class="canvas-fmt-btn" title="Negrito (Ctrl+B)"><b>B</b></button>
+                            <button type="button" id="btn-fmt-italic" class="canvas-fmt-btn" title="Itálico (Ctrl+I)"><i>I</i></button>
+                            <button type="button" id="btn-fmt-underline" class="canvas-fmt-btn" title="Sublinhado (Ctrl+U)"><u>U</u></button>
+                        </div>
+
+                        <span id="canvas-dirty-counter" class="canvas-dirty-pill">0 alterações</span>
+
+                        <button type="button" id="btn-canvas-reload" class="btn-secondary" title="Recarregar página e descartar alterações">🔄 Descartar</button>
+                        <button type="button" id="btn-canvas-save" class="btn-primary" disabled title="Salvar todas as alterações (Ctrl+S)">
+                            <span class="btn-save-text">💾 Salvar Página</span>
+                        </button>
                     </div>
                 </div>
-                <p class="hint">Edite os textos abaixo e clique em <strong>Salvar alterações</strong> (ou Ctrl+S). Cada bloco guarda as últimas versões
-                    no <em>Histórico</em>, e <em>Restaurar original</em> devolve o texto que veio com o site.</p>
-                <div id="groups"></div>
+
+                <!-- Workspace do Canvas com Frame de Dispositivo -->
+                <div class="canvas-workspace" id="canvas-workspace">
+                    <div class="canvas-frame-container desktop" id="canvas-frame-container">
+                        <!-- Notch decorativo quando em tablet/mobile -->
+                        <div class="canvas-device-notch" id="canvas-device-notch">
+                            <span class="notch-camera"></span>
+                            <span class="notch-speaker"></span>
+                        </div>
+
+                        <!-- Iframe Real onde a página carrega interativamente -->
+                        <iframe id="canvas-frame" src="/" title="Visualização Editável do Site"></iframe>
+                    </div>
+                </div>
+
+                <!-- Barra Inferior de Informações e Inspetor -->
+                <footer class="canvas-inspector-bar">
+                    <div class="inspector-left">
+                        <span id="inspector-tag-info" class="inspector-tag">🎯 Selecione qualquer texto na página para editar</span>
+                        <span id="inspector-chars" class="inspector-sub"></span>
+                    </div>
+                    <div class="inspector-center">
+                        <span class="inspector-hint">💡 <strong>Dica:</strong> Clique em qualquer texto ou título na tela para editar diretamente. Use <strong>Ctrl+S</strong> para salvar.</span>
+                    </div>
+                    <div class="inspector-right">
+                        <a id="canvas-live-link" href="/" target="_blank" rel="noopener" class="inspector-link">Abrir no site ao vivo ↗</a>
+                    </div>
+                </footer>
+            </section>
+
+            <!-- ======================================================== -->
+            <!-- 📝 ABA 1: POSTAGEM (CRIAR E EDITAR CONTEÚDO)             -->
+            <!-- ======================================================== -->
+            <section id="postagem-view" hidden aria-label="Criar ou Editar Postagem">
+                <div class="adm-toolbar">
+                    <div>
+                        <h1 style="display:flex; align-items:center; gap:0.5rem; font-size:1.6rem; font-weight:800;">
+                            <span>📝</span> <span id="postagem-view-title">Nova Postagem</span>
+                        </h1>
+                        <p class="muted">Escreva ou edite publicações bíblicas detalhadas para as 8 categorias do Unoteísmo.</p>
+                    </div>
+                    <div style="display:flex; gap:0.6rem; align-items:center; flex-wrap:wrap;">
+                        <button type="button" id="btn-postagem-new" class="btn-secondary">＋ Nova Postagem</button>
+                        <button type="button" id="btn-postagem-to-programar" class="link-btn">Ver Fila / Programar 📅</button>
+                        <button type="button" id="btn-postagem-to-gerenciar" class="link-btn">Ver Publicados 📋</button>
+                    </div>
+                </div>
+
+                <form id="form-postagem" class="card-form postagem-card-form" autocomplete="off">
+                    <input type="hidden" id="post-id" value="">
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="post-category">Tema / Categoria <span class="req">*</span></label>
+                            <select id="post-category" required class="input-select">
+                                <option value="versiculo_do_dia">📜 Versículo do Dia</option>
+                                <option value="palavra_do_dia">📖 Palavra do Dia</option>
+                                <option value="salmos_do_dia">🕊️ Salmos do Dia</option>
+                                <option value="devocional_do_dia">✨ Devocional do Dia</option>
+                                <option value="historias_da_biblia">🏛️ Histórias da Bíblia</option>
+                                <option value="curiosidades_biblicas">🔍 Curiosidades Bíblicas</option>
+                                <option value="ensinamentos_de_jesus">👑 Ensinamentos de Jesus</option>
+                                <option value="ensino_biblico">📚 Ensino Bíblico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-destination">Destino Inicial</label>
+                            <select id="post-destination" class="input-select">
+                                <option value="draft">Salvar na Fila (Rascunho)</option>
+                                <option value="scheduled">Agendar com Data e Hora</option>
+                                <option value="published">Publicar Diretamente no Ar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="post-schedule-datetime-row" class="form-row-2" style="display:none; background:#00000006; padding:0.9rem; border-radius:6px; border:1px dashed #00000033; margin-bottom:1rem;">
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label for="post-schedule-date">📅 Data de Agendamento</label>
+                            <input type="date" id="post-schedule-date" class="input-text">
+                        </div>
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label for="post-schedule-time">🕐 Hora (Horário de Brasília)</label>
+                            <input type="time" id="post-schedule-time" value="17:00" class="input-text">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-title">Título da Postagem <span class="req">*</span></label>
+                        <input type="text" id="post-title" required placeholder="Ex: O Senhor Nosso Deus é o Único Senhor" class="input-text" style="font-size:1.1rem; font-weight:600;">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-subtitle">Subtítulo / Linha Fina <span class="muted">(opcional)</span></label>
+                        <input type="text" id="post-subtitle" placeholder="Ex: A pedra angular de toda a revelação bíblica e o alicerce da nossa fé." class="input-text">
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group" style="flex:2;">
+                            <label for="post-verse-text">Texto do Versículo Principal <span class="muted">(opcional)</span></label>
+                            <textarea id="post-verse-text" rows="2" placeholder="Ex: Ouve, Israel, o Senhor nosso Deus é o único Senhor." class="input-textarea"></textarea>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label for="post-verse-ref">Referência Bíblica</label>
+                            <input type="text" id="post-verse-ref" placeholder="Ex: Deuteronômio 6:4" class="input-text">
+                        </div>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group" style="flex:1;">
+                            <label for="post-image-url">Imagem de Capa <span class="muted">(URL externa ou upload)</span></label>
+                            <div style="display:flex; gap:0.5rem; align-items:center;">
+                                <input type="url" id="post-image-url" placeholder="https://exemplo.com/imagem.jpg" class="input-text" style="flex:1;">
+                                <label class="btn-secondary" style="margin:0; padding:0.6rem 0.9rem; cursor:pointer;" title="Fazer upload de imagem">
+                                    📁 Arquivo
+                                    <input type="file" id="post-image-file" accept="image/*" style="display:none;">
+                                </label>
+                            </div>
+                            <div id="post-image-preview-wrap" style="display:none; margin-top:0.5rem; position:relative;">
+                                <img id="post-image-preview" src="" alt="Prévia da imagem" style="max-height:120px; border-radius:4px; border:1px solid #00000033; object-fit:cover;">
+                                <button type="button" id="btn-remove-post-image" class="icon-btn" style="position:absolute; top:4px; left:4px; background:#000; color:#fff;" title="Remover imagem">✕</button>
+                            </div>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label for="post-youtube-link">Link do Vídeo no YouTube <span class="muted">(opcional)</span></label>
+                            <input type="url" id="post-youtube-link" placeholder="Ex: https://www.youtube.com/watch?v=..." class="input-text">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-summary">Resumo / Chamada <span class="muted">(usado na listagem e compartilhamento)</span></label>
+                        <textarea id="post-summary" rows="2" placeholder="Breve síntese que convida o leitor a explorar a mensagem..." class="input-textarea"></textarea>
+                    </div>
+
+                    <!-- Editor Rico de Conteúdo Monocromático -->
+                    <div class="form-group">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+                            <label style="margin:0;">Conteúdo / Estudo Bíblico Completo <span class="req">*</span></label>
+                            <div style="display:flex; gap:0.4rem;">
+                                <button type="button" id="btn-toggle-html-mode" class="canvas-tool-btn" style="font-size:0.75rem; padding:0.25rem 0.6rem;">Alternar Código HTML</button>
+                            </div>
+                        </div>
+
+                        <div id="post-editor-toolbar" class="post-editor-toolbar" role="toolbar" aria-label="Ferramentas do editor">
+                            <button type="button" data-cmd="bold" class="editor-btn" title="Negrito (Ctrl+B)"><b>B</b></button>
+                            <button type="button" data-cmd="italic" class="editor-btn" title="Itálico (Ctrl+I)"><i>I</i></button>
+                            <button type="button" data-cmd="underline" class="editor-btn" title="Sublinhado (Ctrl+U)"><u>U</u></button>
+                            <span class="editor-sep"></span>
+                            <button type="button" data-cmd="formatBlock" data-val="h2" class="editor-btn" title="Título H2">H2</button>
+                            <button type="button" data-cmd="formatBlock" data-val="h3" class="editor-btn" title="Subtítulo H3">H3</button>
+                            <button type="button" data-cmd="formatBlock" data-val="p" class="editor-btn" title="Parágrafo Normal">P</button>
+                            <span class="editor-sep"></span>
+                            <button type="button" data-cmd="formatBlock" data-val="blockquote" class="editor-btn" title="Citação">❝❞</button>
+                            <button type="button" data-cmd="insertUnorderedList" class="editor-btn" title="Lista com Marcadores">• Lista</button>
+                            <button type="button" data-cmd="insertOrderedList" class="editor-btn" title="Lista Numerada">1. Lista</button>
+                            <span class="editor-sep"></span>
+                            <button type="button" id="btn-editor-link" class="editor-btn" title="Inserir Link">🔗 Link</button>
+                            <button type="button" data-cmd="removeFormat" class="editor-btn" title="Limpar Formatação">🧹</button>
+                        </div>
+
+                        <div id="post-content-editable" class="post-content-editable" contenteditable="true" role="textbox" aria-multiline="true" placeholder="Escreva aqui o conteúdo completo da sua postagem..."></div>
+                        <textarea id="post-content-html" class="post-content-html" style="display:none;" rows="12"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="post-closing-prayer">Oração de Encerramento <span class="muted">(opcional)</span></label>
+                        <textarea id="post-closing-prayer" rows="2" placeholder="Oração sincera que conclui a reflexão com fé e entrega..." class="input-textarea"></textarea>
+                    </div>
+
+                    <div class="post-form-actions">
+                        <div style="display:flex; gap:0.6rem; align-items:center; flex-wrap:wrap;">
+                            <button type="submit" id="btn-post-save-queue" class="btn-secondary" style="font-weight:700;">💾 Salvar na Fila</button>
+                            <button type="button" id="btn-post-publish-now" class="btn-primary" style="font-weight:700;">🚀 Publicar Diretamente</button>
+                            <button type="button" id="btn-post-preview" class="btn-secondary">👁️ Pré-visualizar</button>
+                        </div>
+                        <div>
+                            <button type="button" id="btn-post-clear" class="link-btn">Limpar Campos</button>
+                        </div>
+                    </div>
+                    <p id="post-form-msg" class="msg" role="alert"></p>
+                </form>
+            </section>
+
+            <!-- ======================================================== -->
+            <!-- 📅 ABA 2: PROGRAMAR (FILA DE POSTAGENS E AGENDAMENTO)    -->
+            <!-- ======================================================== -->
+            <section id="programar-view" hidden aria-label="Programar Postagens e Fila">
+                <div class="adm-toolbar">
+                    <div>
+                        <h1 style="display:flex; align-items:center; gap:0.5rem; font-size:1.6rem; font-weight:800;">
+                            <span>📅</span> Programar Postagens
+                        </h1>
+                        <p class="muted">Postagens na fila de espera antes de irem para o site. Agende datas ou publique em lote.</p>
+                    </div>
+                    <div style="display:flex; gap:0.6rem; align-items:center; flex-wrap:wrap;">
+                        <button type="button" id="btn-queue-new-post" class="btn-primary">＋ Nova Postagem</button>
+                        <button type="button" id="btn-queue-refresh" class="btn-secondary">🔄 Atualizar Fila</button>
+                    </div>
+                </div>
+
+                <!-- Relógio Oficial de Brasília em Alta Fidelidade (Monocromático) -->
+                <div class="brasilia-clock-card">
+                    <div class="clock-left">
+                        <span class="clock-icon" aria-hidden="true">🕐</span>
+                        <div>
+                            <span class="clock-sub">Horário Oficial de Brasília (Fuso UTC-3)</span>
+                            <div id="queue-brasilia-time" class="clock-digits">--:--:--</div>
+                        </div>
+                    </div>
+                    <div class="clock-right">
+                        <span class="clock-sub">Data Atual</span>
+                        <div id="queue-brasilia-date" class="clock-date">--/--/----</div>
+                    </div>
+                </div>
+
+                <!-- Barra de Ferramentas da Fila (Ações em Lote) -->
+                <div class="queue-toolbar-card">
+                    <div class="queue-toolbar-top">
+                        <label class="queue-select-all-label">
+                            <input type="checkbox" id="queue-select-all">
+                            <span>Selecionar Tudo na Fila</span>
+                        </label>
+                        <span id="queue-selected-count" class="queue-count-pill">0 selecionados</span>
+                        <span style="flex:1;"></span>
+                        <span id="queue-total-count" class="queue-total-badge">0 postagens na fila</span>
+                    </div>
+
+                    <div class="queue-actions-row">
+                        <div class="queue-input-group">
+                            <label for="queue-batch-date">📅 Data (dd/mm/aaaa)</label>
+                            <input type="text" id="queue-batch-date" placeholder="dd/mm/aaaa" maxlength="10" class="input-text queue-date-input">
+                        </div>
+                        <div class="queue-input-group" style="min-width:110px;">
+                            <label for="queue-batch-time">🕐 Hora (24h)</label>
+                            <input type="text" id="queue-batch-time" value="17:00" placeholder="HH:MM" maxlength="5" class="input-text queue-time-input">
+                        </div>
+                        <div class="queue-buttons-group">
+                            <button type="button" id="btn-queue-batch-schedule" class="btn-secondary queue-btn">⏰ Agendar Selecionados</button>
+                            <button type="button" id="btn-queue-batch-publish" class="btn-primary queue-btn">🚀 Publicar Selecionados</button>
+                            <button type="button" id="btn-queue-batch-delete" class="btn-secondary danger queue-btn">🗑️ Excluir Selecionados</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Itens na Fila -->
+                <div id="queue-items-container" class="queue-list-container">
+                    <p class="muted" style="text-align:center; padding:2.5rem;">Carregando fila...</p>
+                </div>
+            </section>
+
+            <!-- ======================================================== -->
+            <!-- 📋 ABA 3: GERENCIAR (POSTAGENS PUBLICADAS)               -->
+            <!-- ======================================================== -->
+            <section id="gerenciar-view" hidden aria-label="Gerenciar Postagens Publicadas">
+                <div class="adm-toolbar">
+                    <div>
+                        <h1 style="display:flex; align-items:center; gap:0.5rem; font-size:1.6rem; font-weight:800;">
+                            <span>📋</span> Gerenciar Postagens
+                        </h1>
+                        <p class="muted">Todas as postagens publicadas no ar. Edite conteúdos, detecte duplicidades ou exclua com segurança.</p>
+                    </div>
+                    <div style="display:flex; gap:0.6rem; align-items:center; flex-wrap:wrap;">
+                        <button type="button" id="btn-manage-new-post" class="btn-primary">＋ Nova Postagem</button>
+                        <button type="button" id="btn-manage-refresh" class="btn-secondary">🔄 Atualizar Lista</button>
+                    </div>
+                </div>
+
+                <!-- Barra de Busca e Filtro de Categorias -->
+                <div class="manage-filter-card">
+                    <div class="manage-search-row">
+                        <span class="search-icon" aria-hidden="true">🔍</span>
+                        <input type="text" id="manage-search-input" placeholder="Pesquisar por título, palavra-chave, versículo ou conteúdo..." class="input-text manage-search-box">
+                        <button type="button" id="btn-manage-search-clear" class="icon-btn" title="Limpar pesquisa">✕</button>
+                    </div>
+
+                    <div class="manage-cats-row">
+                        <span class="manage-cats-label">Filtrar por Categoria:</span>
+                        <div id="manage-cats-filters" class="manage-chips-wrap">
+                            <!-- Chips de filtro de categorias gerados via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barra de Utilidades: Detector de Duplicadas e Exclusão em Massa -->
+                <div class="manage-tools-card">
+                    <div style="display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap;">
+                        <button type="button" id="btn-detect-duplicates" class="btn-secondary" style="font-weight:700;">
+                            🔍 Detectar Postagens Duplicadas
+                        </button>
+                        <span id="duplicates-status-msg" class="muted" style="font-size:0.9rem;"></span>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:0.8rem;">
+                        <label class="queue-select-all-label">
+                            <input type="checkbox" id="manage-select-all">
+                            <span>Marcar Todos na Tela</span>
+                        </label>
+                        <button type="button" id="btn-manage-bulk-delete" class="btn-secondary danger" style="display:none; font-weight:700;">
+                            🗑️ Excluir Selecionados (<span id="manage-bulk-count">0</span>)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Alerta de Duplicadas (quando detectadas) -->
+                <div id="duplicates-alert-box" class="duplicates-alert-banner" style="display:none;"></div>
+
+                <!-- Lista de Postagens Publicadas -->
+                <div id="manage-posts-list" class="manage-posts-grid">
+                    <p class="muted" style="text-align:center; padding:2.5rem;">Carregando postagens publicadas...</p>
+                </div>
             </section>
 
             <!-- Segurança -->
@@ -89,13 +458,432 @@
                     <p id="pw-msg" class="msg" role="alert"></p>
                 </form>
             </section>
+
+            <!-- Pedidos de Oração -->
+            <section id="prayers-view" hidden aria-labelledby="prayers-title">
+                <div class="adm-toolbar">
+                    <div>
+                        <h1 id="prayers-title">Pedidos de Oração</h1>
+                        <p class="muted">Gerencie, modere e exclua pedidos de oração e respostas da comunidade.</p>
+                    </div>
+                    <div class="toolbar-right">
+                        <button type="button" id="btn-refresh-prayers" class="btn-secondary">Atualizar lista</button>
+                        <button type="button" id="btn-back-prayers" class="btn-secondary">← Voltar aos textos</button>
+                    </div>
+                </div>
+
+                <!-- Estatísticas -->
+                <div class="prayer-stats-grid">
+                    <div class="prayer-stat-card">
+                        <span class="prayer-stat-num" id="stat-total-prayers">0</span>
+                        <span class="prayer-stat-lbl">Total de Pedidos</span>
+                    </div>
+                    <div class="prayer-stat-card">
+                        <span class="prayer-stat-num" id="stat-total-oracoes">0</span>
+                        <span class="prayer-stat-lbl">Intercessões ("Oraram")</span>
+                    </div>
+                    <div class="prayer-stat-card">
+                        <span class="prayer-stat-num" id="stat-total-respostas">0</span>
+                        <span class="prayer-stat-lbl">Respostas Recebidas</span>
+                    </div>
+                </div>
+
+                <!-- Filtros -->
+                <div class="prayer-filter-bar">
+                    <input type="search" id="prayer-search-input" placeholder="Filtrar por nome, mensagem ou resposta…" autocomplete="off">
+                    <select id="prayer-filter-select">
+                        <option value="all">Todos os pedidos</option>
+                        <option value="with-replies">Com respostas</option>
+                        <option value="without-replies">Sem respostas</option>
+                    </select>
+                </div>
+
+                <!-- Lista de Pedidos -->
+                <div id="prayers-admin-list" class="prayers-admin-list">
+                    <p class="muted" style="text-align: center; padding: 2rem;">Carregando pedidos…</p>
+                </div>
+            </section>
+
+            <!-- Agente de IA para Criação de Postagens -->
+            <section id="agent-view" hidden aria-labelledby="agent-title">
+                <div class="adm-toolbar">
+                    <div>
+                        <h1 id="agent-title">🤖 Agente de Conteúdo Bíblico</h1>
+                        <p class="muted">Geração inteligente com IA e gestão de postagens para as 8 categorias do Unoteísmo.</p>
+                    </div>
+                    <div class="toolbar-right">
+                        <button type="button" id="btn-back-agent" class="btn-secondary">← Voltar aos textos</button>
+                    </div>
+                </div>
+
+                <!-- Sub-abas do Agente -->
+                <div class="agent-subnav" role="tablist" aria-label="Navegação do Agente">
+                    <button type="button" id="agent-tab-single" class="agent-subnav-btn active" role="tab" aria-selected="true">✨ Gerar Postagem</button>
+                    <button type="button" id="agent-tab-batch" class="agent-subnav-btn" role="tab" aria-selected="false">🚀 Gerar em Lote</button>
+                    <button type="button" id="agent-tab-posts" class="agent-subnav-btn" role="tab" aria-selected="false">📋 Postagens Criadas <span id="agent-badge-posts-count" class="badge">8</span></button>
+                    <button type="button" id="agent-tab-config" class="agent-subnav-btn" role="tab" aria-selected="false">⚙️ Configurar IA</button>
+                </div>
+
+                <!-- Painel 1: Gerar 1 Postagem -->
+                <div id="agent-panel-single" class="agent-panel">
+                    <div class="agent-card">
+                        <h2>Criar Nova Postagem com IA</h2>
+                        <p class="agent-hint">Selecione uma das 8 categorias oficiais do site. Deixe o assunto em branco para o agente escolher um tema relevante ou digite um versículo/tema específico.</p>
+
+                        <div class="agent-form-grid">
+                            <div class="agent-form-group">
+                                <label for="agent-single-category">Categoria Oficial (8 Categorias)</label>
+                                <select id="agent-single-category">
+                                    <option value="versiculo_do_dia">📜 Versículo do Dia</option>
+                                    <option value="palavra_do_dia">📖 Palavra do Dia</option>
+                                    <option value="salmos_do_dia">🕊️ Salmos do Dia</option>
+                                    <option value="devocional_do_dia">☀️ Devocional do Dia</option>
+                                    <option value="historias_da_biblia">🏛️ Histórias da Bíblia</option>
+                                    <option value="curiosidades_biblicas">🔍 Curiosidades Bíblicas</option>
+                                    <option value="ensinamentos_de_jesus">👑 Ensinamentos de Jesus</option>
+                                    <option value="ensino_biblico">📚 Ensino Bíblico</option>
+                                </select>
+                            </div>
+
+                            <div class="agent-form-group">
+                                <label for="agent-single-topic">Assunto ou Passagem Específica <span class="muted">(opcional)</span></label>
+                                <input type="text" id="agent-single-topic" placeholder="Ex: Salmo 121, O Bom Samaritano, João 17:3, Shalom...">
+                            </div>
+                        </div>
+
+                        <div class="agent-form-grid">
+                            <div class="agent-form-group">
+                                <label for="agent-single-template">Estrutura do Conteúdo</label>
+                                <select id="agent-single-template">
+                                    <option value="classico">Padrão Completo (Exegese, Seções, Tabela Comparativa, Quiz e Oração)</option>
+                                    <option value="devocional">Devocional Pastoral (Foco em Encorajamento, Prática e Oração)</option>
+                                    <option value="estudo">Estudo Bíblico Analítico (Foco Doutrinário, Histórico e Teológico)</option>
+                                </select>
+                            </div>
+
+                            <div class="agent-form-group checkbox-group" style="padding-top: 32px;">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agent-single-autopublish" checked>
+                                    <span>Publicar imediatamente no site (se desmarcado, salva como Rascunho)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="agent-action-row">
+                            <button type="button" id="btn-agent-generate-single" class="btn-primary">⚡ Gerar Postagem Agora</button>
+                        </div>
+
+                        <!-- Indicador de Carregamento -->
+                        <div id="agent-single-loading" class="agent-loading" hidden>
+                            <div class="agent-spinner"></div>
+                            <span id="agent-single-loading-text">O agente está pesquisando as Escrituras e redigindo a postagem…</span>
+                        </div>
+
+                        <!-- Resultado da Geração -->
+                        <div id="agent-single-result" class="agent-result-box" hidden>
+                            <div class="agent-result-header">
+                                <div class="agent-result-badges">
+                                    <span id="res-badge-cat" class="agent-cat-badge">📜 Versículo do Dia</span>
+                                    <span id="res-badge-status" class="agent-status-badge published">Publicado</span>
+                                </div>
+                                <h3 id="res-title">Título da Postagem</h3>
+                                <p id="res-subtitle" class="muted"></p>
+                            </div>
+
+                            <div class="agent-result-body">
+                                <div id="res-verse-box" class="agent-verse-box">
+                                    <blockquote id="res-verse-text"></blockquote>
+                                    <cite id="res-verse-ref"></cite>
+                                </div>
+
+                                <div id="res-summary-box" class="agent-summary-box">
+                                    <strong>Resumo:</strong> <span id="res-summary"></span>
+                                </div>
+
+                                <div id="res-sections" class="agent-sections-preview"></div>
+
+                                <div id="res-table-box" class="agent-table-preview">
+                                    <h4 id="res-table-title"></h4>
+                                    <div class="table-responsive">
+                                        <table id="res-table">
+                                            <thead id="res-table-head"></thead>
+                                            <tbody id="res-table-body"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div id="res-quiz-box" class="agent-quiz-preview">
+                                    <h4>Quiz de Fixação</h4>
+                                    <p id="res-quiz-question" class="quiz-q"></p>
+                                    <div id="res-quiz-options" class="quiz-opts"></div>
+                                    <p id="res-quiz-explanation" class="quiz-exp" hidden></p>
+                                </div>
+
+                                <div id="res-reflections-box" class="agent-reflections-preview">
+                                    <h4>Reflexões Práticas</h4>
+                                    <ul id="res-reflections-list"></ul>
+                                </div>
+
+                                <div id="res-prayer-box" class="agent-prayer-box">
+                                    <h4>Oração de Encerramento</h4>
+                                    <p id="res-prayer"></p>
+                                </div>
+                            </div>
+
+                            <div class="agent-result-actions">
+                                <button type="button" id="btn-res-preview" class="btn-secondary">👁️ Ver Post Completo</button>
+                                <button type="button" id="btn-res-toggle-status" class="btn-secondary">Alternar Rascunho/Publicado</button>
+                                <button type="button" id="btn-res-copy-html" class="btn-secondary">📋 Copiar Texto/HTML</button>
+                                <button type="button" id="btn-res-discard" class="link-btn danger">Descartar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Painel 2: Gerar em Lote -->
+                <div id="agent-panel-batch" class="agent-panel" hidden>
+                    <div class="agent-card">
+                        <h2>Geração Automatizada em Lote</h2>
+                        <p class="agent-hint">Crie múltiplos conteúdos automaticamente. O agente pode gerar postagens para uma categoria específica ou percorrer sequencialmente as 8 categorias oficiais do Unoteísmo.</p>
+
+                        <div class="agent-form-grid">
+                            <div class="agent-form-group">
+                                <label for="agent-batch-category">Categorias do Lote</label>
+                                <select id="agent-batch-category">
+                                    <option value="all">🔁 Percorrer as 8 Categorias em Sequência</option>
+                                    <option value="versiculo_do_dia">📜 Versículo do Dia</option>
+                                    <option value="palavra_do_dia">📖 Palavra do Dia</option>
+                                    <option value="salmos_do_dia">🕊️ Salmos do Dia</option>
+                                    <option value="devocional_do_dia">☀️ Devocional do Dia</option>
+                                    <option value="historias_da_biblia">🏛️ Histórias da Bíblia</option>
+                                    <option value="curiosidades_biblicas">🔍 Curiosidades Bíblicas</option>
+                                    <option value="ensinamentos_de_jesus">👑 Ensinamentos de Jesus</option>
+                                    <option value="ensino_biblico">📚 Ensino Bíblico</option>
+                                </select>
+                            </div>
+
+                            <div class="agent-form-group">
+                                <label for="agent-batch-count">Quantidade de Postagens</label>
+                                <select id="agent-batch-count">
+                                    <option value="1">1 postagem</option>
+                                    <option value="2">2 postagens</option>
+                                    <option value="4">4 postagens</option>
+                                    <option value="8" selected>8 postagens (1 para cada categoria)</option>
+                                    <option value="16">16 postagens (2 para cada categoria)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="agent-form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agent-batch-autopublish" checked>
+                                <span>Publicar automaticamente as postagens criadas neste lote</span>
+                            </label>
+                        </div>
+
+                        <div class="agent-action-row" style="margin-top: 14px;">
+                            <button type="button" id="btn-agent-batch-start" class="btn-primary">🚀 Iniciar Geração em Lote</button>
+                            <button type="button" id="btn-agent-batch-cancel" class="btn-secondary" style="display: none; border-color: var(--red); color: var(--red);">🛑 Cancelar Processo</button>
+                        </div>
+
+                        <!-- Barra de Progresso do Lote -->
+                        <div id="agent-batch-progress-box" class="agent-batch-progress" hidden>
+                            <div class="agent-progress-header">
+                                <span id="agent-batch-progress-label">Gerando...</span>
+                                <span id="agent-batch-progress-percent">0%</span>
+                            </div>
+                            <div class="agent-progress-bar">
+                                <div id="agent-batch-progress-fill" class="agent-progress-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Console de Logs em Tempo Real -->
+                        <div id="agent-batch-terminal-box" style="margin-top: 18px;" hidden>
+                            <div class="terminal-header">
+                                <span>CONSOLE DO AGENTE (LOGS EM TEMPO REAL)</span>
+                                <button type="button" id="btn-clear-batch-log" class="terminal-clear-btn">Limpar</button>
+                            </div>
+                            <pre id="agent-batch-log" class="agent-terminal"></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Painel 3: Postagens Criadas (Feed / Tabela) -->
+                <div id="agent-panel-posts" class="agent-panel" hidden>
+                    <!-- Métricas -->
+                    <div class="agent-stats-grid">
+                        <div class="agent-stat-card">
+                            <span class="agent-stat-num" id="stat-total-posts">0</span>
+                            <span class="agent-stat-lbl">Total de Postagens</span>
+                        </div>
+                        <div class="agent-stat-card">
+                            <span class="agent-stat-num" id="stat-published-posts">0</span>
+                            <span class="agent-stat-lbl">Publicadas</span>
+                        </div>
+                        <div class="agent-stat-card">
+                            <span class="agent-stat-num" id="stat-draft-posts">0</span>
+                            <span class="agent-stat-lbl">Rascunhos</span>
+                        </div>
+                        <div class="agent-stat-card">
+                            <span class="agent-stat-num" id="stat-categories-posts">8</span>
+                            <span class="agent-stat-lbl">Categorias Ativas</span>
+                        </div>
+                    </div>
+
+                    <!-- Filtros e Busca -->
+                    <div class="agent-filter-card">
+                        <div class="agent-filter-search">
+                            <input type="search" id="agent-posts-search" placeholder="Pesquisar por título, versículo ou palavra-chave…" autocomplete="off">
+                            <select id="agent-status-filter">
+                                <option value="all">Todos os status</option>
+                                <option value="published">Apenas Publicados</option>
+                                <option value="draft">Apenas Rascunhos</option>
+                            </select>
+                        </div>
+
+                        <!-- Chips das 8 Categorias -->
+                        <div class="agent-category-chips" id="agent-cat-chips">
+                            <button type="button" class="cat-chip active" data-cat="all">Todas as 8 Categorias</button>
+                            <button type="button" class="cat-chip" data-cat="versiculo_do_dia">📜 Versículo do Dia</button>
+                            <button type="button" class="cat-chip" data-cat="palavra_do_dia">📖 Palavra do Dia</button>
+                            <button type="button" class="cat-chip" data-cat="salmos_do_dia">🕊️ Salmos do Dia</button>
+                            <button type="button" class="cat-chip" data-cat="devocional_do_dia">☀️ Devocional do Dia</button>
+                            <button type="button" class="cat-chip" data-cat="historias_da_biblia">🏛️ Histórias da Bíblia</button>
+                            <button type="button" class="cat-chip" data-cat="curiosidades_biblicas">🔍 Curiosidades Bíblicas</button>
+                            <button type="button" class="cat-chip" data-cat="ensinamentos_de_jesus">👑 Ensinamentos de Jesus</button>
+                            <button type="button" class="cat-chip" data-cat="ensino_biblico">📚 Ensino Bíblico</button>
+                        </div>
+                    </div>
+
+                    <!-- Lista de Postagens -->
+                    <div id="agent-posts-list" class="agent-posts-list">
+                        <p class="muted" style="text-align: center; padding: 2rem;">Carregando postagens…</p>
+                    </div>
+                </div>
+
+                <!-- Painel 4: Configuração de IA -->
+                <div id="agent-panel-config" class="agent-panel" hidden>
+                    <div class="agent-card">
+                        <h2>Configuração de Modelos e Conexões de IA</h2>
+                        <p class="agent-hint">O Unoteísmo possui um <strong>Motor Teológico Autônomo Integrado</strong> com alta densidade bíblica que funciona sem custos nem necessidade de chaves externas. Se desejar usar modelos em nuvem como DeepSeek, Llama 3, Claude ou GPT, informe sua chave de API abaixo.</p>
+
+                        <form id="agent-config-form" class="card-form" style="max-width: 600px;" autocomplete="off">
+                            <label for="agent-cfg-provider">Provedor de Inteligência Artificial</label>
+                            <select id="agent-cfg-provider">
+                                <option value="unoteista_engine">⭐ Motor Teológico Unoteísta (Integrado / Gratuito / Recomendado)</option>
+                                <option value="openrouter">OpenRouter.ai (DeepSeek V3, Qwen 2.5, Claude, Llama 3)</option>
+                                <option value="openai">OpenAI (GPT-4o-mini, GPT-4o)</option>
+                                <option value="groq">Groq Cloud (Llama 3.3 70B ultra-rápido)</option>
+                            </select>
+
+                            <div id="agent-key-wrapper" style="margin-top: 14px;">
+                                <label for="agent-cfg-key">Chave de API (API Key)</label>
+                                <input type="password" id="agent-cfg-key" placeholder="sk-..." autocomplete="off">
+                                <p class="muted" style="font-size: 12px; margin-top: 4px;">Deixe em branco para utilizar o Motor Teológico Unoteísta embutido.</p>
+                            </div>
+
+                            <label for="agent-cfg-model" style="margin-top: 14px;">Identificador do Modelo (opcional)</label>
+                            <input type="text" id="agent-cfg-model" placeholder="Ex: deepseek/deepseek-v4-flash ou gpt-4o-mini" autocomplete="off">
+
+                            <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
+                                <button type="submit" class="btn-primary">Salvar Configurações</button>
+                                <button type="button" id="btn-agent-test-connection" class="btn-secondary">Testar Motor / Conexão</button>
+                            </div>
+
+                            <p id="agent-cfg-msg" class="msg" role="alert"></p>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </main>
 
-        <div id="savebar" class="savebar" hidden>
-            <span id="savebar-text">0 alterações</span>
-            <button type="button" id="btn-save-bar" class="btn-primary">Salvar</button>
+        <!-- Modal de Pré-visualização do Post Completo -->
+        <div id="agent-modal-preview" class="agent-modal-backdrop" hidden>
+            <div class="agent-modal-card">
+                <div class="agent-modal-header">
+                    <span id="modal-prev-cat" class="agent-cat-badge">Categoria</span>
+                    <button type="button" id="btn-close-preview-modal" class="modal-close-btn" aria-label="Fechar">✕</button>
+                </div>
+                <div class="agent-modal-body" id="modal-prev-content">
+                    <!-- Conteúdo renderizado dinamicamente -->
+                </div>
+                <div class="agent-modal-footer">
+                    <button type="button" id="btn-modal-copy-full" class="btn-secondary">Copiar Conteúdo</button>
+                    <button type="button" id="btn-modal-close" class="btn-primary">Fechar Visualização</button>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- Modal de Edição Rápida de Post -->
+        <div id="agent-modal-edit" class="agent-modal-backdrop" hidden>
+            <div class="agent-modal-card">
+                <div class="agent-modal-header">
+                    <h3>Editar Postagem</h3>
+                    <button type="button" id="btn-close-edit-modal" class="modal-close-btn" aria-label="Fechar">✕</button>
+                </div>
+                <form id="agent-edit-form" class="agent-modal-body">
+                    <input type="hidden" id="edit-post-id">
+                    <label for="edit-post-title">Título</label>
+                    <input type="text" id="edit-post-title" required>
+
+                    <label for="edit-post-subtitle">Subtítulo</label>
+                    <input type="text" id="edit-post-subtitle">
+
+                    <label for="edit-post-category">Categoria</label>
+                    <select id="edit-post-category">
+                        <option value="versiculo_do_dia">📜 Versículo do Dia</option>
+                        <option value="palavra_do_dia">📖 Palavra do Dia</option>
+                        <option value="salmos_do_dia">🕊️ Salmos do Dia</option>
+                        <option value="devocional_do_dia">☀️ Devocional do Dia</option>
+                        <option value="historias_da_biblia">🏛️ Histórias da Bíblia</option>
+                        <option value="curiosidades_biblicas">🔍 Curiosidades Bíblicas</option>
+                        <option value="ensinamentos_de_jesus">👑 Ensinamentos de Jesus</option>
+                        <option value="ensino_biblico">📚 Ensino Bíblico</option>
+                    </select>
+
+                    <label for="edit-post-verse-text">Texto do Versículo</label>
+                    <textarea id="edit-post-verse-text" rows="2"></textarea>
+
+                    <label for="edit-post-verse-ref">Referência do Versículo</label>
+                    <input type="text" id="edit-post-verse-ref">
+
+                    <label for="edit-post-summary">Resumo</label>
+                    <textarea id="edit-post-summary" rows="3"></textarea>
+
+                    <label for="edit-post-status">Status</label>
+                    <select id="edit-post-status">
+                        <option value="published">Publicado</option>
+                        <option value="draft">Rascunho</option>
+                    </select>
+
+                    <div style="margin-top: 18px; display: flex; gap: 10px;">
+                        <button type="submit" class="btn-primary">Salvar Alterações</button>
+                        <button type="button" id="btn-cancel-edit-modal" class="btn-secondary">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </main>
+
+        <!-- Modal Compartilhado de Pré-visualização de Postagens -->
+        <div id="post-preview-modal" class="modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="preview-modal-title">
+            <div class="modal-card post-preview-modal-card">
+                <div class="modal-head">
+                    <div style="display:flex; align-items:center; gap:0.6rem;">
+                        <span id="preview-modal-cat-badge" class="badge"></span>
+                        <span id="preview-modal-date" class="muted" style="font-size:0.85rem;"></span>
+                    </div>
+                    <button type="button" id="btn-close-post-preview" class="icon-btn" aria-label="Fechar">✕</button>
+                </div>
+                <div class="post-preview-content-body" id="post-preview-content-body">
+                    <!-- Preenchido dinamicamente via JS -->
+                </div>
+                <div class="modal-foot">
+                    <button type="button" id="btn-modal-preview-edit" class="btn-secondary">✏️ Editar Postagem</button>
+                    <button type="button" id="btn-modal-preview-close" class="btn-primary">Fechar Prévia</button>
+                </div>
+            </div>
+        </div>
 
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
 

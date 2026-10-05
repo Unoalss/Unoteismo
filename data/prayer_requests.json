@@ -1,0 +1,64 @@
+[
+  {
+    "id": "prayer_1791165827709",
+    "name": "Arthur Lázaro",
+    "initials": "AR",
+    "target": "Oração",
+    "reason": "Vida e Família",
+    "message": "Paz e luz a todos",
+    "prayers_count": 1,
+    "is_public": true,
+    "created_at": "2026-10-05T02:03:47.709856+00:00",
+    "replies": []
+  },
+  {
+    "id": "prayer_1",
+    "name": "Maria do Carmo",
+    "initials": "M.C",
+    "target": "Família",
+    "reason": "Saúde e Paz",
+    "message": "Peço oração pela recuperação da saúde do meu esposo e pela paz e harmonia em nosso lar. Confiamos no poder da oração e na providência divina.",
+    "prayers_count": 24,
+    "is_public": true,
+    "created_at": "2026-10-04T19:40:00Z",
+    "replies": [
+      {
+        "id": "reply_1",
+        "name": "Lucas",
+        "message": "Estamos todos em oração por vocês! Deus é fiel e há de confortar e restaurar a saúde de seu esposo.",
+        "created_at": "2026-10-04T20:10:00Z"
+      }
+    ]
+  },
+  {
+    "id": "prayer_2",
+    "name": "Gabriel Santos",
+    "initials": "G.S",
+    "target": "Trabalho",
+    "reason": "Direção e Portas Abertas",
+    "message": "Apresento em oração minha vida profissional e novos projetos, para que a sabedoria divina guie cada decisão e abra portas de oportunidade.",
+    "prayers_count": 18,
+    "is_public": true,
+    "created_at": "2026-10-04T21:15:00Z",
+    "replies": []
+  },
+  {
+    "id": "prayer_3",
+    "name": "Ana Paula Ferreira",
+    "initials": "A.F",
+    "target": "Vida Espiritual",
+    "reason": "Paz Interior e Gratidão",
+    "message": "Agradeço a Deus por mais um dia de vida e peço orações por força espiritual e consolo para enfrentar este momento de luto na família.",
+    "prayers_count": 31,
+    "is_public": true,
+    "created_at": "2026-10-04T22:00:00Z",
+    "replies": [
+      {
+        "id": "reply_2",
+        "name": "Elaine",
+        "message": "Que a paz de Deus que excede todo entendimento guarde o seu coração e conforte toda a família.",
+        "created_at": "2026-10-04T22:20:00Z"
+      }
+    ]
+  }
+]

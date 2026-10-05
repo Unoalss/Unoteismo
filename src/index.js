@@ -94,8 +94,13 @@ async function handleBible(request, env, ctx, url) {
   const book = BOOK_BY_SLUG.get(parts[1]);
   if (!book || parts.length > 3) return notFound(env, url);
 
-  // /biblia/<slug>  ->  capítulo 1
-  if (parts.length === 2) return redirect(url, chapterPath(book, 1) + url.search);
+  // /biblia/<slug>  ->  serve o shell biblia.html para exibir a grade de capítulos
+  if (parts.length === 2) {
+    const shell = await env.ASSETS.fetch(new Request(new URL('/biblia', url.origin)));
+    const res = new Response(shell.body, shell);
+    res.headers.set('Cache-Control', 'public, max-age=300');
+    return res;
+  }
 
   // /biblia/<slug>/<n>
   const n = /^[1-9]\d*$/.test(parts[2]) ? parseInt(parts[2], 10) : NaN;
@@ -298,6 +303,20 @@ export default {
 
       if (p === '/biblia' || p.startsWith('/biblia/')) {
         res = await handleBible(request, env, ctx, url);
+      } else if (p === '/posts' || p.startsWith('/posts/') || p === '/categoria' || p.startsWith('/categoria/')) {
+        res = await env.ASSETS.fetch(new Request(new URL('/categoria.html', url.origin)));
+      } else if (p === '/pedidos-de-oracao' || p === '/pedidos-de-oracao/') {
+        res = await env.ASSETS.fetch(new Request(new URL('/pedidos-de-oracao.html', url.origin)));
+      } else if (p === '/quizzes' || p === '/quizzes/' || p === '/quiz' || p === '/quiz/') {
+        res = await env.ASSETS.fetch(new Request(new URL('/quizzes.html', url.origin)));
+      } else if (p === '/admin' || p === '/admin/') {
+        res = await env.ASSETS.fetch(new Request(new URL('/admin.html', url.origin)));
+      } else if (p === '/sobre' || p === '/sobre/') {
+        res = await env.ASSETS.fetch(new Request(new URL('/sobre.html', url.origin)));
+      } else if (p === '/privacidade' || p === '/privacidade/') {
+        res = await env.ASSETS.fetch(new Request(new URL('/privacidade.html', url.origin)));
+      } else if (p === '/comparativo' || p === '/comparativo/') {
+        res = await env.ASSETS.fetch(new Request(new URL('/comparativo.html', url.origin)));
       } else if (pageIdForPath(p)) {
         res = await handleEditablePage(request, env, url, pageIdForPath(p));
       } else if (p === '/api/admin' || p.startsWith('/api/admin/')) {

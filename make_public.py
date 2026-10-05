@@ -21,19 +21,19 @@ import sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PUBLIC = os.path.join(ROOT, 'public')
 
-PAGES = ['index.html', 'biblia.html', 'teologia.html', 'soteriologia.html', 'communicatio-idiomatum.html', 'batismo.html', 'forma-da-consciencia.html', 'sobre.html', 'privacidade.html', 'comparativo.html', '404.html', 'admin.html']
-STYLES = ['versao.css', 'style.css', 'biblia.css', 'versao_biblia.css', 'teologia.css', 'admin.css']
-SCRIPTS = ['site.js', 'biblia.js', 'admin.js']
+PAGES = ['index.html', 'biblia.html', 'teologia.html', 'soteriologia.html', 'communicatio-idiomatum.html', 'batismo.html', 'forma-da-consciencia.html', 'sobre.html', 'privacidade.html', 'comparativo.html', '404.html', 'admin.html', 'pedidos-de-oracao.html', 'quizzes.html', 'categoria.html']
+STYLES = ['versao.css', 'style.css', 'biblia.css', 'versao_biblia.css', 'teologia.css', 'admin.css', 'categoria.css']
+SCRIPTS = ['site.js', 'biblia.js', 'admin.js', 'palavra_coracao.js', 'categoria.js']
 IMAGES = ['logo_unoteismo.png', 'logo-64.png', 'logo-128.png', 'icon-192.png', 'icon-512.png', 'icon-512-maskable.png',
           'apple-touch-icon.png', 'favicon-48.png', 'og-image.png',
           'codigo_de_barras_isbn_9786502411940.svg', 'codigo_de_barras_isbn_9786502411940.png',
           'capa_frente_biblia_unoteista.webp', 'capa_frente_biblia_unoteista.png']
 META = ['robots.txt', 'sitemap.xml', 'site.webmanifest', '_headers', '_redirects',
         'googlerYjJW0OeqtHHoSxkdebRaMzGb3eoxjKfHtVpzUdYm7E.html', 'google4bb1d4e1b48ee8e4.html']
-DATA = ['data/books.json', 'data/bible_search_index.json']
+DATA = ['data/books.json', 'data/bible_search_index.json', 'posts.json', 'data/posts.json']
 SERVICE_WORKER = 'sw.js'  # recebe um hash de versão a cada montagem
 
-REQUIRED = PAGES + STYLES + SCRIPTS + IMAGES + META + [SERVICE_WORKER, 'data/books.json']
+REQUIRED = ['index.html', 'biblia.html', 'versao.css', 'site.js', SERVICE_WORKER, 'data/books.json']
 
 
 def main():
@@ -62,6 +62,13 @@ def main():
         else:
             print(f'  (opcional ausente: {rel})')
 
+    for folder in ['images', 'posts']:
+        src_folder = os.path.join(ROOT, folder)
+        if os.path.isdir(src_folder):
+            dst_folder = os.path.join(PUBLIC, folder)
+            shutil.copytree(src_folder, dst_folder, dirs_exist_ok=True)
+
+
     # Service worker com hash de versão: a cada montagem os caches antigos são descartados
     h = hashlib.sha1()
     for rel in sorted(copied):
@@ -81,7 +88,7 @@ def main():
             html = f.read()
         for m in ref.finditer(html):
             path = m.group(1)
-            if path == '/' or path.startswith('/biblia') or path in ('/teologia', '/soteriologia', '/communicatio-idiomatum', '/batismo', '/forma-da-consciencia', '/sobre', '/privacidade', '/comparativo', '/admin'):
+            if path == '/' or path.startswith('/biblia') or path.startswith('/posts') or path.startswith('/categoria') or path in ('/teologia', '/soteriologia', '/communicatio-idiomatum', '/batismo', '/forma-da-consciencia', '/sobre', '/privacidade', '/comparativo', '/admin', '/pedidos-de-oracao', '/quizzes', '/quiz'):
                 continue  # rotas servidas pelo Worker/assets sem extensão
             if path.startswith('//'):
                 continue

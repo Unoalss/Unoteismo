@@ -35,20 +35,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   let currentChapter = 1;
   let currentMode = 'pt'; // Sempre abre primeiro na Tradução PT
   let urlHadReference = false; // a URL já indicava livro/capítulo? (senão restauramos a última leitura)
+  let currentView = 'chapter'; // 'chapter' ou 'book'
 
-  // Ler a URL: /biblia/<slug>/<capítulo>  (ou o formato antigo ?book=gn&ch=1)
+  // Ler a URL: /biblia/<slug>/<capítulo> ou /biblia/<slug>/ (ou o formato antigo ?book=gn&ch=1)
   function parseLocation() {
     const out = { book: '', chapter: 0, mode: '' };
     try {
       const m = window.location.pathname.match(/^\/biblia\/([^/]+)(?:\/(\d+))?\/?$/);
       if (m) {
         out.book = decodeURIComponent(m[1]).toLowerCase();
-        out.chapter = m[2] ? parseInt(m[2], 10) : 1;
+        out.chapter = m[2] ? parseInt(m[2], 10) : 0;
       }
       const q = new URLSearchParams(window.location.search);
       if (!out.book) {
-        out.book = (q.get('book') || q.get('b') || '').toLowerCase().trim();
-        out.chapter = parseInt(q.get('ch') || q.get('c') || q.get('cap') || '0', 10) || 0;
+        out.book = (q.get('book') || q.get('b') || q.get('livro') || '').toLowerCase().trim();
+        out.chapter = parseInt(q.get('ch') || q.get('c') || q.get('cap') || q.get('capitulo') || '0', 10) || 0;
       }
       const mode = (q.get('mode') || q.get('m') || '').toLowerCase().trim();
       if (['pt', 'int', 'parallel'].includes(mode)) out.mode = mode;
@@ -58,8 +59,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   {
     const loc = parseLocation();
-    if (loc.book) { currentBookId = loc.book; urlHadReference = true; }
-    if (loc.chapter > 0) currentChapter = loc.chapter;
+    if (loc.book) {
+      currentBookId = loc.book;
+      urlHadReference = true;
+      if (loc.chapter > 0) {
+        currentChapter = loc.chapter;
+        currentView = 'chapter';
+      } else {
+        currentChapter = 0;
+        currentView = 'book';
+      }
+    }
     if (loc.mode) currentMode = loc.mode;
   }
 
@@ -210,6 +220,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
       currentBookId = 'gn';
       currentChapter = 1;
+      currentView = 'chapter';
       urlHadReference = false;
     }
     // Abrindo /biblia sem referência: volta para onde o leitor parou
@@ -330,9 +341,109 @@ document.addEventListener('DOMContentLoaded', async () => {
     return [];
   }
 
+  // 7.5 Renderização da Página do Livro (Grade de Capítulos estilo unoteísta preto e branco)
+  function renderBookChaptersView(book, opts = {}) {
+    if (!book) book = books.find(b => b.id === currentBookId) || books[0];
+    currentBookId = book.id;
+    currentView = 'book';
+    currentChapter = 0;
+
+    const slug = getBookSlug(book);
+    document.title = `${book.name} — Bíblia Sagrada Online | Unoteísmo`;
+
+    // Sincroniza URL no formato /biblia/<slug>/
+    if (opts.push !== false) {
+      try {
+        const next = `/biblia/${slug}/`;
+        if (window.location.pathname !== next) {
+          window.history[opts.push ? 'pushState' : 'replaceState']({ b: book.id, view: 'book' }, '', next);
+        }
+      } catch (e) {}
+    }
+
+    // Ocultar cabeçalhos de leitura e players
+    const chapterReadingHeader = document.getElementById('chapter-reading-header-wrap') || document.querySelector('.chapter-reading-header');
+    if (chapterReadingHeader) chapterReadingHeader.style.display = 'none';
+    if (narratorBar) narratorBar.style.display = 'none';
+    const bottomNav = document.getElementById('bottom-bible-pagination') || document.getElementById('bottom-nav-bar');
+    if (bottomNav) bottomNav.style.display = 'none';
+    if (interlinearTip) interlinearTip.style.display = 'none';
+    const versesCard = document.getElementById('verses-container-card');
+    if (versesCard) {
+      versesCard.style.border = 'none';
+      versesCard.style.background = 'transparent';
+      versesCard.style.boxShadow = 'none';
+      versesCard.style.padding = '0';
+    }
+
+    // Atualiza controles da barra superior
+    currentBookName.textContent = book.name;
+    currentBookGreek.textContent = book.greek ? `(${book.greek})` : '';
+    currentChapNum.textContent = '—';
+    currentTestamentBadge.textContent = getTestamentLabel(book.testament);
+
+    // Conteúdo da página do livro (Grade de Capítulos)
+    versesDisplayArea.innerHTML = `
+      <div class="book-page-container">
+        <nav class="bible-breadcrumb" aria-label="Navegação">
+          <a href="/">Início</a>
+          <span class="bc-sep">/</span>
+          <a href="/biblia">Bíblia</a>
+          <span class="bc-sep">/</span>
+          <span class="bc-current">${escapeHtml(book.name)}</span>
+        </nav>
+
+        <div class="book-page-header">
+          <span class="book-testament-tag">${getTestamentLabel(book.testament)}</span>
+          <h1 class="book-page-title">
+            ${escapeHtml(book.name)}
+            ${book.greek ? `<span class="book-greek-title">(${escapeHtml(book.greek)})</span>` : ''}
+          </h1>
+          <p class="book-page-sub">${book.chapters_count} capítulos • Clique no capítulo para ler</p>
+        </div>
+
+        <div class="book-chapters-grid">
+          ${book.chapters.map(ch => `
+            <a href="/biblia/${slug}/${ch}" class="book-chap-btn" data-chap="${ch}">
+              ${ch}
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    `;
+
+    // Interatividade: clicar no capítulo abre a leitura diretamente
+    versesDisplayArea.querySelectorAll('.book-chap-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentChapter = parseInt(btn.dataset.chap, 10);
+        currentView = 'chapter';
+        renderChapterContent({ push: true });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
   // 8. Renderização Central do Capítulo
   // opts.push: true quando o leitor navegou (cria uma entrada no histórico do navegador)
   async function renderChapterContent(opts = {}) {
+    currentView = 'chapter';
+    const chapterReadingHeader = document.getElementById('chapter-reading-header-wrap') || document.querySelector('.chapter-reading-header');
+    if (chapterReadingHeader) chapterReadingHeader.style.display = '';
+    if (narratorBar) narratorBar.style.display = '';
+    const bottomNav = document.getElementById('bottom-bible-pagination') || document.getElementById('bottom-nav-bar');
+    if (bottomNav) bottomNav.style.display = '';
+    if (interlinearTip) interlinearTip.style.display = '';
+    const versesCard = document.getElementById('verses-container-card');
+    if (versesCard) {
+      versesCard.style.border = '';
+      versesCard.style.background = '';
+      versesCard.style.boxShadow = '';
+      versesCard.style.padding = '';
+    }
+
     // Verificação de protocolo file:/// (navegadores bloqueiam fetch local)
     if (window.location.protocol === 'file:') {
       versesDisplayArea.innerHTML = `
@@ -384,12 +495,49 @@ document.addEventListener('DOMContentLoaded', async () => {
     currentChapNum.textContent = currentChapter;
     currentTestamentBadge.textContent = getTestamentLabel(book.testament);
 
-    headerBookTitle.textContent = book.name;
-    headerBookGreek.textContent = book.greek || '';
-    headerChapTitle.textContent = `Capítulo ${currentChapter}`;
-    headerCanonBadge.textContent = getTestamentLabel(book.testament);
+    if (headerBookTitle) {
+      headerBookTitle.textContent = book.name;
+      headerBookTitle.style.cursor = 'pointer';
+      headerBookTitle.title = `Ver todos os capítulos de ${book.name}`;
+      headerBookTitle.onclick = () => renderBookChaptersView(book, { push: true });
+    }
+    if (headerBookGreek) headerBookGreek.textContent = book.greek || '';
+    if (headerChapTitle) headerChapTitle.textContent = `Capítulo ${currentChapter}`;
+    if (headerCanonBadge) headerCanonBadge.textContent = getTestamentLabel(book.testament);
 
-    bottomChapIndicator.textContent = `${currentChapter} / ${book.chapters_count}`;
+    // Card Cabeçalho do Capítulo (Estilo Referência)
+    const chapterHeaderTitle = document.getElementById('chapter-header-title');
+    if (chapterHeaderTitle) {
+      chapterHeaderTitle.textContent = `${book.name} ${currentChapter}`;
+      chapterHeaderTitle.style.cursor = 'pointer';
+      chapterHeaderTitle.title = `Ver todos os capítulos de ${book.name}`;
+      chapterHeaderTitle.onclick = () => renderBookChaptersView(book, { push: true });
+    }
+    const chapterHeaderSub = document.getElementById('chapter-header-sub');
+    if (chapterHeaderSub) {
+      chapterHeaderSub.textContent = 'Carregando versículos...';
+    }
+
+    // Breadcrumb dinâmico no topo do capítulo
+    const slug = getBookSlug(book);
+    const breadcrumbBookLink = document.getElementById('breadcrumb-book-link');
+    if (breadcrumbBookLink) {
+      breadcrumbBookLink.textContent = book.name;
+      breadcrumbBookLink.href = `/biblia/${slug}/`;
+      breadcrumbBookLink.onclick = (e) => {
+        e.preventDefault();
+        renderBookChaptersView(book, { push: true });
+      };
+    }
+    const breadcrumbChapCurrent = document.getElementById('breadcrumb-chap-current');
+    if (breadcrumbChapCurrent) {
+      breadcrumbChapCurrent.textContent = `Capítulo ${currentChapter}`;
+    }
+
+    // Paginações Superior e Inferior
+    const topChapInfo = document.getElementById('top-chap-info');
+    if (topChapInfo) topChapInfo.textContent = `${currentChapter} / ${book.chapters_count}`;
+    if (bottomChapIndicator) bottomChapIndicator.textContent = `${currentChapter} / ${book.chapters_count}`;
 
     // URL limpa (/biblia/<livro>/<capítulo>), título e metadados; guarda onde o leitor parou
     syncUrl(book, opts.push === true);
@@ -410,10 +558,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Atualizar estado de botões de capítulo anterior/próximo
     const isFirst = currentChapter <= 1;
     const isLast = currentChapter >= book.chapters_count;
-    prevChapBtn.disabled = isFirst;
-    bottomPrevBtn.disabled = isFirst;
-    nextChapBtn.disabled = isLast;
-    bottomNextBtn.disabled = isLast;
+    if (prevChapBtn) prevChapBtn.disabled = isFirst;
+    if (bottomPrevBtn) bottomPrevBtn.disabled = isFirst;
+    if (nextChapBtn) nextChapBtn.disabled = isLast;
+    if (bottomNextBtn) bottomNextBtn.disabled = isLast;
+    const topChapPrev = document.getElementById('top-chap-prev');
+    const topChapNext = document.getElementById('top-chap-next');
+    if (topChapPrev) topChapPrev.disabled = isFirst;
+    if (topChapNext) topChapNext.disabled = isLast;
 
     // Se o servidor já entregou este capítulo em HTML (SSR), mantém o texto na tela até o JS trocar
     const ssrKey = versesDisplayArea.dataset.ssr;
@@ -453,6 +605,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       renderModeINT(intVerses);
     } else if (currentMode === 'parallel') {
       renderModeParallel(ptVerses, intVerses);
+    }
+
+    const vCount = (ptVerses && ptVerses.length) || (intVerses && intVerses.length) || 0;
+    const finalHeaderSub = document.getElementById('chapter-header-sub');
+    if (finalHeaderSub && vCount > 0) {
+      finalHeaderSub.textContent = `${vCount} versículos`;
     }
 
     updateHeadMeta(book, ptVerses);
@@ -571,10 +729,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const book = books.find(b => b.id === loc.book || getBookSlug(b) === loc.book);
     if (!book) return;
     currentBookId = book.id;
-    currentChapter = loc.chapter > 0 ? loc.chapter : 1;
-    if (loc.mode) currentMode = loc.mode;
-    else if (!window.location.search.includes('mode=')) currentMode = 'pt';
-    setReadingMode(currentMode);
+    if (loc.chapter > 0) {
+      currentChapter = loc.chapter;
+      currentView = 'chapter';
+      if (loc.mode) currentMode = loc.mode;
+      else if (!window.location.search.includes('mode=')) currentMode = 'pt';
+      setReadingMode(currentMode);
+    } else {
+      renderBookChaptersView(book, { push: false });
+    }
   });
 
   // Modo 1: Tradução Unoteísta (PT)
@@ -988,8 +1151,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function selectBook(bid) {
     currentBookId = bid;
-    currentChapter = 1;
-    renderChapterContent({ push: true });
+    const book = books.find(b => b.id === bid);
+    if (book) {
+      renderBookChaptersView(book, { push: true });
+    } else {
+      currentChapter = 1;
+      renderChapterContent({ push: true });
+    }
   }
 
   bookSelectorBtn.addEventListener('click', () => {
@@ -1104,10 +1272,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  nextChapBtn.addEventListener('click', () => nextChapter());
-  prevChapBtn.addEventListener('click', () => prevChapter());
-  bottomNextBtn.addEventListener('click', () => nextChapter());
-  bottomPrevBtn.addEventListener('click', () => prevChapter());
+  if (nextChapBtn) nextChapBtn.addEventListener('click', () => nextChapter());
+  if (prevChapBtn) prevChapBtn.addEventListener('click', () => prevChapter());
+  if (bottomNextBtn) bottomNextBtn.addEventListener('click', () => nextChapter());
+  if (bottomPrevBtn) bottomPrevBtn.addEventListener('click', () => prevChapter());
+  const topChapPrevBtn = document.getElementById('top-chap-prev');
+  const topChapNextBtn = document.getElementById('top-chap-next');
+  if (topChapPrevBtn) topChapPrevBtn.addEventListener('click', () => prevChapter());
+  if (topChapNextBtn) topChapNextBtn.addEventListener('click', () => nextChapter());
 
   window.addEventListener('keydown', (e) => {
     if (dialogStack.length) return; // com um diálogo aberto, as setas não trocam de capítulo
@@ -3464,11 +3636,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (refFromQuery) {
     currentBookId = refFromQuery.book.id;
     currentChapter = refFromQuery.chapter;
+    currentView = 'chapter';
   }
-  await setReadingMode(currentMode);
+  if (currentView === 'book') {
+    const book = books.find(b => b.id === currentBookId) || books[0];
+    renderBookChaptersView(book, { push: false });
+  } else {
+    await setReadingMode(currentMode);
+  }
   if (refFromQuery) {
     if (refFromQuery.verse) scrollToAndHighlightVerse(refFromQuery.verse);
-  } else {
+  } else if (currentView !== 'book') {
     handleInitialHash();
   }
   if (searchFromQuery) openSearchModal(searchFromQuery);

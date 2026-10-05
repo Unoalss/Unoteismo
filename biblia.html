@@ -625,14 +625,30 @@
         </a>
     </div>
 
-    <!-- Cabeçalho do Capítulo em Leitura -->
-    <div class="chapter-reading-header">
-      <div class="reading-book-badge" id="header-canon-badge">Antigo Testamento</div>
-      <h1 class="reading-title" id="header-book-title">Gênesis</h1>
-      <div class="reading-greek-title" id="header-book-greek" lang="grc">Γένεσις</div>
-      <div class="reading-chapter-title" id="header-chap-title">Capítulo 1</div>
-      <div class="reading-divider">
-        <span class="divider-glyph">✧</span>
+    <!-- Breadcrumb, Cabeçalho e Paginação Superior do Capítulo em Leitura -->
+    <div class="chapter-reading-header-wrap" id="chapter-reading-header-wrap">
+      <nav class="bible-breadcrumb" id="chapter-top-breadcrumb" aria-label="Navegação">
+        <a href="/">Início</a>
+        <span class="bc-sep">/</span>
+        <a href="/biblia/genesis/" class="bc-book-link" id="breadcrumb-book-link">Gênesis</a>
+        <span class="bc-sep">/</span>
+        <span class="bc-current" id="breadcrumb-chap-current">Capítulo 1</span>
+      </nav>
+
+      <div class="chapter-header" id="chapter-header-box">
+        <span class="book-testament-tag" id="header-canon-badge">Antigo Testamento</span>
+        <h1 id="chapter-header-title">Gênesis 1</h1>
+        <span id="header-book-title" style="display:none;">Gênesis</span>
+        <span id="header-book-greek" style="display:none;" lang="grc">Γένεσις</span>
+        <span id="header-chap-title" style="display:none;">Capítulo 1</span>
+        <p id="chapter-header-sub">31 versículos</p>
+      </div>
+
+      <!-- Paginação Superior -->
+      <div class="bible-pagination" id="top-bible-pagination">
+        <button class="bible-page-btn" id="top-chap-prev" type="button" aria-label="Capítulo anterior">&larr; Anterior</button>
+        <span class="bible-page-info" id="top-chap-info">1 / 50</span>
+        <button class="bible-page-btn" id="top-chap-next" type="button" aria-label="Próximo capítulo">Próximo &rarr;</button>
       </div>
     </div>
 
@@ -740,13 +756,15 @@
       <button type="button" class="tip-dismiss" id="tip-dismiss" aria-label="Dispensar dica">&times;</button>
     </div>
 
-    <!-- Área de Conteúdo dos Versículos -->
-    <div class="verses-display-area" id="verses-display-area">
-      <!--SSR_VERSES--><div class="loading-state" id="loading-spinner" role="status">
-        <div class="spinner-circle"></div>
-        <span>Carregando texto sagrado...</span>
-      </div><!--/SSR_VERSES-->
-      <!-- Preenchido dinamicamente de acordo com o modo ativo -->
+    <!-- Área de Conteúdo dos Versículos (Card Branco Estilo Referência) -->
+    <div class="verses-container" id="verses-container-card">
+      <div class="verses-display-area" id="verses-display-area">
+        <!--SSR_VERSES--><div class="loading-state" id="loading-spinner" role="status">
+          <div class="spinner-circle"></div>
+          <span>Carregando texto sagrado...</span>
+        </div><!--/SSR_VERSES-->
+        <!-- Preenchido dinamicamente de acordo com o modo ativo -->
+      </div>
     </div>
 
     <!-- Barra de ações para os versículos selecionados -->
@@ -763,28 +781,11 @@
 
     <!--SSR_CHAPTER_LINKS--><nav class="chapter-links" id="chapter-links" aria-label="Capítulos do livro"></nav><!--/SSR_CHAPTER_LINKS-->
 
-    <!-- Paginação Inferior do Capítulo -->
-    <div class="chapter-bottom-nav">
-      <button class="nav-arrow-btn" id="bottom-prev-btn" title="Capítulo Anterior" aria-label="Capítulo anterior">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-        <span>Anterior</span>
-      </button>
-
-      <!-- Indicador Numérico do Capítulo -->
-      <div class="nav-center-status">
-        <span class="nav-counter" id="bottom-chap-indicator">1 / 50</span>
-      </div>
-
-      <button class="nav-arrow-btn highlight-btn" id="bottom-next-btn" title="Próximo Capítulo" aria-label="Próximo capítulo">
-        <span>Próximo</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="5" y1="12" x2="19" y2="12"></line>
-          <polyline points="12 5 19 12 12 19"></polyline>
-        </svg>
-      </button>
+    <!-- Paginação Inferior do Capítulo (Estilo Referência) -->
+    <div class="bible-pagination" id="bottom-bible-pagination">
+      <button class="bible-page-btn" id="bottom-prev-btn" type="button" aria-label="Capítulo anterior">&larr; Anterior</button>
+      <span class="bible-page-info" id="bottom-chap-indicator">1 / 50</span>
+      <button class="bible-page-btn" id="bottom-next-btn" type="button" aria-label="Próximo capítulo">Próximo &rarr;</button>
     </div>
 
   </main>
