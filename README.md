@@ -24,7 +24,20 @@ Essa mesma Consciência divina manifesta-se na criação através do **Logos (Sa
 
 ---
 
-## 2. Os Quatro Pilares da Filosofia de Vida
+## 2. O Que Nós Entendemos: A Síntese da Fé Unoteísta
+
+> **«A síntese bíblica sobre a humanidade de Jesus, a Consciência divina e a comunicação de propriedades.»**
+
+| Ponto | Pilar Teológico | Síntese Doutrinária |
+| :---: | :--- | :--- |
+| **01** | **A Humanidade de Jesus** | Jesus é o homem que ora a Deus, que morre, que nasce, que recebe a herança de Deus e a quem Deus concede poder e autoridade. |
+| **02** | **A Consciência Divina** | Mas quem é Deus? Deus é o seu próprio Espírito, a própria Consciência divina que encarnou em Jesus. Assim, Jesus é o homem e imagem que o próprio Deus encarnou, sem que a Consciência divina deixe de ser o que é. |
+| **03** | **Comunicação de Propriedades** | Jesus é considerado, chamado e reconhecido como o próprio Deus porque tudo que Deus é, é comunicado a ele. Essa comunicação inclui sua identidade, sua glória, seu poder, sua autoridade, paternidade e tudo aquilo que pertence a Deus e que ele é. Essa comunicação pode ser compreendida à luz da [*communicatio idiomatum*](https://unoteismo.arthurlazarodesousasantos.workers.dev/communicatio-idiomatum), expressão teológica relacionada à comunicação de propriedades. |
+| **04** | **O Deus Único em Carne** | Portanto, Jesus é chamado de Deus e reconhecido como o Pai porque tudo o que Deus é lhe é comunicado. Essa comunicação não significa que Jesus seja outro Deus, nem que a divindade tenha sido concedida a um homem independente de Deus. Trata-se do próprio Deus que se tornou aquele homem Jesus compondo seu próprio ser e sendo a consciência dele, e esse homem recebe e manifesta tudo o que pertence à identidade divina. Assim, Jesus é o homem que ora, nasce, sofre e morre, enquanto a Consciência divina permanece sendo o próprio Deus, sem deixar de ser Espírito e que compõe o ser humano Jesus. |
+
+---
+
+## 3. Os Quatro Pilares da Filosofia de Vida
 
 ```text
                     ┌────────────────────────────────────────┐
@@ -47,7 +60,7 @@ Essa mesma Consciência divina manifesta-se na criação através do **Logos (Sa
 
 ---
 
-## 3. Teologia Unoteísta: Os Três Axiomas Fundamentais
+## 4. Teologia Unoteísta: Os Três Axiomas Fundamentais
 
 A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a filosofia da consciência com o testemunho bíblico:
 
@@ -84,7 +97,7 @@ A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a
 
 ---
 
-## 4. Confissão de Fé Unoteísta (12 Artigos)
+## 5. Confissão de Fé Unoteísta (12 Artigos)
 
 1. **Artigo 1 — Um só Deus:** Cremos em um só Deus e Pai de todos, que é o Espírito, a Consciência eterna, uma só Pessoa divina, que permeia todas as coisas, possui vontade própria e julga todas as coisas segundo a sua vontade.
 2. **Artigo 2 — O Espírito de Deus:** Cremos que o Espírito é a própria Consciência divina, e que não há outro Espírito divino além daquele que é Deus. Deus é Espírito e existe eternamente como Consciência.
@@ -101,7 +114,7 @@ A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a
 
 ---
 
-## 5. O Cânon das Escrituras (69 Livros)
+## 6. O Cânon das Escrituras (69 Livros)
 
 | Divisão | Quantidade | Descrição |
 | :--- | :---: | :--- |
@@ -120,7 +133,7 @@ A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a
 
 ---
 
-## 6. Quadro Teológico Comparativo
+## 7. Quadro Teológico Comparativo
 
 | Critério | Trinitarianismo Clássico | Modalismo Sabeliano | Arianismo / Unitarianismo | **UNOTEÍSMO** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -133,7 +146,7 @@ A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a
 
 ---
 
-## 7. Recursos Online & Portais Oficiais
+## 8. Recursos Online & Portais Oficiais
 
 * 🌐 **Portal Oficial do Unoteísmo:** [https://unoteismo.arthurlazarodesousasantos.workers.dev](https://unoteismo.arthurlazarodesousasantos.workers.dev)
 * 📜 **Tratado da Teologia Unoteísta (Os Três Axiomas):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
