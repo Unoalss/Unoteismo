@@ -1,6 +1,6 @@
-# UNOTEÍSMO — Filosofia de Vida, Monoteísmo Bíblico e Defesa da Verdade
+# UNOTEÍSMO — Olá, seja bem-vindo ao Unoteísmo
 
-> **«A verdade sem viés religioso: respostas claras sobre a Bíblia, sobre a fé e sobre a vida.»**
+> **A crença em um único Deus supremo e Criador, ontologicamente um e único, que é o Espírito, a Consciência Divina que permeia e sustenta todas as coisas. No princípio, esse Deus emanou de si mesmo para o interior de um ser divino criado, constituído de energia espiritual, dotado de mente e corpo espiritual, chamado Sabedoria. Para salvar a humanidade, esse mesmo Deus, Espírito, encarnou no ser humano Jesus desde o ventre materno. Assim, experimentou a morte e ressuscitou, glorificando o corpo humano, o homem, Jesus, e revestindo-o do corpo de energia espiritual, do Divino, Sabedoria. Desse modo, a Sabedoria é a forma divina que reveste Jesus, a imagem de Deus, enquanto o único Deus, o Espírito eterno, permanece como a Consciência Divina que habita e se manifesta nele.**
 
 [![Website Oficial](https://img.shields.io/badge/Website-unoteismo.workers.dev-d4af37?style=for-the-badge&logo=google-chrome&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev)
 [![Release Oficial v1.0.0](https://img.shields.io/badge/Release-v1.0.0_Oficial-success?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Unoalss/Unoteismo/releases/tag/v1.0.0)
@@ -16,11 +16,9 @@
 
 ## 1. O que é o Unoteísmo?
 
-O **Unoteísmo** é um sistema de pensamento teológico e uma **filosofia de vida fundamentada na busca e defesa incansável da verdade**, caracterizada por sua completa independência em relação a corporativismos eclesiásticos, hierarquias clericais e tradições dogmáticas medievais (**sem viés religioso**).
+**Olá, seja bem-vindo ao Unoteísmo.**
 
-No âmbito ontológico e escriturístico, o Unoteísmo professa que Deus é o **Espírito, a Consciência eterna que permeia todas as coisas**, possuindo vontade própria e julgando todas as coisas segundo a sua vontade. Não há divisão de Deus em pessoas distintas: **há uma só Consciência e uma só Pessoa divina**.
-
-Essa mesma Consciência divina manifesta-se na criação através do **Logos (Sabedoria e Palavra)** — portador da mente e do corpo espiritual — e encarna plenamente no homem histórico **Jesus Cristo**, o Messias, Unigênito do Pai e herdeiro de todas as promessas.
+A crença em um único Deus supremo e Criador, ontologicamente um e único, que é o Espírito, a Consciência Divina que permeia e sustenta todas as coisas. No princípio, esse Deus emanou de si mesmo para o interior de um ser divino criado, constituído de energia espiritual, dotado de mente e corpo espiritual, chamado **Sabedoria**. Para salvar a humanidade, esse mesmo Deus, Espírito, encarnou no ser humano Jesus desde o ventre materno. Assim, experimentou a morte e ressuscitou, glorificando o corpo humano, o homem, Jesus, e revestindo-o do corpo de energia espiritual, do Divino, Sabedoria. Desse modo, a **Sabedoria é a forma divina que reveste Jesus, a imagem de Deus**, enquanto o único Deus, o Espírito eterno, permanece como a Consciência Divina que habita e se manifesta nele.
 
 ---
 
@@ -153,7 +151,9 @@ A teologia unoteísta organiza-se em três axiomas fundamentais que harmonizam a
 * 🕊️ **Tratado de Soteriologia Unoteísta (A Doutrina da Salvação):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/soteriologia](https://unoteismo.arthurlazarodesousasantos.workers.dev/soteriologia)
 * 💡 **Tratado de Communicatio Idiomatum (A Comunicação de Nomes e Atributos):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/communicatio-idiomatum](https://unoteismo.arthurlazarodesousasantos.workers.dev/communicatio-idiomatum)
 * 🌊 **Tratado do Batismo Bíblico (Um só Batismo em Nome de Jesus):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo](https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo)
-* 🧠 **Tratado da Forma da Consciência (A Distinção entre as Consciências):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/forma-da-consciencia](https://unoteismo.arthurlazarodesousasantos.workers.dev/forma-da-consciencia)
+* 🧠 **Tratado de Consciência, Mente e Espírito:** [https://unoteismo.arthurlazarodesousasantos.workers.dev/consciencia](https://unoteismo.arthurlazarodesousasantos.workers.dev/consciencia)
+* 💎 **Tratado da Forma da Consciência (A Distinção entre as Consciências):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/forma-da-consciencia](https://unoteismo.arthurlazarodesousasantos.workers.dev/forma-da-consciencia)
+* 👤 **Tratado: O Que É Pessoa? (Pessoalidade, Espírito e o Verdadeiro Eu):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/pessoalidade](https://unoteismo.arthurlazarodesousasantos.workers.dev/pessoalidade)
 * 📖 **Leitor da Bíblia Sagrada (69 Livros):** [https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 * 🔍 **Bíblia Interlinear & Léxico Grego Completo:** [https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia?mode=int)
 * ⚖️ **Quadro Comparativo Teológico:** [https://unoteismo.arthurlazarodesousasantos.workers.dev/comparativo](https://unoteismo.arthurlazarodesousasantos.workers.dev/comparativo)
