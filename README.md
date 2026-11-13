@@ -1,6 +1,6 @@
 # UNOTEÍSMO — Olá, seja bem-vindo ao Unoteísmo
 
-> **A crença em um único Deus supremo e Criador, ontologicamente um e único, que é o Espírito, a Consciência Divina que permeia e sustenta todas as coisas. No princípio, esse Deus emanou de si mesmo para o interior de um ser divino criado, constituído de energia espiritual, dotado de mente e corpo espiritual, chamado Sabedoria. Para salvar a humanidade, esse mesmo Deus, Espírito, encarnou no ser humano Jesus desde o ventre materno. Assim, experimentou a morte e ressuscitou, glorificando o corpo humano, o homem, Jesus, e revestindo-o do corpo de energia espiritual, do Divino, Sabedoria. Desse modo, a Sabedoria é a forma divina que reveste Jesus, a imagem de Deus, enquanto o único Deus, o Espírito eterno, permanece como a Consciência Divina que habita e se manifesta nele.**
+> **A crença de que Deus é um só Espírito e Pai, que estava no homem Jesus, seu Filho, e era o seu próprio Espírito, constituindo o ser humano Jesus, estando unido a ele e sendo ele espiritualmente.**
 
 [![Website Oficial](https://img.shields.io/badge/Website-unoteismo.workers.dev-d4af37?style=for-the-badge&logo=google-chrome&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev)
 [![Release Oficial v1.0.0](https://img.shields.io/badge/Release-v1.0.0_Oficial-success?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Unoalss/Unoteismo/releases/tag/v1.0.0)
@@ -18,7 +18,7 @@
 
 **Olá, seja bem-vindo ao Unoteísmo.**
 
-A crença em um único Deus supremo e Criador, ontologicamente um e único, que é o Espírito, a Consciência Divina que permeia e sustenta todas as coisas. No princípio, esse Deus emanou de si mesmo para o interior de um ser divino criado, constituído de energia espiritual, dotado de mente e corpo espiritual, chamado **Sabedoria**. Para salvar a humanidade, esse mesmo Deus, Espírito, encarnou no ser humano Jesus desde o ventre materno. Assim, experimentou a morte e ressuscitou, glorificando o corpo humano, o homem, Jesus, e revestindo-o do corpo de energia espiritual, do Divino, Sabedoria. Desse modo, a **Sabedoria é a forma divina que reveste Jesus, a imagem de Deus**, enquanto o único Deus, o Espírito eterno, permanece como a Consciência Divina que habita e se manifesta nele.
+A crença de que Deus é um só Espírito e Pai, que estava no homem Jesus, seu Filho, e era o seu próprio Espírito, constituindo o ser humano Jesus, estando unido a ele e sendo ele espiritualmente.
 
 ---
 
