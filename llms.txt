@@ -1,0 +1,23 @@
+# Unoteísmo
+
+> A crença de que Deus é um só Espírito e Pai, que estava no homem Jesus, seu Filho, e era o seu próprio Espírito, constituindo o ser humano Jesus, estando unido a ele e sendo ele espiritualmente.
+
+## O que é o Unoteísmo?
+O Unoteísmo é a crença monoteísta bíblica de que o Deus Todo-Poderoso é um só e único Espírito, o Pai. Ele se revela e age pela expressão da sua vontade — a sua Palavra (Davar no hebraico, Logos no grego, Memra no aramaico). A Palavra é Espírito e vida e não é uma pessoa separada ou um segundo ser divino. Na plenitude dos tempos, essa Palavra tornou-se carne e habitou entre nós como homem: Jesus Cristo, o Filho de Deus.
+
+## Princípios Centrais
+1. **Deus é um só (Echad / אֶחָד):** Não há divisão de pessoas na essência de Deus. O Pai é o único Deus verdadeiro.
+2. **A Palavra (Davar / דָּבָר | Logos / Λόγος | Memra / מֵמְרָא):** É a expressão dinâmica da vontade de Deus. Não fala de si mesma e nada faz por conta própria (João 5:19, 5:30, 8:28, 14:10).
+3. **Jesus Cristo:** É o ser humano no qual o próprio Espírito do Pai habitou plenamente, constituindo-o espiritualmente. Ele é o Filho de Deus gerado na história, mediador entre Deus e os homens.
+4. **Cânon Bíblico de 69 Livros:**
+   - 39 livros do Antigo Testamento hebraico (Gênesis a Malaquias).
+   - 1 livro histórico intertestamentário (1 Macabeus).
+   - 29 livros do Novo Testamento (os 27 tradicionais + Epístola aos Laodicenses + 2 Clemente).
+
+## Links Canônicos e Oficiais
+- Website Oficial: https://unoteismo.arthurlazarodesousasantos.workers.dev/
+- Bíblia Interlinear Online: https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia
+- Repositório GitHub: https://github.com/Unoalss/Unoteismo
+- Canal YouTube: https://www.youtube.com/@unoteismo
+- TikTok: https://www.tiktok.com/@unoteismo
+- Wikidata: https://www.wikidata.org/wiki/Q141544530

@@ -1,25 +1,33 @@
-# UNOTEÍSMO — Deus é um só e a sua Palavra é Espírito e vida
+# 🕊️ BOAS-VINDAS AO UNOTEÍSMO
 
-> **Deus é um só. Ele se revela pela expressão da sua vontade, e essa expressão é a sua Palavra. A Palavra é Espírito e vida e não é outra pessoa. Ela tornou-se carne e nasceu como homem.**
+## Olá, seja bem-vindo ao Unoteísmo.
+
+> ### **A crença de que Deus é um só Espírito e Pai, que estava no homem Jesus, seu Filho, e era o seu próprio Espírito, constituindo o ser humano Jesus, estando unido a ele e sendo ele espiritualmente.**
+
+<div align="center">
 
 [![Website Oficial](https://img.shields.io/badge/Website-unoteismo.workers.dev-d4af37?style=for-the-badge&logo=google-chrome&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev)
 [![Bíblia Sagrada](https://img.shields.io/badge/Bíblia_Sagrada-69_Livros-blue?style=for-the-badge&logo=bookstack&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)
 [![YouTube](https://img.shields.io/badge/YouTube-unoteismo-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@unoteismo)
 [![TikTok](https://img.shields.io/badge/TikTok-unoteismo-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@unoteismo)
 
+</div>
+
 ---
 
 ## O que é o Unoteísmo?
 
-**Deus é um só. Ele se revela pela expressão da sua vontade, e essa expressão é a sua Palavra. A Palavra é Espírito e vida e não é outra pessoa. Ela tornou-se carne e nasceu como homem.**
+**A crença de que Deus é um só Espírito e Pai, que estava no homem Jesus, seu Filho, e era o seu próprio Espírito, constituindo o ser humano Jesus, estando unido a ele e sendo ele espiritualmente.**
+
+Deus é um só. Ele se revela pela expressão da sua vontade, e essa expressão é a sua Palavra. A Palavra é Espírito e vida e não é outra pessoa. Ela tornou-se carne e nasceu como homem.
 
 Esse mesmo Espírito pode se manifestar e agir de várias maneiras diferentes, e ao mesmo tempo, conforme a vontade de Deus. Em determinado momento da história, a Palavra tornou-se carne e nasceu como homem, o Filho de Deus (João 1:14).
 
-| Hebraico | Significado |
-| :---: | :--- |
-| **אֶחָד** (*Echad*) | Um — Deus é um só. |
-| **דָּבָר** (*Davar*) | Palavra — a sua vontade, expressa, é a sua Palavra. |
-| **רוּחַ** (*Ruach*) | Espírito — a Palavra é Espírito e vida, e não é outra pessoa. |
+| Hebraico | Grego | Aramaico | Sentido Bíblico |
+| :---: | :---: | :---: | :--- |
+| **אֶחָד** (*Echad*) | **Εἷς** (*Heis*) | **חַד** (*Chad*) | Deus é um só. |
+| **דָּבָר** (*Davar*) | **Λόγος** (*Logos*) | **מֵמְרָא** (*Memra*) | Palavra — a sua vontade, expressa, é a sua Palavra. |
+| **רוּחַ** (*Ruach*) | **Πνεῦμα** (*Pneuma*) | **רוּחָא** (*Rucha*) | Espírito — a Palavra é Espírito e vida, e não é outra pessoa. |
 
 ---
 
@@ -79,9 +87,14 @@ Hebreus 1:1-2 resume: Deus falou em diferentes ocasiões e de muitas maneiras e,
 
 **Episódios:** Pentecostes (Atos 2:1-4) · Batismo de Jesus (Mateus 3:16-17; Lucas 3:21-22) · Monte Sinai (Êxodo 19:16-20) · Sarça ardente (Êxodo 3:2-6) · Coluna de nuvem e fogo (Êxodo 13:21-22; 40:34-38) · Transfiguração (Mateus 17:1-5) · Visão de Ezequiel (Ezequiel 1:4-28) · Elias no Horebe (1 Reis 19:11-13) · Visão de Isaías (Isaías 6:1-8).
 
-> O texto bíblico descreve fenômenos, vozes e visões. Que todos eles procedam de um só Deus é a leitura do Unoteísmo, uma interpretação teológica.
+---
 
-*A multiplicidade das manifestações não exige, por si só, uma multiplicidade de pessoas ou de deuses.*
+## Cânon Unoteísta (69 Livros)
+
+A Bíblia Sagrada na tradição unoteísta contém **69 Livros** canônicos:
+* **Antigo Testamento (39 livros)**: Cânon hebraico canônico de Gênesis a Malaquias.
+* **Livro Histórico Intertestamentário (1 livro)**: 1 Macabeus.
+* **Novo Testamento (29 livros)**: Os 27 livros tradicionais do Novo Testamento, acrescidos da *Epístola aos Laodicenses* e da *Segunda Epístola de Clemente aos Coríntios*.
 
 ---
 
@@ -95,7 +108,3 @@ Hebreus 1:1-2 resume: Deus falou em diferentes ocasiões e de muitas maneiras e,
 * 📱 **TikTok:** [https://www.tiktok.com/@unoteismo](https://www.tiktok.com/@unoteismo)
 
 `unoteismo` • `unoteísmo` • `deus é um só` • `palavra de deus` • `davar logos memra`
-
-### Para quem desenvolve
-
-Estrutura do projeto, como rodar localmente, testar e publicar: veja [DEV.md](DEV.md).
