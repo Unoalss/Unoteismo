@@ -2,14 +2,14 @@
 
 > **Olá, seja bem-vindo ao Unoteísmo.**
 >
-> **Unoteísmo:** A crença de que existe um só Deus, YHWH, o Pai, uma única Consciência eterna que se expressa e age por meio de sua própria Palavra, o seu Espírito, e que manifestou essa Palavra em carne no homem Jesus Cristo, seu Filho. Por meio da **União Constitutiva** e da **Comunicação de Atributos (*Communicatio Idiomatum*)**, Jesus é o próprio Deus e Pai manifestado em verdadeira humanidade, sem constituir outra Pessoa divina independente.
+> **Unoteísmo:** O Unoteísmo é a crença em um único Deus, o Pai, que é a única Consciência divina eterna. Essa Consciência expressa-se por sua Palavra viva, que é seu próprio Espírito e sua emanação inseparável, compartilhando integralmente sua identidade. Pela Palavra, Deus cria, age e se manifesta. Em Jesus Cristo, essa Palavra encarnou e constituiu a identidade pessoal de um verdadeiro homem. Assim, Jesus é simultaneamente verdadeiro homem e manifestação do próprio Deus, logo o próprio Deus, sem que exista uma segunda Pessoa divina.
 
 <div align="center">
 
 [![Portal Oficial Unoteísmo](https://img.shields.io/badge/Portal_Oficial-Unote%C3%ADsmo-8e3220?style=for-the-badge&logo=google-chrome&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev/)
 [![Bíblia Sagrada 69 Livros](https://img.shields.io/badge/B%C3%ADblia_Sagrada-69_Livros-26406a?style=for-the-badge&logo=bookstack&logoColor=white)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/joao/1)
 [![Léxico Grego 61.047 Verbetes](https://img.shields.io/badge/L%C3%A9xico_Grego-61.047_Verbetes-2b5336?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/lexico)
-[![Teologia Unoteísta](https://img.shields.io/badge/Estudo-Teologia_Unote%C3%ADsta-7a5a14?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
+[![Unoteísmo — Teologia](https://img.shields.io/badge/Estudo-Unote%C3%ADsmo-7a5a14?style=for-the-badge)](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)
 [![YouTube @unoteismo](https://img.shields.io/badge/YouTube-%40unoteismo-cc0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@unoteismo)
 [![TikTok @unoteismo](https://img.shields.io/badge/TikTok-%40unoteismo-111111?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@unoteismo)
 
@@ -25,8 +25,8 @@
 - [Nada de si mesma: a relação entre o Filho e o Pai](#nada-de-si-mesma-a-relação-entre-o-filho-e-o-pai)
 - [Muitas formas, um só Deus: manifestações da Palavra](#muitas-formas-um-só-deus-manifestações-da-palavra)
 - [Nas Escrituras: modalidades e episódios bíblicos](#nas-escrituras-modalidades-e-episódios-bíblicos)
-- [Síntese Teológica e Perguntas Frequentes (FAQ)](#síntese-teológica-e-perguntas-frequentes-faq)
-- [Bíblia Sagrada Online, Léxico Grego e Estudos Teológicos](#bíblia-sagrada-online-léxico-grego-e-estudos-teológicos)
+- [Síntese Doutrinária e Perguntas Frequentes (FAQ)](#síntese-doutrinária-e-perguntas-frequentes-faq)
+- [Bíblia Sagrada Online, Léxico Grego e Estudos](#bíblia-sagrada-online-léxico-grego-e-estudos)
 - [Links Oficiais e Identidade Digital](#links-oficiais-e-identidade-digital)
 
 ---
@@ -37,7 +37,7 @@
 
 Deus é um só. Ele se revela pela expressão da sua vontade, e essa expressão é a sua Palavra. A Palavra é Espírito e vida e não é outra pessoa. Ela tornou-se carne e nasceu como homem.
 
-Acesse a apresentação interativa completa no site oficial: [Portal do Unoteísmo](https://unoteismo.arthurlazarodesousasantos.workers.dev/).
+Acesse a apresentação completa no site oficial: [Portal do Unoteísmo](https://unoteismo.arthurlazarodesousasantos.workers.dev/).
 
 ---
 
@@ -145,38 +145,35 @@ A Bíblia apresenta vários episódios em que Deus se manifesta de maneiras dife
 
 ---
 
-## Síntese Teológica e Perguntas Frequentes (FAQ)
+## Síntese Doutrinária e Perguntas Frequentes (FAQ)
 
-### Os três pilares da formulação unoteísta
-* **Deus, o Pai — A Consciência:** YHWH, o único Espírito eterno, uma só Pessoa divina e um só Centro de Consciência.
-* **A Palavra, o Espírito de Deus — A Emanação:** a expressão viva e inseparável dessa Consciência, compartilhando integralmente sua natureza, identidade e atributos.
-* **Jesus Cristo, o Filho de Deus — A Manifestação Encarnada:** o verdadeiro homem no qual a Palavra divina se fez carne, constituindo sua identidade pessoal por meio da **União Constitutiva** e da **Comunicação de Atributos**.
+### Pilares do Unoteísmo
+* **Deus, o Pai — A Consciência:** YHWH, o único Deus verdadeiro ([João 17:3](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/joao/17)), eterno, invisível e indivisível, a única Consciência divina que se revela e age por sua própria Palavra ([Salmo 33:6](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/salmos/33)).
+* **A Palavra, o Espírito de Deus — A Emanação:** a emanação viva, eterna e inseparável de Deus ([Sabedoria 7:22, 25](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/sabedoria-de-salomao/7) — *“eflúvio do poder de Deus”*; [João 1:1](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/joao/1)), identificada com o Espírito Santo ([João 6:63](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/joao/6); [2 Coríntios 3:17](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/2-corintios/3)), sem constituir outra Pessoa ou Consciência.
+* **Jesus Cristo, o Filho — Manifestação Pessoal em Carne:** a manifestação plena de Deus em carne ([João 1:14](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/joao/1); [1 Timóteo 3:16](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/1-timoteo/3)). Possui corpo, mente e fôlego humanos verdadeiros, cuja identidade pessoal é constituída de forma constitutiva pela Palavra eterna do Pai.
+* **Pessoalidade (O Que É Pessoa?):** distinção entre o ser humano — unidade viva de **corpo, mente e fôlego de vida** — e a **pessoalidade**, o Espírito e centro de consciência permanente ([1 Coríntios 2:11](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/1-corintios/2)). Em nós, o espírito é criado e o Espírito de Deus habita de forma participativa ([Romanos 8:16](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/romanos/8)).
 
-### O que é o Unoteísmo?
-O Unoteísmo é a crença de que existe um só Deus, YHWH, o Pai, uma única Consciência eterna que se expressa e age por meio de sua própria Palavra, o seu Espírito, e se manifesta na criação de diferentes maneiras, sem deixar de ser uma só Pessoa divina. Em Jesus Cristo, a Palavra se fez carne, constituindo sua identidade pessoal pela União Constitutiva.
-
-### A Palavra de Deus é outra pessoa?
-Não. A Palavra é a emanação viva e inseparável da única Consciência divina do Pai — identificada como o próprio Espírito de Deus — e não constitui outra Pessoa divina independente.
+### Perguntas Frequentes
+* **O que é o Unoteísmo?** — A crença em um único Deus, o Pai, única Consciência divina eterna que se expressa por sua Palavra viva e encarnou no homem Jesus Cristo como manifestação do próprio Deus, sem existir uma segunda Pessoa divina.
+* **A Palavra de Deus é outra pessoa?** — Não. É a emanação viva e inseparável de Deus e o seu próprio Espírito, não outra pessoa ou centro de consciência independente.
 
 ---
 
-## Bíblia Sagrada Online, Léxico Grego e Estudos Teológicos
+## Bíblia Sagrada Online, Léxico Grego e Estudos
 
-O portal **Unoteísmo** reúne a edição canônica completa da **Bíblia Sagrada Online (69 livros — 42 do Antigo Testamento preservados na tradição da Septuaginta e 27 do Novo Testamento canônico, totalizando 1.285 capítulos e 33.580 versículos)**:
+O portal **Unoteísmo** reúne a edição canônica completa da **Bíblia Sagrada Online (69 livros — 42 do Antigo Testamento preservados na tradição da Septuaginta e 27 do Novo Testamento canônico, totalizando 1.285 capítulos e 33.580 versículos)** e os estudos oficiais organizados na navegação principal:
 
-* 📖 **[Bíblia Sagrada Online (PT-BR & Áudio Neural)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)** — Texto bíblico em português com narração por vozes neurais humanas, avanço contínuo em segundo plano e exportação em PDF em duas colunas.
-* 🏛️ **[Bíblia Interlinear Grego-Português](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia/joao/1)** — Alinhamento palavra por palavra do texto grego original com lemas, códigos morfológicos e análise gramatical.
-* 📚 **[Léxico Grego Bíblico (61.047 Verbetes)](https://unoteismo.arthurlazarodesousasantos.workers.dev/lexico)** — Dicionário bíblico e exegético completo com pesquisa por termo grego, transliteração ou português.
+1. 🏠 **[Início — Uma só Palavra · Um só Deus](https://unoteismo.arthurlazarodesousasantos.workers.dev/)** — Apresentação introdutória do Unoteísmo.
+2. 📖 **[Bíblia Sagrada Online (69 Livros & Interlinear Grego)](https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia)** — Tradução em português, alinhamento interlinear grego-português palavra por palavra, áudio narrado com vozes neurais humanas e geração em PDF.
+3. 📜 **[Unoteísmo — Teologia Unoteísta](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)** — *Deus, a Consciência; a Palavra, sua Emanação; e o Filho, sua Manifestação Pessoal em Carne.*
+4. 👤 **[Pessoalidade — O Que É Pessoa?](https://unoteismo.arthurlazarodesousasantos.workers.dev/pessoalidade)** — *A relação entre Consciência, Espírito, corpo, mente e fôlego de vida.*
+5. 💧 **[Batismo — O Batismo Bíblico](https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo)** — Estudo escriturístico sobre o batismo cristão.
+6. ✝️ **[Soteriologia](https://unoteismo.arthurlazarodesousasantos.workers.dev/soteriologia)** — A doutrina bíblica da salvação na perspectiva unoteísta.
+7. ⏳ **[Escatologia](https://unoteismo.arthurlazarodesousasantos.workers.dev/escatologia)** — Estudo bíblico em preparação.
 
-### Tratados Doutrinários e Comunidade
+### Léxico e Comunidade
 
-* 📜 **[Teologia Unoteísta](https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia)** — *Deus, a Consciência; a Palavra, sua Emanação; e o Filho, sua Manifestação Encarnada.*
-* ⚖️ **[Apologética Bíblica & Enciclopédia Comparativa](https://unoteismo.arthurlazarodesousasantos.workers.dev/comparativo)** — *O Unoteísmo diante das diferentes correntes teológicas.*
-* 👤 **[O Que É Pessoa? A Pessoalidade, o Espírito e o Verdadeiro Eu](https://unoteismo.arthurlazarodesousasantos.workers.dev/pessoalidade)** — *A relação entre Consciência, Espírito, Mente e Identidade.*
-* 🔗 **[Communicatio Idiomatum — Comunicação de Atributos](https://unoteismo.arthurlazarodesousasantos.workers.dev/communicatio-idiomatum)** — *Por que Jesus Cristo é o próprio Pai manifestado em carne, segundo o Unoteísmo?*
-* ✝️ **[Soteriologia](https://unoteismo.arthurlazarodesousasantos.workers.dev/soteriologia)** — A doutrina da salvação na perspectiva unoteísta.
-* 💧 **[O Batismo Bíblico](https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo)** — Estudo escriturístico sobre o batismo cristão.
-* 🧠 **[Consciência e Espírito](https://unoteismo.arthurlazarodesousasantos.workers.dev/consciencia)** · **[A Forma da Consciência](https://unoteismo.arthurlazarodesousasantos.workers.dev/forma-da-consciencia)** — Estudos sobre espírito, mente e forma divina.
+* 📚 **[Léxico Grego Bíblico (61.047 Verbetes)](https://unoteismo.arthurlazarodesousasantos.workers.dev/lexico)** — Dicionário exegético completo da Septuaginta e do Novo Testamento.
 * 🎬 **[Vídeos](https://unoteismo.arthurlazarodesousasantos.workers.dev/videos)** · 🙏 **[Pedidos de Oração](https://unoteismo.arthurlazarodesousasantos.workers.dev/pedidos-de-oracao)** · 🧩 **[Quizzes Bíblicos](https://unoteismo.arthurlazarodesousasantos.workers.dev/quizzes)** · ℹ️ **[Sobre](https://unoteismo.arthurlazarodesousasantos.workers.dev/sobre)** · 🔒 **[Privacidade](https://unoteismo.arthurlazarodesousasantos.workers.dev/privacidade)**
 
 ---
@@ -186,7 +183,7 @@ O portal **Unoteísmo** reúne a edição canônica completa da **Bíblia Sagrad
 * **Website Oficial:** https://unoteismo.arthurlazarodesousasantos.workers.dev/
 * **Bíblia Online:** https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia
 * **Léxico Grego:** https://unoteismo.arthurlazarodesousasantos.workers.dev/lexico
-* **Sitemap XML (1.390 URLs):** https://unoteismo.arthurlazarodesousasantos.workers.dev/sitemap.xml
+* **Sitemap XML (1.387 URLs):** https://unoteismo.arthurlazarodesousasantos.workers.dev/sitemap.xml
 * **Guia estruturado para LLMs (`llms.txt`):** https://unoteismo.arthurlazarodesousasantos.workers.dev/llms.txt
 * **Repositório GitHub:** https://github.com/Unoalss/Unoteismo
 * **Wikidata (`Q141544530`):** https://www.wikidata.org/wiki/Q141544530
