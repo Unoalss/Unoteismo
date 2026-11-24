@@ -1,4 +1,4 @@
-""Monta a pasta public/ (o que o Cloudflare publica) a partir da raiz do projeto.
+"""Monta a pasta public/ (o que o Cloudflare publica) a partir da raiz do projeto.
 
 Uso (da raiz do projeto, ou de qualquer pasta):
     python make_public.py            # monta public/ e confere as referências
