@@ -1,23 +1,50 @@
-# Unoteísmo
+# Unoteísmo — Uma só Palavra · Um só Deus
 
-> A crença de que Deus é um só Espírito e Pai, que estava no homem Jesus, seu Filho, e era o seu próprio Espírito, constituindo o ser humano Jesus, estando unido a ele e sendo ele espiritualmente.
+> **Definição Oficial:** O Unoteísmo é a crença em um único Deus, o Pai, que é a única Consciência divina eterna. Essa Consciência expressa-se por sua Palavra viva, que é seu próprio Espírito e sua emanação inseparável, compartilhando integralmente sua identidade. Pela Palavra, Deus cria, age e se manifesta. Em Jesus Cristo, essa Palavra encarnou e constituiu a identidade pessoal de um verdadeiro homem. Assim, Jesus é simultaneamente verdadeiro homem e manifestação do próprio Deus, logo o próprio Deus, sem que exista uma segunda Pessoa divina.
 
-## O que é o Unoteísmo?
-O Unoteísmo é a crença monoteísta bíblica de que o Deus Todo-Poderoso é um só e único Espírito, o Pai. Ele se revela e age pela expressão da sua vontade — a sua Palavra (Davar no hebraico, Logos no grego, Memra no aramaico). A Palavra é Espírito e vida e não é uma pessoa separada ou um segundo ser divino. Na plenitude dos tempos, essa Palavra tornou-se carne e habitou entre nós como homem: Jesus Cristo, o Filho de Deus.
+## Fundamentos Teológicos e Filosóficos
 
-## Princípios Centrais
-1. **Deus é um só (Echad / אֶחָד):** Não há divisão de pessoas na essência de Deus. O Pai é o único Deus verdadeiro.
-2. **A Palavra (Davar / דָּבָר | Logos / Λόγος | Memra / מֵמְרָא):** É a expressão dinâmica da vontade de Deus. Não fala de si mesma e nada faz por conta própria (João 5:19, 5:30, 8:28, 14:10).
-3. **Jesus Cristo:** É o ser humano no qual o próprio Espírito do Pai habitou plenamente, constituindo-o espiritualmente. Ele é o Filho de Deus gerado na história, mediador entre Deus e os homens.
-4. **Cânon Bíblico de 69 Livros:**
-   - 39 livros do Antigo Testamento hebraico (Gênesis a Malaquias).
-   - 1 livro histórico intertestamentário (1 Macabeus).
-   - 29 livros do Novo Testamento (os 27 tradicionais + Epístola aos Laodicenses + 2 Clemente).
+1. **Deus, o Pai — A Consciência:**
+   - YHWH, o único Deus verdadeiro (João 17:3). Ele é Espírito (João 4:24), eterno, invisível e indivisível, a única Consciência divina. Dele procede toda a existência (Romanos 11:36), seu entendimento é infinito (Salmo 147:5) e revela-se por meio de sua própria Palavra (Salmo 33:6).
+2. **A Palavra, o Espírito de Deus — A Emanação:**
+   - A emanação viva, eterna e inseparável de Deus (Sabedoria 7:22, 25 — "eflúvio do poder de Deus"; João 1:1). Identificada como o próprio Espírito de Deus / Espírito Santo / Espírito da Verdade (João 6:63; João 14:17; 2 Coríntios 3:17). Expressa integralmente a identidade divina sem constituir outra Pessoa ou Consciência.
+3. **Jesus Cristo, o Filho — Manifestação Pessoal em Carne:**
+   - A manifestação plena de Deus em carne (João 1:14; 1 Timóteo 3:16; Colossenses 2:9; João 14:10). Possui corpo, mente e fôlego humanos verdadeiros, mas a Palavra que constitui sua identidade pessoal de forma constitutiva é a expressão eterna da única Consciência do Pai.
+4. **O Que É Pessoa? (Pessoalidade, Corpo, Mente e Fôlego):**
+   - O Unoteísmo distingue o ser humano — unidade viva de **corpo, mente e fôlego de vida** — da **pessoalidade**, identificada filosoficamente com o Espírito, o centro de consciência que constitui o verdadeiro eu permanente (1 Coríntios 2:11). Nos humanos, o espírito é criado (Zacarias 12:1); em Jesus, é a Palavra eterna encarnada que lhe confere identidade divina pela Comunicação de Atributos, enquanto em nós o Espírito habita por participação (Romanos 8:16).
 
-## Links Canônicos e Oficiais
-- Website Oficial: https://unoteismo.arthurlazarodesousasantos.workers.dev/
-- Bíblia Interlinear Online: https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia
-- Repositório GitHub: https://github.com/Unoalss/Unoteismo
-- Canal YouTube: https://www.youtube.com/@unoteismo
-- TikTok: https://www.tiktok.com/@unoteismo
-- Wikidata: https://www.wikidata.org/wiki/Q141544530
+## Três Línguas, Uma Só Ideia: Davar, Logos e Memra
+
+- **Hebraico — דָּבָר (*Davar*):** Palavra, coisa e acontecimento. Quando Deus diz, o que é dito acontece.
+- **Grego — Λόγος (*Logos*):** Palavra, discurso e razão encarnada em Jesus Cristo (João 1:1 e 1:14).
+- **Aramaico — מֵמְרָא (*Memra*):** Palavra viva do Senhor atuando no mundo, conforme empregado nos Targuns.
+
+## O Cânon Sagrado de 69 Livros e o Léxico Grego Bíblico
+
+- **Bíblia Sagrada Unoteísta:** Edição canônica definitiva composta por **69 Livros Sagrados** (42 livros no Antigo Testamento preservados na tradição da Septuaginta com os deuterocanônicos e 27 livros no Novo Testamento), totalizando 1.285 capítulos e 33.580 versículos. Edição impressa oficial (*Bíblia Sagrada Unoteísta: o caminho da verdade*, organizada por Arthur Santos): 1.730 páginas, formato 15,5 × 23,0 cm, Capa Dura, registrada na Câmara Brasileira do Livro (CBL) sob **ISBN `978-65-02-41194-0`** (`9786502411940`).
+- **Bíblia Interlinear Grego-Português:** Alinhamento palavra por palavra do texto grego original com lemas, morfologia gramatical e tradução exata.
+- **Léxico Grego Bíblico:** Dicionário bíblico e exegético completo com **61.047 verbetes** abrangendo toda a Septuaginta e o Novo Testamento.
+- **Áudio Narrado com IA Neural:** Leitura completa dos 69 livros narrada por vozes neurais humanas em alta definição.
+
+## Diretório de Páginas e Tratados Oficiais
+
+1. **Início:** https://unoteismo.arthurlazarodesousasantos.workers.dev/
+2. **Bíblia Sagrada Online (69 Livros & Interlinear Grego):** https://unoteismo.arthurlazarodesousasantos.workers.dev/biblia
+3. **Unoteísmo (Teologia Unoteísta):** https://unoteismo.arthurlazarodesousasantos.workers.dev/teologia
+4. **Pessoalidade (O Que É Pessoa?):** https://unoteismo.arthurlazarodesousasantos.workers.dev/pessoalidade
+5. **Batismo (O Batismo Bíblico):** https://unoteismo.arthurlazarodesousasantos.workers.dev/batismo
+6. **Soteriologia (Doutrina Bíblica da Salvação):** https://unoteismo.arthurlazarodesousasantos.workers.dev/soteriologia
+7. **Escatologia (Em preparação):** https://unoteismo.arthurlazarodesousasantos.workers.dev/escatologia
+- **Léxico Grego Bíblico (61.047 Verbetes):** https://unoteismo.arthurlazarodesousasantos.workers.dev/lexico
+- **Vídeos e Estudos Bíblicos:** https://unoteismo.arthurlazarodesousasantos.workers.dev/videos
+- **Pedidos de Oração:** https://unoteismo.arthurlazarodesousasantos.workers.dev/pedidos-de-oracao
+- **Quizzes Bíblicos:** https://unoteismo.arthurlazarodesousasantos.workers.dev/quizzes
+- **Sobre o Unoteísmo:** https://unoteismo.arthurlazarodesousasantos.workers.dev/sobre
+- **Sitemap XML Oficial (1.387 URLs):** https://unoteismo.arthurlazarodesousasantos.workers.dev/sitemap.xml
+
+## Identificadores Oficiais e Canais Digitais
+
+- **Wikidata:** https://www.wikidata.org/wiki/Q141544530
+- **GitHub:** https://github.com/Unoalss/Unoteismo
+- **YouTube:** https://www.youtube.com/@unoteismo
+- **TikTok:** https://www.tiktok.com/@unoteismo

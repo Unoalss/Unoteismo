@@ -1,4 +1,4 @@
-"""Monta a pasta public/ (o que o Cloudflare publica) a partir da raiz do projeto.
+""Monta a pasta public/ (o que o Cloudflare publica) a partir da raiz do projeto.
 
 Uso (da raiz do projeto, ou de qualquer pasta):
     python make_public.py            # monta public/ e confere as referências
@@ -23,14 +23,15 @@ import time
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PUBLIC = os.path.join(ROOT, 'public')
 
-PAGES = ['index.html', 'biblia.html', 'teologia.html', 'soteriologia.html', 'communicatio-idiomatum.html', 'batismo.html', 'consciencia.html', 'forma-da-consciencia.html', 'pessoalidade.html', 'sobre.html', 'privacidade.html', 'comparativo.html', '404.html', 'admin.html', 'pedidos-de-oracao.html', 'quizzes.html', 'videos.html', 'categoria.html']
-STYLES = ['versao.css', 'style.css', 'biblia.css', 'versao_biblia.css', 'teologia.css', 'admin.css', 'categoria.css', 'menu.css', 'bible-theme.css']
-SCRIPTS = ['site.js', 'biblia.js', 'admin.js', 'palavra_coracao.js', 'videos.js', 'categoria.js', 'pedidos.js', 'menu.js']
+PAGES = ['index.html', 'biblia.html', 'teologia.html', 'pessoalidade.html', 'batismo.html', 'soteriologia.html', 'escatologia.html', 'sobre.html', 'privacidade.html', '404.html', 'admin.html', 'pedidos-de-oracao.html', 'quizzes.html', 'videos.html', 'categoria.html']
+STYLES = ['versao.css', 'style.css', 'biblia.css', 'versao_biblia.css', 'teologia.css', 'admin.css', 'categoria.css', 'menu.css', 'bible-theme.css', 'bible-pergaminho.css', 'home-chrome.css', 'seo-showcase.css']
+SCRIPTS = ['site.js', 'biblia.js', 'admin.js', 'palavra_coracao.js', 'videos.js', 'categoria.js', 'pedidos.js', 'menu.js', 'pergaminho.js', 'home-chrome.js']
 IMAGES = ['logo_unoteismo.png', 'logo-64.png', 'logo-128.png', 'icon-192.png', 'icon-512.png', 'icon-512-maskable.png',
           'apple-touch-icon.png', 'favicon-48.png', 'og-image.png',
           'codigo_de_barras_isbn_9786502411940.svg', 'codigo_de_barras_isbn_9786502411940.png',
           'capa_frente_biblia_unoteista.webp', 'capa_frente_biblia_unoteista.png']
 META = ['robots.txt', 'sitemap.xml', 'site.webmanifest', '_headers', '_redirects', 'llms.txt',
+        'c041318c2d964f43b593ef2d35a96f1b.txt',
         'googlerYjJW0OeqtHHoSxkdebRaMzGb3eoxjKfHtVpzUdYm7E.html', 'google4bb1d4e1b48ee8e4.html']
 DATA = ['data/books.json', 'data/bible_search_index.json', 'posts.json', 'data/posts.json', 'prayer_requests.json', 'data/prayer_requests.json', 'videos_config.json', 'data/videos_config.json']
 SERVICE_WORKER = 'sw.js'  # recebe um hash de versão a cada montagem
@@ -139,7 +140,7 @@ def main():
             html = f.read()
         for m in ref.finditer(html):
             path = m.group(1)
-            if path == '/' or path.startswith('/biblia') or path.startswith('/lexico') or path.startswith('/posts') or path.startswith('/categoria') or path in ('/teologia', '/soteriologia', '/communicatio-idiomatum', '/batismo', '/consciencia', '/forma-da-consciencia', '/pessoalidade', '/sobre', '/privacidade', '/comparativo', '/admin', '/pedidos-de-oracao', '/quizzes', '/quiz', '/videos'):
+            if path == '/' or path.startswith('/biblia') or path.startswith('/lexico') or path.startswith('/posts') or path.startswith('/categoria') or path in ('/teologia', '/pessoalidade', '/batismo', '/soteriologia', '/escatologia', '/sobre', '/privacidade', '/admin', '/pedidos-de-oracao', '/quizzes', '/quiz', '/videos'):
                 continue  # rotas servidas pelo Worker/assets sem extensão
             if path.startswith('//'):
                 continue
@@ -163,3 +164,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
